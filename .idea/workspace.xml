@@ -1,7 +1,301 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6715c09-9246-44a7-a11f-74de4631b765" name="Default" comment="" />
+    <list default="true" id="a6715c09-9246-44a7-a11f-74de4631b765" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/ActionEnter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/ConfigManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/Encoder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/PathFormat.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/define/ActionMap$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/define/ActionMap.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/define/ActionState.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/define/AppInfo$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/define/AppInfo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/define/BaseState.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/define/FileType$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/define/FileType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/define/MIMEType$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/define/MIMEType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/define/MultiState.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/define/State.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/hunter/FileManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/hunter/ImageHunter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/upload/Base64Uploader.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/upload/BinaryUploader.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/upload/StorageManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/baidu/ueditor/upload/Uploader.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/action/ArticleAction.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/action/BaseAction.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/action/FolderAction.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/action/IndexController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/AdminConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/ArticleConstant$Status.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/ArticleConstant$check.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/ArticleConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/CommentConstant$Status.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/CommentConstant$kind.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/CommentConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/ConfigConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/FolderConstant$check.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/FolderConstant$status.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/FolderConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/GuestbookConstant$status.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/GuestbookConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/MediaConstant$Kind.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/MediaConstant$Type.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/MediaConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/SystemConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/UploadConstant$Type.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/UploadConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/UserConstant$Type.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/constant/UserConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/dao/AdminFolderMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/dao/AdminMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/dao/ArticleMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/dao/ChapterMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/dao/CommentMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/dao/ConfigMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/dao/FolderMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/dao/UserMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/entity/AdminFolderVo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/entity/AdminVo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/entity/ArticleVo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/entity/FolderVo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/entity/JsonVo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/entity/MenuVo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/entity/PageVo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/exception/ArticleNotFoundException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/exception/FolderNotFoundException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/exception/TemplateNotFoundException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/exception/ValidateException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/filter/GlobalInterceptor.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/model/Admin.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/model/AdminFolder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/model/Article.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/model/Chapter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/model/Comment.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/model/Config.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/model/Folder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/model/User.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/plugins/Plugin.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/plugins/TagPlugin.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/service/ArticleService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/service/ConfigService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/service/FolderService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/service/TemplateService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/tag/ArticleListTag.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/utils/AuthUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/utils/CalendarTools.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/utils/HttpUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/utils/IpUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/utils/MediaUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/utils/PropertyUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/utils/RegexUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/utils/SSUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/utils/SpringContextUtil.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/images/aliyun.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/images/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/images/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/images/aliyun.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/images/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/images/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/ActionEnter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/ConfigManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/Encoder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/PathFormat.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/define/ActionMap$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/define/ActionMap.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/define/ActionState.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/define/AppInfo$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/define/AppInfo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/define/BaseState.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/define/FileType$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/define/FileType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/define/MIMEType$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/define/MIMEType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/define/MultiState.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/define/State.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/hunter/FileManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/hunter/ImageHunter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/upload/Base64Uploader.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/upload/BinaryUploader.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/upload/StorageManager.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/baidu/ueditor/upload/Uploader.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/action/ArticleAction.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/action/BaseAction.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/action/FolderAction.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/action/IndexController.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/AdminConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/ArticleConstant$Status.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/ArticleConstant$check.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/ArticleConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/CommentConstant$Status.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/CommentConstant$kind.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/CommentConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/ConfigConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/FolderConstant$check.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/FolderConstant$status.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/FolderConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/GuestbookConstant$status.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/GuestbookConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/MediaConstant$Kind.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/MediaConstant$Type.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/MediaConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/SystemConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/UploadConstant$Type.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/UploadConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/UserConstant$Type.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/constant/UserConstant.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/dao/AdminFolderMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/dao/AdminMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/dao/ArticleMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/dao/ChapterMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/dao/CommentMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/dao/ConfigMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/dao/FolderMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/dao/UserMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/entity/AdminFolderVo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/entity/AdminVo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/entity/ArticleVo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/entity/FolderVo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/entity/JsonVo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/entity/MenuVo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/entity/PageVo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/exception/ArticleNotFoundException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/exception/FolderNotFoundException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/exception/TemplateNotFoundException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/exception/ValidateException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/filter/GlobalInterceptor.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/model/Admin.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/model/AdminFolder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/model/Article.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/model/Chapter.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/model/Comment.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/model/Config.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/model/Folder.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/model/User.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/plugins/Plugin.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/plugins/TagPlugin.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/service/ArticleService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/service/ConfigService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/service/FolderService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/service/TemplateService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/tag/ArticleListTag.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/utils/AuthUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/utils/CalendarTools.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/utils/HttpUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/utils/IpUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/utils/MediaUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/utils/PropertyUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/utils/RegexUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/utils/SSUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/jim/novel/utils/SpringContextUtil.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/JimNovel_war.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/JimNovel_war_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/applicationContext.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/dao/AdminFolderMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/dao/AdminMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/dao/ArticleMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/dao/ChapterMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/dao/CommentMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/dao/ConfigMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/dao/FolderMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/com/jim/novel/dao/UserMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/log4j.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/classes/ueditor.config.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/404.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/500.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/css/blog.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/folder-blog.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/folder.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/footer.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/header.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/index.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/js/html5shiv.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/js/ie-emulation-modes-warning.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/js/ie10-viewport-bug-workaround.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/js/ie8-responsive-file-warning.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/js/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/js/respond.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/static/template/blog/sidebar.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/entity/AdminFolderVo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/entity/AdminVo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/entity/ArticleVo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/entity/FolderVo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/entity/JsonVo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/entity/MenuVo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/entity/PageVo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/exception/ArticleNotFoundException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/exception/FolderNotFoundException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/exception/TemplateNotFoundException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/exception/ValidateException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/filter/FtlFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/filter/ManageFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/plugins/Plugin.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/plugins/TagPlugin.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/service/TemplateService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/tag/ArticleListTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/404.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/500.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/css/blog.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/folder-blog.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/folder.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/footer.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/header.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/index.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/js/html5shiv.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/js/ie-emulation-modes-warning.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/js/ie10-viewport-bug-workaround.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/js/ie8-responsive-file-warning.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/js/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/js/respond.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/sidebar.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ueditor.config.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webdefault.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_generator_mybatis_generator_core_1_3_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/utils/SSLHttpClient.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/JimNovel_Web_exploded/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JimNovel.iml" afterPath="$PROJECT_DIR$/JimNovel.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/action/ArticleAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/action/ArticleAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/action/BaseAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/action/BaseAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/action/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/action/IndexController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/constant/ConfigConstant.java" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/constant/ConfigConstant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/AdminFolderMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/AdminFolderMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/AdminFolderMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/AdminFolderMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/ArticleMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/ArticleMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/ArticleMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/ArticleMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/ChapterMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/ChapterMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/ChapterMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/ChapterMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/CommentMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/CommentMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/CommentMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/CommentMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/FolderMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/FolderMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/FolderMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/FolderMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/filter/GlobalInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/filter/GlobalInterceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/model/AdminFolder.java" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/model/AdminFolder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/model/Article.java" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/model/Article.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/model/Chapter.java" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/model/Chapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/model/Comment.java" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/model/Comment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/model/Folder.java" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/model/Folder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/service/ArticleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/service/ArticleService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jim/novel/service/FolderService.java" afterPath="$PROJECT_DIR$/src/main/java/com/jim/novel/service/FolderService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,81 +311,62 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="generatorConfig.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="83" lean-forward="false" selection-start-line="21" selection-start-column="83" selection-end-line="21" selection-end-column="83" />
+            <state relative-caret-position="1105">
+              <caret line="242" column="8" lean-forward="false" selection-start-line="242" selection-start-column="8" selection-end-line="242" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfigService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/service/ConfigService.java">
+      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="45" column="28" lean-forward="false" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1247#1248#0" expanded="true" />
-                <element signature="e#1297#1298#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConfigMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/dao/ConfigMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdminMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/dao/AdminMapper.java">
+      <file leaf-file-name="logging.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/logging.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GlobalInterceptor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/filter/GlobalInterceptor.java">
+      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/target/classes/log4j.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+        <entry file="file://$PROJECT_DIR$/target/classes/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="64" lean-forward="false" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -108,10 +383,18 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>configDao</find>
+      <find>selectByPrimaryKey</find>
+      <find>long</find>
+      <find>SHISHUO_TEMPLATE</find>
     </findStrings>
     <replaceStrings>
       <replace>configMapper</replace>
+      <replace>NOVEL_TEMPLATE</replace>
+      <replace>int</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -122,12 +405,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/novel.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/action/BaseAction.java" />
         <option value="$PROJECT_DIR$/src/generatorConfig.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/action/IndexController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/action/FolderAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/action/ArticleAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/utils/JSONTools.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/constant/CommentConstant.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/constant/SystemConstant.java" />
@@ -137,11 +416,41 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/utils/DateTools.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/utils/JqueryEasyUIData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/baidu/ueditor/hunter/FileManager.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/service/ConfigService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/filter/GlobalInterceptor.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/entity/AdminFolderVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/entity/AdminVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/entity/ArticleVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/entity/FolderVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/entity/GuestbookVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/exception/ValidateException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/entity/JsonVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/exception/TemplateNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/exception/FolderNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/action/BaseAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/exception/ArticleNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/action/ArticleAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/FolderMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/FolderMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/service/TemplateService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/action/IndexController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/plugins/Plugin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/utils/SSUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/tag/ArticleListTag.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/service/ArticleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/ArticleMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/dao/ArticleMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/constant/ConfigConstant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/plugins/TagPlugin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/service/FolderService.java" />
+        <option value="$PROJECT_DIR$/src/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/filter/FtlFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jim/novel/filter/ManageFilter.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       </list>
     </option>
   </component>
@@ -150,6 +459,13 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -202,13 +518,34 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
         </PATH_ELEMENT>
       </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="JimNovel" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="jetty" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
+        </PATH_ELEMENT>
+      </PATH>
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="3" />
+    <option name="x" value="4" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="709" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -219,12 +556,15 @@
       <hideEmptyPackages />
       <abbreviatePackageNames />
       <autoscrollToSource />
-      <autoscrollFromSource />
+      <autoscrollFromSource ProjectPane="true" />
       <sortByType />
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -233,6 +573,202 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JimNovel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: org.freemarker:freemarker:2.3.20" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="freemarker-2.3.20.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JimNovel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: org.freemarker:freemarker:2.3.20" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="freemarker-2.3.20.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="freemarker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JimNovel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: org.freemarker:freemarker:2.3.20" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="freemarker-2.3.20.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="freemarker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JimNovel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: commons-lang:commons-lang:2.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commons-lang-2.1.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JimNovel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: commons-lang:commons-lang:2.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="commons-lang-2.1.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JimNovel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.8 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JimNovel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.8 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rt.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JimNovel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.8 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rt.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JimNovel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.8 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rt.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JimNovel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="JimNovel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -247,15 +783,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -269,19 +797,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
+              <option name="myItemId" value="classes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -316,6 +836,14 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -327,15 +855,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="doc" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JimNovel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JimNovel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -347,24 +898,40 @@
     <property name="project.structure.side.proportion" value="0.3137931" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/baidu/ueditor" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/jim/novel/constant" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/jim/novel/utils" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/main" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/doc/database" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.jim.novel.tag" />
+      <recent name="com.jim.novel.utils" />
+      <recent name="com.jim.novel.exception" />
       <recent name="com.jim.novel.service" />
       <recent name="com.jim.novel.filter" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/doc/database" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/jim/novel/filter" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/jim/novel/plugins" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/jim/novel/entity" />
+      <recent name="$PROJECT_DIR$/src/webapp/WEB-INF/static/template" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Unnamed">
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -767,6 +1334,81 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
+    <configuration default="false" name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.36" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="JimNovel:Web exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_JimNovel" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="58234" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="JimNovel:Web exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
+    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -779,20 +1421,22 @@
       <option name="presentableId" value="Default" />
       <updated>1489418454351</updated>
       <workItem from="1489418458745" duration="6942000" />
-      <workItem from="1489426079514" duration="633000" />
+      <workItem from="1489426079514" duration="1121000" />
+      <workItem from="1489588574971" duration="8156000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7575000" />
+    <option name="totallyTimeSpent" value="16219000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3" y="23" width="1280" height="709" extended-state="6" />
-    <editor active="true" />
+    <frame x="4" y="23" width="1280" height="709" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -803,16 +1447,18 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30470017" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14748785" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.365105" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30452344" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -820,7 +1466,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -838,7 +1483,487 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/constant/ArticleConstant.java">
+    <entry file="uml://MAVEN/com.jim.novel:JimNovel:1.0-SNAPSHOT">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>com.jim.novel:JimNovel:1.0-SNAPSHOT</OriginalElement>
+          <nodes>
+            <node x="0.0" y="963.8916435506246">com.jim.novel:JimNovel:1.0-SNAPSHOT</node>
+            <node x="230.0" y="1006.7414102887406">junit:junit:jar:4.11</node>
+            <node x="459.5" y="1006.7414102887406">junit:junit:jar:4.11/org.hamcrest:hamcrest-core:jar:1.3</node>
+            <node x="702.0" y="1336.4187681250794">org.springframework:spring-context:jar:3.2.11.RELEASE</node>
+            <node x="1144.0" y="1288.7868175513813">org.springframework:spring-context:jar:3.2.11.RELEASE/org.springframework:spring-beans:jar:3.2.11.RELEASE</node>
+            <node x="431.0" y="771.2414102887406">org.springframework:spring-context-support:jar:3.2.11.RELEASE</node>
+            <node x="712.5" y="527.9914102887406">org.springframework:spring-jdbc:jar:3.2.11.RELEASE</node>
+            <node x="945.5" y="530.3830538393652">org.springframework:spring-jdbc:jar:3.2.11.RELEASE/org.springframework:spring-tx:jar:3.2.11.RELEASE</node>
+            <node x="196.0" y="1357.1796746942384">org.springframework:spring-webmvc:jar:3.2.11.RELEASE</node>
+            <node x="940.0" y="1371.5437681250794">org.springframework:spring-aop:jar:3.2.11.RELEASE</node>
+            <node x="1151.0" y="1368.8023578363388">org.springframework:spring-aop:jar:3.2.11.RELEASE/aopalliance:aopalliance:jar:1.0</node>
+            <node x="1150.5" y="1485.872903795234">org.springframework:spring-test:jar:3.2.11.RELEASE</node>
+            <node x="469.5" y="1353.3842674315977">org.springframework:spring-web:jar:3.2.11.RELEASE</node>
+            <node x="1340.0" y="1340.0092674315977">org.springframework:spring-core:jar:3.2.11.RELEASE</node>
+            <node x="1526.0" y="1340.0092674315977">org.springframework:spring-core:jar:3.2.11.RELEASE/commons-logging:commons-logging:jar:1.1.3</node>
+            <node x="918.0" y="1434.872903795234">org.springframework:spring-expression:jar:3.2.11.RELEASE</node>
+            <node x="219.5" y="486.7689604085242">org.mybatis:mybatis:jar:3.2.3</node>
+            <node x="197.0" y="1197.7414102887406">org.mybatis:mybatis-spring:jar:1.2.1</node>
+            <node x="210.5" y="1076.7414102887406">org.freemarker:freemarker:jar:2.3.20</node>
+            <node x="228.5" y="715.6416435506246">log4j:log4j:jar:1.2.14</node>
+            <node x="193.5" y="1511.372903795234">org.apache.commons:commons-lang3:jar:3.1</node>
+            <node x="176.0" y="105.0">mysql:mysql-connector-java:jar:5.1.25</node>
+            <node x="193.5" y="936.7414102887406">javax.servlet:javax.servlet-api:jar:3.1.0</node>
+            <node x="197.5" y="416.7689604085242">commons-lang:commons-lang:jar:2.1</node>
+            <node x="226.5" y="206.7689604085242">org.jsoup:jsoup:jar:1.7.3</node>
+            <node x="224.5" y="866.7414102887406">dom4j:dom4j:jar:1.6.1</node>
+            <node x="478.5" y="866.7414102887406">dom4j:dom4j:jar:1.6.1/xml-apis:xml-apis:jar:1.0.b2</node>
+            <node x="180.5" y="1267.7414102887406">commons-fileupload:commons-fileupload:jar:1.3</node>
+            <node x="466.0" y="1267.7414102887406">commons-fileupload:commons-fileupload:jar:1.3/commons-io:commons-io:jar:2.2</node>
+            <node x="450.5" y="1114.9914102887406">org.codehaus.jackson:jackson-core-lgpl:jar:1.9.13</node>
+            <node x="180.0" y="1127.7414102887406">org.codehaus.jackson:jackson-mapper-lgpl:jar:1.9.13</node>
+            <node x="184.0" y="623.3916435506246">commons-validator:commons-validator:jar:1.4.0</node>
+            <node x="443.5" y="693.4914102887406">commons-validator:commons-validator:jar:1.4.0/commons-beanutils:commons-beanutils:jar:1.8.3</node>
+            <node x="692.0" y="693.4914102887406">commons-validator:commons-validator:jar:1.4.0/commons-beanutils:commons-beanutils:jar:1.8.3/commons-logging:commons-logging:jar:1.1.1</node>
+            <node x="446.5" y="623.4914102887406">commons-validator:commons-validator:jar:1.4.0/commons-digester:commons-digester:jar:1.8</node>
+            <node x="448.5" y="553.4914102887406">commons-validator:commons-validator:jar:1.4.0/commons-logging:commons-logging:jar:1.1.3</node>
+            <node x="192.0" y="276.7689604085242">commons-codec:commons-codec:jar:1.8</node>
+            <node x="219.0" y="35.0">com.github.axet:kaptcha:jar:0.0.8</node>
+            <node x="491.0" y="0.0">com.github.axet:kaptcha:jar:0.0.8/junit:junit:jar:4.10</node>
+            <node x="487.0" y="70.0">com.github.axet:kaptcha:jar:0.0.8/com.jhlabs:filters:jar:2.0.235</node>
+            <node x="200.5" y="346.7689604085242">net.sf.json-lib:json-lib:jar:jdk15:2.4</node>
+            <node x="443.5" y="430.0">net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-beanutils:commons-beanutils:jar:1.8.0</node>
+            <node x="438.5" y="290.0">net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-collections:commons-collections:jar:3.2.1</node>
+            <node x="458.5" y="500.0">net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-lang:commons-lang:jar:2.5</node>
+            <node x="448.5" y="220.0">net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-logging:commons-logging:jar:1.1.3</node>
+            <node x="477.5" y="360.0">net.sf.json-lib:json-lib:jar:jdk15:2.4/net.sf.ezmorph:ezmorph:jar:1.0.6</node>
+            <node x="702.0" y="360.0">net.sf.json-lib:json-lib:jar:jdk15:2.4/net.sf.ezmorph:ezmorph:jar:1.0.6/commons-lang:commons-lang:jar:2.3</node>
+            <node x="195.0" y="1581.372903795234">commons-dbcp:commons-dbcp:jar:1.4</node>
+            <node x="458.0" y="1581.372903795234">commons-dbcp:commons-dbcp:jar:1.4/commons-pool:commons-pool:jar:1.5.4</node>
+            <node x="200.5" y="1651.372903795234">net.coobird:thumbnailator:jar:0.4.7</node>
+            <node x="170.0" y="796.7414102887406">org.mybatis.generator:mybatis-generator-core:jar:1.3.5</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="net.sf.json-lib:json-lib:jar:jdk15:2.4" target="net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-collections:commons-collections:jar:3.2.1">
+              <point x="60.0" y="-6.0" />
+              <point x="351.0" y="355.7689604085242" />
+              <point x="-83.0" y="-0.0" />
+            </edge>
+            <edge source="net.sf.json-lib:json-lib:jar:jdk15:2.4/net.sf.ezmorph:ezmorph:jar:1.0.6" target="net.sf.json-lib:json-lib:jar:jdk15:2.4/net.sf.ezmorph:ezmorph:jar:1.0.6/commons-lang:commons-lang:jar:2.3">
+              <point x="44.0" y="-0.0" />
+              <point x="-63.0" y="-0.0" />
+            </edge>
+            <edge source="org.springframework:spring-jdbc:jar:3.2.11.RELEASE" target="org.springframework:spring-jdbc:jar:3.2.11.RELEASE/org.springframework:spring-tx:jar:3.2.11.RELEASE">
+              <point x="52.5" y="-0.0" />
+              <point x="-45.5" y="-0.0" />
+            </edge>
+            <edge source="net.sf.json-lib:json-lib:jar:jdk15:2.4" target="net.sf.json-lib:json-lib:jar:jdk15:2.4/net.sf.ezmorph:ezmorph:jar:1.0.6">
+              <point x="60.0" y="-0.0" />
+              <point x="351.0" y="361.7689604085242" />
+              <point x="431.0" y="375.0" />
+              <point x="-44.0" y="-0.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="org.springframework:spring-test:jar:3.2.11.RELEASE">
+              <point x="45.0" y="11.5" />
+              <point x="170.0" y="1500.872903795234" />
+              <point x="-51.5" y="-0.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="org.freemarker:freemarker:jar:2.3.20">
+              <point x="45.0" y="1.5" />
+              <point x="170.0" y="1091.7414102887406" />
+              <point x="-50.0" y="-0.0" />
+            </edge>
+            <edge source="org.springframework:spring-jdbc:jar:3.2.11.RELEASE" target="org.springframework:spring-core:jar:3.2.11.RELEASE">
+              <point x="52.5" y="-10.0" />
+              <point x="838.0" y="532.9914102887406" />
+              <point x="918.0" y="501.7689604085242" />
+              <point x="1260.0" y="501.7689604085242" />
+              <point x="-53.0" y="-10.909090909090992" />
+            </edge>
+            <edge source="org.springframework:spring-web:jar:3.2.11.RELEASE" target="org.springframework:spring-context:jar:3.2.11.RELEASE">
+              <point x="52.0" y="-3.75" />
+              <point x="-63.0" y="11.25" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="javax.servlet:javax.servlet-api:jar:3.1.0">
+              <point x="45.0" y="-0.5" />
+              <point x="170.0" y="951.7414102887406" />
+              <point x="-67.0" y="-0.0" />
+            </edge>
+            <edge source="org.springframework:spring-aop:jar:3.2.11.RELEASE" target="org.springframework:spring-core:jar:3.2.11.RELEASE">
+              <point x="51.0" y="10.0" />
+              <point x="1064.0" y="1396.5437681250794" />
+              <point x="1144.0" y="1409.3023578363388" />
+              <point x="1260.0" y="1409.3023578363388" />
+              <point x="-53.0" y="2.727272727272748" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="org.mybatis.generator:mybatis-generator-core:jar:1.3.5">
+              <point x="45.0" y="-2.5" />
+              <point x="-90.5" y="-0.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="com.github.axet:kaptcha:jar:0.0.8">
+              <point x="45.0" y="-14.5" />
+              <point x="170.0" y="50.0" />
+              <point x="-41.5" y="-0.0" />
+            </edge>
+            <edge source="commons-validator:commons-validator:jar:1.4.0" target="commons-validator:commons-validator:jar:1.4.0/commons-logging:commons-logging:jar:1.1.3">
+              <point x="76.5" y="-10.0" />
+              <point x="351.0" y="628.3916435506246" />
+              <point x="431.0" y="568.4914102887406" />
+              <point x="-73.0" y="-0.0" />
+            </edge>
+            <edge source="commons-validator:commons-validator:jar:1.4.0" target="commons-validator:commons-validator:jar:1.4.0/commons-beanutils:commons-beanutils:jar:1.8.3">
+              <point x="76.5" y="10.0" />
+              <point x="351.0" y="648.3916435506246" />
+              <point x="431.0" y="708.4914102887406" />
+              <point x="-78.0" y="-0.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="org.springframework:spring-webmvc:jar:3.2.11.RELEASE">
+              <point x="45.0" y="8.5" />
+              <point x="170.0" y="1372.1796746942384" />
+              <point x="-64.5" y="-0.0" />
+            </edge>
+            <edge source="org.springframework:spring-context-support:jar:3.2.11.RELEASE" target="org.springframework:spring-core:jar:3.2.11.RELEASE">
+              <point x="90.5" y="-10.0" />
+              <point x="692.0" y="758.7401966965078" />
+              <point x="1260.0" y="758.7401966965078" />
+              <point x="-53.0" y="-5.454545454545496" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="org.jsoup:jsoup:jar:1.7.3">
+              <point x="45.0" y="-11.5" />
+              <point x="170.0" y="221.7689604085242" />
+              <point x="-34.0" y="-0.0" />
+            </edge>
+            <edge source="org.springframework:spring-aop:jar:3.2.11.RELEASE" target="org.springframework:spring-context:jar:3.2.11.RELEASE/org.springframework:spring-beans:jar:3.2.11.RELEASE">
+              <point x="51.0" y="-10.0" />
+              <point x="1064.0" y="1376.5437681250794" />
+              <point x="-58.0" y="12.85714285714289" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:3.2.11.RELEASE" target="org.springframework:spring-aop:jar:3.2.11.RELEASE">
+              <point x="63.0" y="3.75" />
+              <point x="918.0" y="1376.5437681250794" />
+              <point x="-51.0" y="-10.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="org.springframework:spring-expression:jar:3.2.11.RELEASE">
+              <point x="45.0" y="10.5" />
+              <point x="170.0" y="1462.122903795234" />
+              <point x="838.0" y="1462.122903795234" />
+              <point x="-73.0" y="10.0" />
+            </edge>
+            <edge source="dom4j:dom4j:jar:1.6.1" target="dom4j:dom4j:jar:1.6.1/xml-apis:xml-apis:jar:1.0.b2">
+              <point x="36.0" y="-0.0" />
+              <point x="-43.0" y="-0.0" />
+            </edge>
+            <edge source="org.springframework:spring-core:jar:3.2.11.RELEASE" target="org.springframework:spring-core:jar:3.2.11.RELEASE/commons-logging:commons-logging:jar:1.1.3">
+              <point x="53.0" y="-0.0" />
+              <point x="-73.0" y="-0.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="org.mybatis:mybatis:jar:3.2.3">
+              <point x="45.0" y="-7.5" />
+              <point x="170.0" y="501.7689604085242" />
+              <point x="-41.0" y="-0.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="org.springframework:spring-web:jar:3.2.11.RELEASE">
+              <point x="45.0" y="7.5" />
+              <point x="170.0" y="1346.6796746942384" />
+              <point x="351.0" y="1346.6796746942384" />
+              <point x="431.0" y="1360.8842674315977" />
+              <point x="-52.0" y="-7.5" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="commons-codec:commons-codec:jar:1.8">
+              <point x="45.0" y="-10.5" />
+              <point x="170.0" y="291.7689604085242" />
+              <point x="-68.5" y="-0.0" />
+            </edge>
+            <edge source="org.springframework:spring-webmvc:jar:3.2.11.RELEASE" target="org.springframework:spring-context:jar:3.2.11.RELEASE">
+              <point x="64.5" y="-6.0" />
+              <point x="351.0" y="1366.1796746942384" />
+              <point x="431.0" y="1340.7592674315977" />
+              <point x="612.0" y="1340.7592674315977" />
+              <point x="-63.0" y="3.75" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="org.springframework:spring-aop:jar:3.2.11.RELEASE">
+              <point x="45.0" y="9.5" />
+              <point x="170.0" y="1409.7592674315977" />
+              <point x="838.0" y="1409.7592674315977" />
+              <point x="918.0" y="1396.5437681250794" />
+              <point x="-51.0" y="10.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="commons-lang:commons-lang:jar:2.1">
+              <point x="45.0" y="-8.5" />
+              <point x="170.0" y="431.7689604085242" />
+              <point x="-63.0" y="-0.0" />
+            </edge>
+            <edge source="org.springframework:spring-test:jar:3.2.11.RELEASE" target="org.springframework:spring-core:jar:3.2.11.RELEASE">
+              <point x="51.5" y="-0.0" />
+              <point x="-53.0" y="13.63636363636374" />
+            </edge>
+            <edge source="org.springframework:spring-web:jar:3.2.11.RELEASE" target="org.springframework:spring-aop:jar:3.2.11.RELEASE">
+              <point x="52.0" y="3.75" />
+              <point x="612.0" y="1372.1342674315977" />
+              <point x="692.0" y="1386.5437681250794" />
+              <point x="-51.0" y="-0.0" />
+            </edge>
+            <edge source="org.springframework:spring-context-support:jar:3.2.11.RELEASE" target="org.springframework:spring-context:jar:3.2.11.RELEASE/org.springframework:spring-beans:jar:3.2.11.RELEASE">
+              <point x="90.5" y="-0.0" />
+              <point x="692.0" y="788.6330538393652" />
+              <point x="1064.0" y="788.6330538393652" />
+              <point x="-58.0" y="-4.285714285714221" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="org.mybatis:mybatis-spring:jar:1.2.1">
+              <point x="45.0" y="4.5" />
+              <point x="170.0" y="1212.7414102887406" />
+              <point x="-63.5" y="-0.0" />
+            </edge>
+            <edge source="org.springframework:spring-expression:jar:3.2.11.RELEASE" target="org.springframework:spring-core:jar:3.2.11.RELEASE">
+              <point x="73.0" y="-0.0" />
+              <point x="1260.0" y="1449.872903795234" />
+              <point x="-53.0" y="8.181818181818244" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="log4j:log4j:jar:1.2.14">
+              <point x="45.0" y="-4.5" />
+              <point x="170.0" y="730.6416435506246" />
+              <point x="-32.0" y="-0.0" />
+            </edge>
+            <edge source="org.springframework:spring-jdbc:jar:3.2.11.RELEASE" target="org.springframework:spring-context:jar:3.2.11.RELEASE/org.springframework:spring-beans:jar:3.2.11.RELEASE">
+              <point x="52.5" y="10.0" />
+              <point x="838.0" y="552.9914102887406" />
+              <point x="918.0" y="772.7044824107936" />
+              <point x="1064.0" y="772.7044824107936" />
+              <point x="-58.0" y="-8.571428571428669" />
+            </edge>
+            <edge source="org.springframework:spring-webmvc:jar:3.2.11.RELEASE" target="org.springframework:spring-core:jar:3.2.11.RELEASE">
+              <point x="64.5" y="12.0" />
+              <point x="351.0" y="1384.1796746942384" />
+              <point x="431.0" y="1475.372903795234" />
+              <point x="1260.0" y="1475.372903795234" />
+              <point x="-53.0" y="10.909090909090992" />
+            </edge>
+            <edge source="commons-validator:commons-validator:jar:1.4.0" target="commons-validator:commons-validator:jar:1.4.0/commons-digester:commons-digester:jar:1.8">
+              <point x="76.5" y="-0.0" />
+              <point x="-75.0" y="-0.0" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:3.2.11.RELEASE" target="org.springframework:spring-expression:jar:3.2.11.RELEASE">
+              <point x="63.0" y="11.25" />
+              <point x="-73.0" y="-10.0" />
+            </edge>
+            <edge source="org.springframework:spring-webmvc:jar:3.2.11.RELEASE" target="org.springframework:spring-web:jar:3.2.11.RELEASE">
+              <point x="64.5" y="-0.0" />
+              <point x="-52.0" y="7.5" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:3.2.11.RELEASE" target="org.springframework:spring-core:jar:3.2.11.RELEASE">
+              <point x="63.0" y="-3.75" />
+              <point x="1260.0" y="1347.6687681250794" />
+              <point x="-53.0" y="-0.0" />
+            </edge>
+            <edge source="commons-fileupload:commons-fileupload:jar:1.3" target="commons-fileupload:commons-fileupload:jar:1.3/commons-io:commons-io:jar:2.2">
+              <point x="80.0" y="-0.0" />
+              <point x="-55.5" y="-0.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="mysql:mysql-connector-java:jar:5.1.25">
+              <point x="45.0" y="-13.5" />
+              <point x="-84.5" y="-0.0" />
+            </edge>
+            <edge source="junit:junit:jar:4.11" target="junit:junit:jar:4.11/org.hamcrest:hamcrest-core:jar:1.3">
+              <point x="30.5" y="-0.0" />
+              <point x="-62.0" y="-0.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="org.springframework:spring-context:jar:3.2.11.RELEASE">
+              <point x="45.0" y="6.5" />
+              <point x="170.0" y="1308.2414102887406" />
+              <point x="612.0" y="1308.2414102887406" />
+              <point x="-63.0" y="-3.75" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="org.springframework:spring-context-support:jar:3.2.11.RELEASE">
+              <point x="45.0" y="-3.5" />
+              <point x="170.0" y="786.2414102887406" />
+              <point x="-90.5" y="-0.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="net.sf.json-lib:json-lib:jar:jdk15:2.4">
+              <point x="45.0" y="-9.5" />
+              <point x="170.0" y="361.7689604085242" />
+              <point x="-60.0" y="-0.0" />
+            </edge>
+            <edge source="org.springframework:spring-webmvc:jar:3.2.11.RELEASE" target="org.springframework:spring-expression:jar:3.2.11.RELEASE">
+              <point x="64.5" y="6.0" />
+              <point x="351.0" y="1378.1796746942384" />
+              <point x="431.0" y="1449.872903795234" />
+              <point x="-73.0" y="-0.0" />
+            </edge>
+            <edge source="org.springframework:spring-jdbc:jar:3.2.11.RELEASE/org.springframework:spring-tx:jar:3.2.11.RELEASE" target="org.springframework:spring-context:jar:3.2.11.RELEASE/org.springframework:spring-beans:jar:3.2.11.RELEASE">
+              <point x="45.5" y="7.5" />
+              <point x="1064.0" y="552.8830538393652" />
+              <point x="-58.0" y="-12.85714285714289" />
+            </edge>
+            <edge source="org.springframework:spring-aop:jar:3.2.11.RELEASE" target="org.springframework:spring-aop:jar:3.2.11.RELEASE/aopalliance:aopalliance:jar:1.0">
+              <point x="51.0" y="-0.0" />
+              <point x="-51.0" y="-0.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="commons-validator:commons-validator:jar:1.4.0">
+              <point x="45.0" y="-5.5" />
+              <point x="170.0" y="638.3916435506246" />
+              <point x="-76.5" y="-0.0" />
+            </edge>
+            <edge source="org.springframework:spring-web:jar:3.2.11.RELEASE" target="org.springframework:spring-context:jar:3.2.11.RELEASE/org.springframework:spring-beans:jar:3.2.11.RELEASE">
+              <point x="52.0" y="-11.25" />
+              <point x="612.0" y="1357.1342674315977" />
+              <point x="692.0" y="1325.9187681250794" />
+              <point x="1064.0" y="1325.9187681250794" />
+              <point x="-58.0" y="4.285714285714221" />
+            </edge>
+            <edge source="com.github.axet:kaptcha:jar:0.0.8" target="com.github.axet:kaptcha:jar:0.0.8/junit:junit:jar:4.10">
+              <point x="41.5" y="-7.5" />
+              <point x="351.0" y="42.5" />
+              <point x="431.0" y="15.0" />
+              <point x="-30.5" y="-0.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="commons-dbcp:commons-dbcp:jar:1.4">
+              <point x="45.0" y="13.5" />
+              <point x="170.0" y="1596.372903795234" />
+              <point x="-65.5" y="-0.0" />
+            </edge>
+            <edge source="commons-dbcp:commons-dbcp:jar:1.4" target="commons-dbcp:commons-dbcp:jar:1.4/commons-pool:commons-pool:jar:1.5.4">
+              <point x="65.5" y="-0.0" />
+              <point x="-63.5" y="-0.0" />
+            </edge>
+            <edge source="com.github.axet:kaptcha:jar:0.0.8" target="com.github.axet:kaptcha:jar:0.0.8/com.jhlabs:filters:jar:2.0.235">
+              <point x="41.5" y="7.5" />
+              <point x="351.0" y="57.5" />
+              <point x="431.0" y="85.0" />
+              <point x="-34.5" y="-0.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="dom4j:dom4j:jar:1.6.1">
+              <point x="45.0" y="-1.5" />
+              <point x="170.0" y="881.7414102887406" />
+              <point x="-36.0" y="-0.0" />
+            </edge>
+            <edge source="org.springframework:spring-webmvc:jar:3.2.11.RELEASE" target="org.springframework:spring-context:jar:3.2.11.RELEASE/org.springframework:spring-beans:jar:3.2.11.RELEASE">
+              <point x="64.5" y="-12.0" />
+              <point x="351.0" y="1360.1796746942384" />
+              <point x="431.0" y="1320.9914102887406" />
+              <point x="1064.0" y="1320.9914102887406" />
+              <point x="-58.0" y="-0.0" />
+            </edge>
+            <edge source="net.sf.json-lib:json-lib:jar:jdk15:2.4" target="net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-lang:commons-lang:jar:2.5">
+              <point x="60.0" y="12.0" />
+              <point x="351.0" y="373.7689604085242" />
+              <point x="431.0" y="515.0" />
+              <point x="-63.0" y="-0.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="net.coobird:thumbnailator:jar:0.4.7">
+              <point x="45.0" y="14.5" />
+              <point x="170.0" y="1666.372903795234" />
+              <point x="-60.0" y="-0.0" />
+            </edge>
+            <edge source="net.sf.json-lib:json-lib:jar:jdk15:2.4" target="net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-logging:commons-logging:jar:1.1.3">
+              <point x="60.0" y="-12.0" />
+              <point x="351.0" y="349.7689604085242" />
+              <point x="431.0" y="235.0" />
+              <point x="-73.0" y="-0.0" />
+            </edge>
+            <edge source="org.springframework:spring-context-support:jar:3.2.11.RELEASE" target="org.springframework:spring-context:jar:3.2.11.RELEASE">
+              <point x="90.5" y="10.0" />
+              <point x="-63.0" y="-11.25" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="org.codehaus.jackson:jackson-core-lgpl:jar:1.9.13">
+              <point x="45.0" y="2.5" />
+              <point x="170.0" y="1117.2414102887406" />
+              <point x="351.0" y="1117.2414102887406" />
+              <point x="431.0" y="1122.4914102887406" />
+              <point x="-71.0" y="-7.5" />
+            </edge>
+            <edge source="org.springframework:spring-web:jar:3.2.11.RELEASE" target="org.springframework:spring-core:jar:3.2.11.RELEASE">
+              <point x="52.0" y="11.25" />
+              <point x="612.0" y="1379.6342674315977" />
+              <point x="692.0" y="1424.372903795234" />
+              <point x="1260.0" y="1424.372903795234" />
+              <point x="-53.0" y="5.454545454545496" />
+            </edge>
+            <edge source="commons-validator:commons-validator:jar:1.4.0/commons-beanutils:commons-beanutils:jar:1.8.3" target="commons-validator:commons-validator:jar:1.4.0/commons-beanutils:commons-beanutils:jar:1.8.3/commons-logging:commons-logging:jar:1.1.1">
+              <point x="78.0" y="-0.0" />
+              <point x="-73.0" y="-0.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="org.codehaus.jackson:jackson-mapper-lgpl:jar:1.9.13">
+              <point x="45.0" y="3.5" />
+              <point x="-80.5" y="-0.0" />
+            </edge>
+            <edge source="org.springframework:spring-jdbc:jar:3.2.11.RELEASE/org.springframework:spring-tx:jar:3.2.11.RELEASE" target="org.springframework:spring-core:jar:3.2.11.RELEASE">
+              <point x="45.5" y="-7.5" />
+              <point x="1260.0" y="537.8830538393652" />
+              <point x="-53.0" y="-8.181818181818244" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="org.apache.commons:commons-lang3:jar:3.1">
+              <point x="45.0" y="12.5" />
+              <point x="170.0" y="1526.372903795234" />
+              <point x="-67.0" y="-0.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="junit:junit:jar:4.11">
+              <point x="45.0" y="0.5" />
+              <point x="170.0" y="1021.7414102887406" />
+              <point x="-30.5" y="-0.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="org.springframework:spring-jdbc:jar:3.2.11.RELEASE">
+              <point x="45.0" y="-6.5" />
+              <point x="170.0" y="542.9914102887406" />
+              <point x="-52.5" y="-0.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="org.springframework:spring-core:jar:3.2.11.RELEASE">
+              <point x="45.0" y="-12.5" />
+              <point x="170.0" y="145.5" />
+              <point x="1260.0" y="145.5" />
+              <point x="-53.0" y="-13.63636363636374" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:3.2.11.RELEASE" target="org.springframework:spring-context:jar:3.2.11.RELEASE/org.springframework:spring-beans:jar:3.2.11.RELEASE">
+              <point x="63.0" y="-11.25" />
+              <point x="918.0" y="1335.1866252679365" />
+              <point x="1064.0" y="1335.1866252679365" />
+              <point x="-58.0" y="8.571428571428669" />
+            </edge>
+            <edge source="org.springframework:spring-context:jar:3.2.11.RELEASE/org.springframework:spring-beans:jar:3.2.11.RELEASE" target="org.springframework:spring-core:jar:3.2.11.RELEASE">
+              <point x="58.0" y="-0.0" />
+              <point x="-53.0" y="-2.727272727272748" />
+            </edge>
+            <edge source="org.codehaus.jackson:jackson-mapper-lgpl:jar:1.9.13" target="org.codehaus.jackson:jackson-core-lgpl:jar:1.9.13">
+              <point x="80.5" y="-0.0" />
+              <point x="-71.0" y="7.5" />
+            </edge>
+            <edge source="net.sf.json-lib:json-lib:jar:jdk15:2.4" target="net.sf.json-lib:json-lib:jar:jdk15:2.4/commons-beanutils:commons-beanutils:jar:1.8.0">
+              <point x="60.0" y="6.0" />
+              <point x="351.0" y="367.7689604085242" />
+              <point x="431.0" y="445.0" />
+              <point x="-78.0" y="-0.0" />
+            </edge>
+            <edge source="com.jim.novel:JimNovel:1.0-SNAPSHOT" target="commons-fileupload:commons-fileupload:jar:1.3">
+              <point x="45.0" y="5.5" />
+              <point x="-80.0" y="-0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.8999999999999999" x="582.5555555555557" y="705.2222222222222" />
+          <SelectedNodes>
+            <node>org.mybatis.generator:mybatis-generator-core:jar:1.3.5</node>
+          </SelectedNodes>
+          <Categories />
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/filter/GlobalInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-215">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/SSLHttpClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/js/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -846,67 +1971,210 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/constant/CommentConstant.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/entity/AdminFolderVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/constant/ConfigConstant.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/entity/AdminVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state relative-caret-position="75">
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/constant/UploadConstant.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/model/Article.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4588">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/entity/FolderVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/entity/GuestbookVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/entity/HeadlineVo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/entity/PageVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/exception/ValidateException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/entity/JsonVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-298">
+          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/entity/MenuVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/constant/UserConstant.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/exception/TemplateNotFoundException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/constant/SystemConstant.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/exception/FolderNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/exception/ArticleNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/model/Admin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/AuthUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/dao/AdminFolderMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="46" column="15" lean-forward="false" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
+        <state relative-caret-position="225">
+          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#809#810#0" expanded="false" />
-            <element signature="e#884#885#0" expanded="false" />
+            <marker date="1489591375000" expanded="true" signature="1170:1289" ph="select from admin_folder" />
+            <marker date="1489591375000" expanded="true" signature="1506:1579" ph="delete from " />
+            <marker date="1489591375000" expanded="true" signature="1798:2023" ph="insert into admin_folder... " />
+            <marker date="1489591375000" expanded="true" signature="3272:3668" ph="update admin... " />
+            <marker date="1489591375000" expanded="true" signature="3899:4124" ph="update admin... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/JSONTools.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/HttpTools.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/DateTools.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/FileTools.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/Base64Utils.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/XMLTools.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/StringTools.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/LoggerTools.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/JqueryEasyUIData.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/dao/AdminFolderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-403">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/dao/FolderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/dao/FolderMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="285" column="11" lean-forward="false" selection-start-line="285" selection-start-column="11" selection-end-line="285" selection-end-column="11" />
+          <folding>
+            <marker date="1489592962000" expanded="true" signature="2406:2568" ph="select , fro... " />
+            <marker date="1489592962000" expanded="true" signature="2785:2854" ph="delete from " />
+            <marker date="1489592962000" expanded="true" signature="3068:3722" ph="insert into folder... " />
+            <marker date="1489592962000" expanded="true" signature="6482:7835" ph="update folde... " />
+            <marker date="1489592962000" expanded="true" signature="8070:8745" ph="update folde... " />
+            <marker date="1489592962000" expanded="true" signature="8971:9597" ph="update folde... " />
+            <marker date="1489592962000" expanded="true" signature="9704:9826" ph="select * fro... folder" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/entity/ArticleVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/action/BaseAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/action/ArticleAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/service/ArticleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/SSUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -915,296 +2183,227 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/ImgeTools.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/HttpUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="63" column="15" lean-forward="false" selection-start-line="63" selection-start-column="15" selection-end-line="63" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1279#1280#0" expanded="false" />
-            <element signature="e#1324#1325#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/CalendarTools.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/QEncodeUtil.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/SpringContextUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-988">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/RegexUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/MediaUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2325">
-          <caret line="177" column="29" lean-forward="false" selection-start-line="177" selection-start-column="29" selection-end-line="177" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/IpUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/ueditor.config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/ueditor/define/AppInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/ueditor/define/FileType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/ueditor/define/State.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/ueditor/upload/StorageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/ueditor/define/BaseState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/ueditor/define/MultiState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/ueditor/upload/BinaryUploader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/ueditor/hunter/ImageHunter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/ueditor/define/ActionState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/ueditor/hunter/FileManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/ueditor/upload/Base64Uploader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="25" column="32" lean-forward="false" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/ueditor/ConfigManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/ueditor/PathFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2882#2883#0" expanded="false" />
-            <element signature="e#2927#2928#0" expanded="false" />
-            <element signature="e#2967#2968#0" expanded="false" />
-            <element signature="e#3040#3041#0" expanded="false" />
-            <element signature="e#3076#3077#0" expanded="false" />
-            <element signature="e#3147#3148#0" expanded="false" />
-            <element signature="e#3184#3185#0" expanded="false" />
-            <element signature="e#3255#3256#0" expanded="false" />
-            <element signature="e#3290#3291#0" expanded="false" />
-            <element signature="e#3361#3362#0" expanded="false" />
-            <element signature="e#3397#3398#0" expanded="false" />
-            <element signature="e#3468#3469#0" expanded="false" />
-            <element signature="e#3506#3507#0" expanded="false" />
-            <element signature="e#3577#3578#0" expanded="false" />
-            <element signature="e#3615#3616#0" expanded="false" />
-            <element signature="e#3686#3687#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/ueditor/Encoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/baidu/ueditor/ActionEnter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/dao/ArticleMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2820">
-          <caret line="188" column="43" lean-forward="false" selection-start-line="188" selection-start-column="43" selection-end-line="188" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/utils/PropertyUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state relative-caret-position="336">
+          <caret line="205" column="0" lean-forward="false" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1489593035000" expanded="true" signature="1734:1817" ph="select from article" />
+            <marker date="1489593035000" expanded="true" signature="2034:2106" ph="delete from " />
+            <marker date="1489593035000" expanded="true" signature="2321:2832" ph="insert into article... " />
+            <marker date="1489593035000" expanded="true" signature="5081:6115" ph="update artic... " />
+            <marker date="1489593035000" expanded="true" signature="6342:6874" ph="update artic... " />
+            <marker date="1489593035000" expanded="true" signature="6988:7148" ph="select * fro... article" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/model/Config.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/constant/ConfigConstant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="180">
+          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/dao/ArticleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" column="60" lean-forward="true" selection-start-line="51" selection-start-column="60" selection-end-line="51" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/plugins/Plugin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/static/template/blog/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/tag/ArticleListTag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/dao/ConfigMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="503">
+          <caret line="60" column="1" lean-forward="false" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/dao/AdminMapper.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.1/commons-lang-2.1.jar!/org/apache/commons/lang/StringUtils.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="380">
+          <caret line="1656" column="25" lean-forward="false" selection-start-line="1656" selection-start-column="25" selection-end-line="1656" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/freemarker/freemarker/2.3.20/freemarker-2.3.20.jar!/freemarker/template/Configuration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="87" column="20" lean-forward="false" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
+          <folding>
+            <element signature="e#14959#14960#0" expanded="true" />
+            <element signature="e#15009#15010#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="1805" column="15" lean-forward="false" selection-start-line="1805" selection-start-column="15" selection-end-line="1805" selection-end-column="15" />
+          <folding>
+            <element signature="e#70749#70750#0" expanded="false" />
+            <element signature="e#70802#70803#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/service/ConfigService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="45" column="28" lean-forward="false" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1247#1248#0" expanded="true" />
-            <element signature="e#1297#1298#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/filter/GlobalInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="83" lean-forward="false" selection-start-line="21" selection-start-column="83" selection-end-line="21" selection-end-column="83" />
+        <state relative-caret-position="169">
+          <caret line="89" column="43" lean-forward="false" selection-start-line="89" selection-start-column="43" selection-end-line="89" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/plugins/TagPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="64" lean-forward="false" selection-start-line="5" selection-start-column="64" selection-end-line="5" selection-end-column="64" />
+        <state relative-caret-position="373">
+          <caret line="39" column="64" lean-forward="false" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/service/FolderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="51" column="14" lean-forward="false" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3043#3051#0" expanded="false" />
+            <element signature="e#4082#4092#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/action/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/service/TemplateService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1652">
+          <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2200#2208#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/filter/FtlFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jim/novel/filter/ManageFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webdefault.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/logging.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="242" column="8" lean-forward="false" selection-start-line="242" selection-start-column="8" selection-end-line="242" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1300,6 +2499,7 @@
   </component>
   <component name="mavenExecuteGoalHistory">
     <option value="$PROJECT_DIR$" />
+    <option value="clean install" />
     <option value="mybatis-generator:generate" />
   </component>
 </project>

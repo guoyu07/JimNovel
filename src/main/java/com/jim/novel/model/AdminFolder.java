@@ -11,7 +11,7 @@ public class AdminFolder implements Serializable {
      *
      * @mbg.generated
      */
-    private Long adminId;
+    private Integer adminId;
 
     /**
      *
@@ -20,7 +20,7 @@ public class AdminFolder implements Serializable {
      *
      * @mbg.generated
      */
-    private Long folderId;
+    private Integer folderId;
 
     /**
      *
@@ -56,7 +56,7 @@ public class AdminFolder implements Serializable {
      *
      * @mbg.generated
      */
-    public Long getAdminId() {
+    public Integer getAdminId() {
         return adminId;
     }
 
@@ -68,7 +68,7 @@ public class AdminFolder implements Serializable {
      *
      * @mbg.generated
      */
-    public void setAdminId(Long adminId) {
+    public void setAdminId(Integer adminId) {
         this.adminId = adminId;
     }
 
@@ -80,7 +80,7 @@ public class AdminFolder implements Serializable {
      *
      * @mbg.generated
      */
-    public Long getFolderId() {
+    public Integer getFolderId() {
         return folderId;
     }
 
@@ -92,7 +92,7 @@ public class AdminFolder implements Serializable {
      *
      * @mbg.generated
      */
-    public void setFolderId(Long folderId) {
+    public void setFolderId(Integer folderId) {
         this.folderId = folderId;
     }
 

@@ -11,7 +11,7 @@ public class Chapter implements Serializable {
      *
      * @mbg.generated
      */
-    private Long chapterId;
+    private Integer chapterId;
 
     /**
      *
@@ -20,7 +20,7 @@ public class Chapter implements Serializable {
      *
      * @mbg.generated
      */
-    private Long articleId;
+    private Integer articleId;
 
     /**
      *
@@ -83,7 +83,7 @@ public class Chapter implements Serializable {
      *
      * @mbg.generated
      */
-    public Long getChapterId() {
+    public Integer getChapterId() {
         return chapterId;
     }
 
@@ -95,7 +95,7 @@ public class Chapter implements Serializable {
      *
      * @mbg.generated
      */
-    public void setChapterId(Long chapterId) {
+    public void setChapterId(Integer chapterId) {
         this.chapterId = chapterId;
     }
 
@@ -107,7 +107,7 @@ public class Chapter implements Serializable {
      *
      * @mbg.generated
      */
-    public Long getArticleId() {
+    public Integer getArticleId() {
         return articleId;
     }
 
@@ -119,7 +119,7 @@ public class Chapter implements Serializable {
      *
      * @mbg.generated
      */
-    public void setArticleId(Long articleId) {
+    public void setArticleId(Integer articleId) {
         this.articleId = articleId;
     }
 

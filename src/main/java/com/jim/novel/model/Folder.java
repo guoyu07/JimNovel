@@ -11,7 +11,7 @@ public class Folder implements Serializable {
      *
      * @mbg.generated
      */
-    private Long folderId;
+    private Integer folderId;
 
     /**
      *
@@ -20,7 +20,7 @@ public class Folder implements Serializable {
      *
      * @mbg.generated
      */
-    private Long fatherId;
+    private Integer fatherId;
 
     /**
      *
@@ -155,7 +155,7 @@ public class Folder implements Serializable {
      *
      * @mbg.generated
      */
-    public Long getFolderId() {
+    public Integer getFolderId() {
         return folderId;
     }
 
@@ -167,7 +167,7 @@ public class Folder implements Serializable {
      *
      * @mbg.generated
      */
-    public void setFolderId(Long folderId) {
+    public void setFolderId(Integer folderId) {
         this.folderId = folderId;
     }
 
@@ -179,7 +179,7 @@ public class Folder implements Serializable {
      *
      * @mbg.generated
      */
-    public Long getFatherId() {
+    public Integer getFatherId() {
         return fatherId;
     }
 
@@ -191,7 +191,7 @@ public class Folder implements Serializable {
      *
      * @mbg.generated
      */
-    public void setFatherId(Long fatherId) {
+    public void setFatherId(Integer fatherId) {
         this.fatherId = fatherId;
     }
 

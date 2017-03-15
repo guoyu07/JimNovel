@@ -11,7 +11,7 @@ public class Comment implements Serializable {
      *
      * @mbg.generated
      */
-    private Long commoentId;
+    private Integer commoentId;
 
     /**
      *
@@ -20,7 +20,7 @@ public class Comment implements Serializable {
      *
      * @mbg.generated
      */
-    private Long userId;
+    private Integer userId;
 
     /**
      *
@@ -29,7 +29,7 @@ public class Comment implements Serializable {
      *
      * @mbg.generated
      */
-    private Long fatherId;
+    private Integer fatherId;
 
     /**
      *
@@ -92,7 +92,7 @@ public class Comment implements Serializable {
      *
      * @mbg.generated
      */
-    public Long getCommoentId() {
+    public Integer getCommoentId() {
         return commoentId;
     }
 
@@ -104,7 +104,7 @@ public class Comment implements Serializable {
      *
      * @mbg.generated
      */
-    public void setCommoentId(Long commoentId) {
+    public void setCommoentId(Integer commoentId) {
         this.commoentId = commoentId;
     }
 
@@ -116,7 +116,7 @@ public class Comment implements Serializable {
      *
      * @mbg.generated
      */
-    public Long getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
@@ -128,7 +128,7 @@ public class Comment implements Serializable {
      *
      * @mbg.generated
      */
-    public void setUserId(Long userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
@@ -140,7 +140,7 @@ public class Comment implements Serializable {
      *
      * @mbg.generated
      */
-    public Long getFatherId() {
+    public Integer getFatherId() {
         return fatherId;
     }
 
@@ -152,7 +152,7 @@ public class Comment implements Serializable {
      *
      * @mbg.generated
      */
-    public void setFatherId(Long fatherId) {
+    public void setFatherId(Integer fatherId) {
         this.fatherId = fatherId;
     }
 

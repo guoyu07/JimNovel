@@ -11,7 +11,7 @@ public class Article implements Serializable {
      *
      * @mbg.generated
      */
-    private Long articleId;
+    private Integer articleId;
 
     /**
      *
@@ -20,7 +20,7 @@ public class Article implements Serializable {
      *
      * @mbg.generated
      */
-    private Long folderId;
+    private Integer folderId;
 
     /**
      *
@@ -119,7 +119,7 @@ public class Article implements Serializable {
      *
      * @mbg.generated
      */
-    public Long getArticleId() {
+    public Integer getArticleId() {
         return articleId;
     }
 
@@ -131,7 +131,7 @@ public class Article implements Serializable {
      *
      * @mbg.generated
      */
-    public void setArticleId(Long articleId) {
+    public void setArticleId(Integer articleId) {
         this.articleId = articleId;
     }
 
@@ -143,7 +143,7 @@ public class Article implements Serializable {
      *
      * @mbg.generated
      */
-    public Long getFolderId() {
+    public Integer getFolderId() {
         return folderId;
     }
 
@@ -155,7 +155,7 @@ public class Article implements Serializable {
      *
      * @mbg.generated
      */
-    public void setFolderId(Long folderId) {
+    public void setFolderId(Integer folderId) {
         this.folderId = folderId;
     }
 
