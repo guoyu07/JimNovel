@@ -5,12 +5,14 @@ import com.jim.novel.entity.ArticleVo;
 import com.jim.novel.exception.ArticleNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 /**
  * Created by run on 17/3/14.
  */
+@Service
 public class ArticleService {
     @Autowired
     private ArticleMapper articleDao;
