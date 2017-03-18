@@ -8,3 +8,4 @@
 - MyBatis Generator
 - Freemarker
 - UEditor
+- Redis
