@@ -1,48 +1,158 @@
-<#assign config_v="20141009044">
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="${shishuo_seo_description}">
-<meta name="author" content="师说CMS">
-<link rel="icon" href="${TEMPLATE_BASE_PATH}/images/favicon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta content="telephone=no" name="format-detection">
 
-<title>${shishuo_seo_title}</title>
+    <link href="${TEMPLATE_BASE_PATH}/css/main.css" rel="stylesheet" type="text/css" />
 
-<!-- Bootstrap core CSS -->
-<link href="${TEMPLATE_BASE_PATH}/css/bootstrap.min.css" rel="stylesheet">
+    <title>Home</title>
 
-<!-- Custom styles for this template -->
-<link href="${TEMPLATE_BASE_PATH}/css/blog.css" rel="stylesheet">
-
-<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-<!--[if lt IE 9]><script src="${TEMPLATE_BASE_PATH}/js/ie8-responsive-file-warning.js"></script><![endif]-->
-<script src="${TEMPLATE_BASE_PATH}/js/ie-emulation-modes-warning.js"></script>
-
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-      <script src="${TEMPLATE_BASE_PATH}/js/html5shiv.min.js"></script>
-      <script src="${TEMPLATE_BASE_PATH}/js/respond.min.js"></script>
-    <![endif]-->
 </head>
-
 <body>
-	<div class="blog-masthead">
-		<div class="container">
-			<nav class="blog-nav">
-			<@shishuo_folder_list_tag folderId= 0>
-			<a class="blog-nav-item <#if 0==g_folderId>active</#if>" href="${BASE_PATH}/index.htm">首页</a>
-	                <#list tag_folder_list as tag_folder>
-	                	<a class="blog-nav-item <#if tag_folder.folderId==g_folderId>active</#if>" href="<@shishuo_folder_url_tag folderId=tag_folder.folderId/>">${tag_folder.name}</a>
-			</#list>
-           		</@shishuo_folder_list_tag>
-			</nav>
-		</div>
-	</div>
-	<div class="container">
-		<div class="blog-header">
-			<h1 class="blog-title">${shishuo_seo_title}</h1>
-			<p class="lead blog-description">${shishuo_seo_description}</p>
-		</div>
+<!-- Header -->
+<header id="header" class="header">
+    <div class="header__top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="wrap-logo">
+                        <a href="index.html" class="logo"></a>
+                    </div>
+                </div>
+                <div class="col-sm-offset-2 col-md-offset-5 col-sm-6 col-md-4 hidden-xs">
+                    <div class="col-xs-4 col-sm-5">
+                        <div class="weather">
+                            <div class="weather__temperature">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <em class="active">用户名</em>
+
+
+                            </div>
+                            <div class="weather__city">
+                                <em>none</em>
+                                <div class="weather__city__list">
+                                    <ul>
+                                        <li class="active">
+                                            <a href="#">读者  come in</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">后台  come in </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">作家 come in</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-7">
+                        <div class="exchange">
+                            <ul>
+                                <li><a href="register.html">注册</a></li>
+                                <li><a href="login.html">登陆</a></li>
+                                <li><a href="bookshelf.html"><span class="glyphicon glyphicon-align-left"></span>我的书架</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wsmenucontent overlapblackbg"></div>
+    <div class="wsmenuexpandermain slideRight">
+        <a id="navToggle" class="animated-arrow slideLeft">
+            <span></span>
+        </a>
+    </div>
+    <div class="header_down">
+        <div class="container">
+            <div class="wrapper clearfix bigmegamenu">
+                <!--Main Menu HTML Code-->
+                <nav class="wsmenu slideLeft clearfix">
+                    <ul class="mobile-sub wsmenu-list">
+                        <li class="visible-xs">
+                            <form class="navbar-form mob_search" role="search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <button type="submit" class="btn btn-search">
+                                    <i class="icon-search"></i>
+                                </button>
+                            </form>
+                        </li>
+                        <li class="active">
+                            <span class="wsmenu-click"></span>
+                            <a href="index.html">首頁</a>
+                        </li>
+					<@shishuo_folder_list_tag folderId= 0>
+						<#list tag_folder_list as tag_folder>
+                            <li class="active">
+                                <span class="wsmenu-click"></span>
+                                <a href="index.html">${tag_folder.name}</a>
+                            </li>
+						</#list>
+					</@shishuo_folder_list_tag>
+
+
+                        <li class="navbar-right hidden-xs">
+                            <form class="navbar-form" role="search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <button type="submit" class="btn btn-search">
+                                    <i class="icon-search"></i>
+                                    <br/>Search
+                                </button>
+                            </form>
+                        </li>
+                        <li>
+                            <div class="visible-xs col-sm-offset-5 col-sm-4">
+                                <div class="col-sm-5">
+                                    <div class="weather">
+                                        <div class="weather__temperature">
+                                            <span class="glyphicon glyphicon-user"></span>
+                                            <em class="active">用户名</em>
+                                        </div>
+                                        <div class="weather__city">
+                                            <em>none</em>
+                                            <div class="weather__city__list">
+                                                <ul>
+                                                    <li class="active">
+                                                        <a href="#">读者  come in</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">后台  come in </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">作家 come in</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-7">
+                                    <div class="exchange">
+                                        <ul>
+                                            <li><a href="#">注册</a></li>
+                                            <li><a href="#">登陆</a></li>
+                                            <li><a href="#"><span class="glyphicon glyphicon-align-left"></span>我的书架</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!--Menu HTML Code-->
+            </div>
+        </div>
+    </div>
+</header>

@@ -40,7 +40,7 @@ public class ConfigService {
 	 */
 	public Config addConfig(String key, String value) {
 		Config config = new Config();
-		config.setKey(key);
+		config.setKeymap(key);
 		config.setValue(value);
 		config.setCreateTime(new Date());
 		configMapper.insert(config);
