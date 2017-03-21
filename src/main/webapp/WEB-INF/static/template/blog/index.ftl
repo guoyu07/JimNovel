@@ -7,11 +7,11 @@
             <!-- Tab panes -->
             <div class="col-sm-8 tab-content tab-content_mob-p0">
 
-            <@shishuo_article_page_tag folderId=1 p=1 rows="8">
+            <@shishuo_popular_article_tag  p=1 rows=4 count=4>
 
-                        <#list tag_article_page.list as tag_article>
-                            <div role="tabpanel" class="tab-pane fade in active" id="home">
-                                <a href="full-width.html"><img src="img/content/slide4.jpg" alt="main img" class="tab-pane__img"></a>
+                        <#list tag_hot_article.list as tag_article>
+                            <div role="tabpanel" class="tab-pane fade<#if 0==tag_article_index> in active</#if>" id="${tag_article.folder.ename}">
+                                <a href="full-width.html"><img src="${tag_article.imgUrl}" alt="main img" class="tab-pane__img"></a>
                                 <div class="header_news_text tab-pane__block">
                                     <p class="tab-pane__category yel_line"> ${tag_article.createTime?string("yyyy-MM-dd")}</p>
                                     <a class="tab-pane__title">${tag_article.title}</a>
@@ -20,50 +20,31 @@
                             </div>
                         </#list>
 
-            </@shishuo_article_page_tag>
+            </@shishuo_popular_article_tag>
 
-
-
-                <div role="tabpanel" class="tab-pane fade in active" id="home">
-                    <a href="full-width.html"><img src="img/content/slide4.jpg" alt="main img" class="tab-pane__img"></a>
-                    <div class="header_news_text tab-pane__block">
-                        <p class="tab-pane__category yel_line">武侠</p>
-                        <a class="tab-pane__title">三生三世十里桃花</a>
-                        <p class="tab-pane__text">累世情缘，谁捡起，谁抛下，谁忘前尘，谁总牵挂。忆当时年华，谁点相思，谁种桃花。</p>
-                    </div>
-                </div>
-                <div role="tabpanel" class="tab-pane fade" id="profile">
-                    <a href="full-width.html" ><img src="img/content/slide3.jpg" alt="main img" class="tab-pane__img"></a>
-                    <div class="header_news_text tab-pane__block">
-                        <p class="tab-pane__category yel_line">科幻</p>
-                        <a class="tab-pane__title">时间之墟</a>
-                        <p class="tab-pane__text">我们的大脑只不过是用来挂记忆这件衣服的钉子而已，必须要有钉子挂住它，但衣服却不在钉子里。</p>
-                    </div>
-                </div>
 
             </div>
             <!-- END Tab panes -->
             <!-- Nav tabs -->
             <div class="col-sm-4 news-tabs">
                 <p class="news-tabs__title h2">今日热门</p>
-                <ul class="news-tabs__nav nav nav-tabs shadow_text" role="tablist">
-                    <li role="presentation" class="active">
-                        <a href="#home" role="tab" data-toggle="tab">
-                            <span class="time">No.1</span>
-                            三生三世十里桃花 <span class="glyphicon glyphicon-edit" style="padding-left: 5px;" >唐七公子</span>
-                            <p>恩怨纠葛如浮云过,她遗憾没在最好的年华里遇上他。
-                            </p>
-                        </a>
-                    </li>
-                    <li role="presentation">
-                        <a href="#profile" role="tab" data-toggle="tab">
-                            <span class="time">No.2</span>
-                            时间之墟<span class="glyphicon glyphicon-edit" style="padding-left: 5px;" >宝树</span>
-                            <p>灵魂仿佛涣散到无边的空间中，没有光明，没有身体，没有时间。 </p>
-                        </a>
-                    </li>
 
+                <ul class="news-tabs__nav nav nav-tabs shadow_text" role="tablist">
+                    <@shishuo_popular_article_tag  p=1 rows=4 count=4>
+                        <#list tag_hot_article.list as tag_article>
+
+                                <li role="presentation" <#if 0==tag_article_index>class="active"</#if>>
+                                    <a href="#${tag_article.folder.ename}" role="tab" data-toggle="tab">
+                                        <span class="time">No.${tag_article_index+1}</span>
+                                    ${tag_article.title} <span class="glyphicon glyphicon-edit" style="padding-left: 5px;" >${tag_article.author}</span>
+                                        <p>${tag_article.keyword}</p>
+                                    </a>
+                                </li>
+
+                        </#list>
+                    </@shishuo_popular_article_tag>
                 </ul>
+
             </div>
             <!-- END Nav tabs -->
         </div>

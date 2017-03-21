@@ -331,4 +331,9 @@
     where
     path like #{path}"%" and status = '1'
   </select>
+  <select id="getPopularList" resultType="com.jim.novel.entity.ArticleVo">
+    select *
+    from article
+    order by view_count desc limit #{offset},#{rows}
+  </select>
 </mapper>

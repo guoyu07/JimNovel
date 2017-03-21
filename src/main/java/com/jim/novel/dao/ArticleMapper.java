@@ -46,8 +46,8 @@ public interface ArticleMapper {
      * @return List<FileVo>
      */
     List<ArticleVo> getArticleListOfDisplayByPath(
-            @Param("path") String path, @Param("offset") long offset,
-            @Param("rows") long rows);
+            @Param("path") String path, @Param("offset") int offset,
+            @Param("rows") int rows);
     /**
      * @param firstFolderId
      * @param secondFolderId
@@ -55,7 +55,7 @@ public interface ArticleMapper {
      * @param fourthFolderId
      * @return
      */
-    int getArticleCountByAdminIdAndPath(@Param("adminId") long adminId,
+    int getArticleCountByAdminIdAndPath(@Param("adminId") int adminId,
                                                @Param("path") String path)
                                             ;
     /**
@@ -64,8 +64,11 @@ public interface ArticleMapper {
      * @param foderId
      * @return List<FileVo>
      */
-    public List<ArticleVo> getArticleListByAdminIdAndPath(
-            @Param("adminId") long adminId, @Param("path") String path,
+    List<ArticleVo> getArticleListByAdminIdAndPath(
+            @Param("adminId") int adminId, @Param("path") String path,
             @Param("status") int status,
-            @Param("offset") long offset, @Param("rows") long rows);
+            @Param("offset") int offset, @Param("rows") int rows);
+
+    List<ArticleVo> getPopularList(@Param("offset") int offset, @Param("rows") int rows);
+
 }

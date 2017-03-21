@@ -6,7 +6,7 @@
 
 package com.jim.novel.tag;
 
-import com.jim.novel.constant.FolderConstant;
+import com.jim.novel.constant.enums.FolderDisplay;
 import com.jim.novel.entity.FolderVo;
 import com.jim.novel.exception.FolderNotFoundException;
 import com.jim.novel.model.Folder;
@@ -39,7 +39,7 @@ public class FolderListTag extends TagPlugin {
 	public void execute(Environment env, Map params, TemplateModel[] loopVars,
 			TemplateDirectiveBody body) throws TemplateException, IOException {
 
-		long folderId = 0;
+		int folderId = 0;
 		List<FolderVo> list = new ArrayList<FolderVo>();
 		// 获取页面的参数
 		try {
@@ -51,7 +51,7 @@ public class FolderListTag extends TagPlugin {
 				folderId = folder.getFolderId();
 			}
 			list = folderService.getFolderListByFatherId(folderId,
-					FolderConstant.status.display);
+					FolderDisplay.SHOW);
 		} catch (FolderNotFoundException e) {
 			// 丢弃
 		}

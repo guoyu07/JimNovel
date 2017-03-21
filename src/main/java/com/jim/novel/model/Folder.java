@@ -23,7 +23,7 @@ public class Folder {
 
     private Integer count;
 
-    private String status;
+    private String display;
 
     private String check;
 
@@ -54,7 +54,7 @@ public class Folder {
     }
 
     public void setEname(String ename) {
-        this.ename = ename == null ? null : ename.trim();
+        this.ename = ename;
     }
 
     public String getName() {
@@ -62,7 +62,7 @@ public class Folder {
     }
 
     public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+        this.name = name;
     }
 
     public String getPath() {
@@ -70,7 +70,7 @@ public class Folder {
     }
 
     public void setPath(String path) {
-        this.path = path == null ? null : path.trim();
+        this.path = path;
     }
 
     public Byte getLevel() {
@@ -113,12 +113,12 @@ public class Folder {
         this.count = count;
     }
 
-    public String getStatus() {
-        return status;
+    public String getDisplay() {
+        return display;
     }
 
-    public void setStatus(String status) {
-        this.status = status == null ? null : status.trim();
+    public void setDisplay(String display) {
+        this.display = display;
     }
 
     public String getCheck() {
@@ -126,7 +126,7 @@ public class Folder {
     }
 
     public void setCheck(String check) {
-        this.check = check == null ? null : check.trim();
+        this.check = check;
     }
 
     public Date getCreateTime() {
@@ -150,6 +150,6 @@ public class Folder {
     }
 
     public void setContent(String content) {
-        this.content = content == null ? null : content.trim();
+        this.content = content;
     }
 }

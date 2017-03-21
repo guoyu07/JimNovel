@@ -1,6 +1,5 @@
 package com.jim.novel.service;
 
-import com.jim.novel.constant.ArticleConstant;
 import com.jim.novel.constant.enums.ArticleStatus;
 import com.jim.novel.dao.ArticleMapper;
 import com.jim.novel.entity.ArticleVo;
@@ -13,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -27,6 +25,8 @@ public class ArticleService {
     @Autowired
     private FolderService folderService;
 
+    @Autowired
+    private UserService userService;
 
     @Cacheable(value = "article", key = "'getArticleById_'+#articleId")
     public ArticleVo getArticleById(int articleId)
@@ -75,6 +75,28 @@ public class ArticleService {
     }
 
 
+    /**获取热门文章
+     *
+     * @param pageNum
+     * @param rows
+     * @return
+     */
+    public PageVo<ArticleVo> getPopularArticle(int pageNum,int rows,int count) throws FolderNotFoundException {
+        PageVo<ArticleVo> pageVo = new PageVo<>(pageNum);
+        pageVo.setRows(rows);
+        pageVo.setCount(count);
+        List<ArticleVo> articleVoList = articleDao.getPopularList(pageVo.getOffset(),rows);
+        for (ArticleVo article :
+                articleVoList) {
+            FolderVo articleFolder = folderService.getFolderById(article.getFolderId());
+            String authorNmae = userService.getAuthorNmaeByUserId(article.getOwnerId());
+            article.setAuthor(authorNmae);
+            article.setFolder(articleFolder);
+        }
+        pageVo.setList(articleVoList);
+        return pageVo;
+
+    }
     /**
      * 得到目录的显示的文件分页
      *

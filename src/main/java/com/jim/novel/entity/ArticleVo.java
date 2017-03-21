@@ -15,12 +15,26 @@ public class ArticleVo extends Article {
 
 	private String pictureUrl;
 
+	private String author;
+
 	public String getPictureUrl() {
 		if (StringUtils.isBlank(this.getPictureUrl())) {
 			return "upload/blank.jpg";
 		} else {
 			return this.getPictureUrl();
 		}
+	}
+
+	public void setPictureUrl(String pictureUrl) {
+		this.pictureUrl = pictureUrl;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
 	}
 
 	public Folder getFolder() {
@@ -34,6 +48,7 @@ public class ArticleVo extends Article {
 	public List<FolderVo> getFolderPathList() {
 		return folderPathList;
 	}
+
 
 	public void setFolderPathList(List<FolderVo> folderPathList) {
 		this.folderPathList = folderPathList;

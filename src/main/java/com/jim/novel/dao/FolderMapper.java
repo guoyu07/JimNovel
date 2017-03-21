@@ -1,6 +1,6 @@
 package com.jim.novel.dao;
 
-import com.jim.novel.constant.FolderConstant;
+import com.jim.novel.constant.enums.FolderDisplay;
 import com.jim.novel.entity.FolderVo;
 import com.jim.novel.model.Folder;
 import com.jim.novel.model.FolderExample;
@@ -36,7 +36,7 @@ public interface FolderMapper {
 
     int updateByPrimaryKey(Folder record);
 
-    public FolderVo getFolderById(@Param("folderId") long folderId);
+    public FolderVo getFolderById(@Param("folderId") int folderId);
 
     /**
      * 通过ename获得指定目录
@@ -54,6 +54,6 @@ public interface FolderMapper {
      * @return List<FolderVo>
      */
     public List<FolderVo> getFolderListByFatherId(
-            @Param("fatherId") long fatherId,
-            @Param("status") FolderConstant.status status);
+            @Param("fatherId") int fatherId,
+            @Param("display") int display);
 }

@@ -22,12 +22,6 @@ public interface ConfigMapper {
 
     Config selectByPrimaryKey(String keymap);
 
-    int updateByExampleSelective(@Param("record") Config record, @Param("example") ConfigExample example);
-
-    int updateByExampleWithBLOBs(@Param("record") Config record, @Param("example") ConfigExample example);
-
-    int updateByExample(@Param("record") Config record, @Param("example") ConfigExample example);
-
     int updateByPrimaryKeySelective(Config record);
 
     int updateByPrimaryKeyWithBLOBs(Config record);

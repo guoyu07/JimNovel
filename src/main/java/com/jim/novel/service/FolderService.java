@@ -1,6 +1,6 @@
 package com.jim.novel.service;
 
-import com.jim.novel.constant.FolderConstant;
+import com.jim.novel.constant.enums.FolderDisplay;
 import com.jim.novel.dao.FolderMapper;
 import com.jim.novel.entity.FolderVo;
 import com.jim.novel.exception.FolderNotFoundException;
@@ -114,9 +114,9 @@ public class FolderService {
      * @return List<Folder>
      */
     @Cacheable(value = "folder")
-    public List<FolderVo> getFolderListByFatherId(long fatherId,
-                                                  FolderConstant.status status) {
-        return folderDao.getFolderListByFatherId(fatherId, status);
+    public List<FolderVo> getFolderListByFatherId(int fatherId,
+                                                  FolderDisplay display) {
+        return folderDao.getFolderListByFatherId(fatherId, display.getValue());
     }
 
     public int firstFolderId(int folderId) {

@@ -12,8 +12,7 @@
     <result column="width" property="width" jdbcType="INTEGER" />
     <result column="height" property="height" jdbcType="INTEGER" />
     <result column="count" property="count" jdbcType="INTEGER" />
-    <result column="status" property="status" jdbcType="VARCHAR" />
-    <result column="check" property="check" jdbcType="CHAR" />
+    <result column="display" property="display" jdbcType="VARCHAR" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
   </resultMap>
@@ -79,8 +78,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    folder_id, father_id, ename, name, path, level, sort, width, height, count, status, 
-    check, create_time, modify_time
+    folder_id, father_id, ename, name, path, level, sort, width, height, count, display, 
+     create_time, modify_time
   </sql>
   <sql id="Blob_Column_List" >
     content
@@ -121,11 +120,9 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+  <select id="selectByPrimaryKey" resultType="com.jim.novel.entity.FolderVo" parameterType="java.lang.Integer" >
     select 
-    <include refid="Base_Column_List" />
-    ,
-    <include refid="Blob_Column_List" />
+    *
     from folder
     where folder_id = #{folderId,jdbcType=INTEGER}
   </select>
@@ -143,13 +140,13 @@
     insert into folder (folder_id, father_id, ename, 
       name, path, level, 
       sort, width, height, 
-      count, status, check, 
+      count, display,
       create_time, modify_time, content
       )
     values (#{folderId,jdbcType=INTEGER}, #{fatherId,jdbcType=INTEGER}, #{ename,jdbcType=VARCHAR}, 
       #{name,jdbcType=VARCHAR}, #{path,jdbcType=VARCHAR}, #{level,jdbcType=TINYINT}, 
       #{sort,jdbcType=TINYINT}, #{width,jdbcType=INTEGER}, #{height,jdbcType=INTEGER}, 
-      #{count,jdbcType=INTEGER}, #{status,jdbcType=VARCHAR}, #{check,jdbcType=CHAR}, 
+      #{count,jdbcType=INTEGER}, #{display,jdbcType=VARCHAR},
       #{createTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP}, #{content,jdbcType=LONGVARCHAR}
       )
   </insert>
@@ -186,11 +183,8 @@
       <if test="count != null" >
         count,
       </if>
-      <if test="status != null" >
-        status,
-      </if>
-      <if test="check != null" >
-        check,
+      <if test="display != null" >
+        display,
       </if>
       <if test="createTime != null" >
         create_time,
@@ -233,12 +227,10 @@
       <if test="count != null" >
         #{count,jdbcType=INTEGER},
       </if>
-      <if test="status != null" >
-        #{status,jdbcType=VARCHAR},
+      <if test="display != null" >
+        #{display,jdbcType=VARCHAR},
       </if>
-      <if test="check != null" >
-        #{check,jdbcType=CHAR},
-      </if>
+
       <if test="createTime != null" >
         #{createTime,jdbcType=TIMESTAMP},
       </if>
@@ -289,11 +281,8 @@
       <if test="record.count != null" >
         count = #{record.count,jdbcType=INTEGER},
       </if>
-      <if test="record.status != null" >
-        status = #{record.status,jdbcType=VARCHAR},
-      </if>
-      <if test="record.check != null" >
-        check = #{record.check,jdbcType=CHAR},
+      <if test="record.display != null" >
+        display = #{record.display,jdbcType=VARCHAR},
       </if>
       <if test="record.createTime != null" >
         create_time = #{record.createTime,jdbcType=TIMESTAMP},
@@ -321,8 +310,7 @@
       width = #{record.width,jdbcType=INTEGER},
       height = #{record.height,jdbcType=INTEGER},
       count = #{record.count,jdbcType=INTEGER},
-      status = #{record.status,jdbcType=VARCHAR},
-      check = #{record.check,jdbcType=CHAR},
+      display = #{record.display,jdbcType=VARCHAR},
       create_time = #{record.createTime,jdbcType=TIMESTAMP},
       modify_time = #{record.modifyTime,jdbcType=TIMESTAMP},
       content = #{record.content,jdbcType=LONGVARCHAR}
@@ -342,8 +330,7 @@
       width = #{record.width,jdbcType=INTEGER},
       height = #{record.height,jdbcType=INTEGER},
       count = #{record.count,jdbcType=INTEGER},
-      status = #{record.status,jdbcType=VARCHAR},
-      check = #{record.check,jdbcType=CHAR},
+      display = #{record.display,jdbcType=VARCHAR},
       create_time = #{record.createTime,jdbcType=TIMESTAMP},
       modify_time = #{record.modifyTime,jdbcType=TIMESTAMP}
     <if test="_parameter != null" >
@@ -380,12 +367,10 @@
       <if test="count != null" >
         count = #{count,jdbcType=INTEGER},
       </if>
-      <if test="status != null" >
-        status = #{status,jdbcType=VARCHAR},
+      <if test="display != null" >
+        display = #{display,jdbcType=VARCHAR},
       </if>
-      <if test="check != null" >
-        check = #{check,jdbcType=CHAR},
-      </if>
+
       <if test="createTime != null" >
         create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
@@ -409,8 +394,7 @@
       width = #{width,jdbcType=INTEGER},
       height = #{height,jdbcType=INTEGER},
       count = #{count,jdbcType=INTEGER},
-      status = #{status,jdbcType=VARCHAR},
-      check = #{check,jdbcType=CHAR},
+      display = #{display,jdbcType=VARCHAR},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       modify_time = #{modifyTime,jdbcType=TIMESTAMP},
       content = #{content,jdbcType=LONGVARCHAR}
@@ -427,8 +411,7 @@
       width = #{width,jdbcType=INTEGER},
       height = #{height,jdbcType=INTEGER},
       count = #{count,jdbcType=INTEGER},
-      status = #{status,jdbcType=VARCHAR},
-      check = #{check,jdbcType=CHAR},
+      display = #{display,jdbcType=VARCHAR},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       modify_time = #{modifyTime,jdbcType=TIMESTAMP}
     where folder_id = #{folderId,jdbcType=INTEGER}
@@ -437,7 +420,7 @@
 
   <select id="getFolderListByFatherId" resultType="com.jim.novel.entity.FolderVo">
     select * from folder where father_id=#{fatherId}
-    <if test="status !=null">and status = #{status}</if>
+    <if test="display !=null">and display = #{display}</if>
     order by sort
   </select>
 

@@ -87,9 +87,9 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+  <select id="selectByPrimaryKey" resultType="com.jim.novel.entity.UserVo" parameterType="java.lang.Integer" >
     select 
-    <include refid="Base_Column_List" />
+    *
     from user
     where id = #{id,jdbcType=INTEGER}
   </select>
