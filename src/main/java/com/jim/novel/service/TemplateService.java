@@ -77,7 +77,7 @@ public class TemplateService {
 	}
 
 	/**
-	 * 得到文件夹模板
+	 * 得到目录视图模板
 	 * 
 	 * @param folderId
 	 * @return

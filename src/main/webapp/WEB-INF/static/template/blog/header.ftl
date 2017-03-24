@@ -93,9 +93,9 @@
                         </li>
 					<@shishuo_folder_list_tag folderId= 0>
 						<#list tag_folder_list as tag_folder>
-                            <li class="active">
+                            <li <#if tag_folder.folderId==g_folderId>class="active"</#if> >
                                 <span class="wsmenu-click"></span>
-                                <a href="index.html">${tag_folder.name}</a>
+                                <a href="<@shishuo_folder_url_tag folderId=tag_folder.folderId/>">${tag_folder.name}</a>
                             </li>
 						</#list>
 					</@shishuo_folder_list_tag>

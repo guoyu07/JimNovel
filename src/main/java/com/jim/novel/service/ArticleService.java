@@ -121,6 +121,8 @@ public class ArticleService {
         for (ArticleVo artcle : articlelist) {
             FolderVo artcleFolder = folderService
                     .getFolderById(artcle.getFolderId());
+            String authorNmae = userService.getAuthorNmaeByUserId(artcle.getOwnerId());
+            artcle.setAuthor(authorNmae);
             artcle.setFolder(artcleFolder);
         }
         pageVo.setList(articlelist);
