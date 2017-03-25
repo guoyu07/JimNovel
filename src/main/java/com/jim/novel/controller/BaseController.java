@@ -1,6 +1,7 @@
 package com.jim.novel.controller;
 
 import com.jim.novel.service.ArticleService;
+import com.jim.novel.service.ChapterService;
 import com.jim.novel.service.FolderService;
 import com.jim.novel.service.TemplateService;
 import org.apache.log4j.Logger;
@@ -18,6 +19,9 @@ public class BaseController {
 
     @Autowired
     protected TemplateService themeService;
+
+    @Autowired
+    protected ChapterService chapterService;
 
 
     protected final Logger logger = Logger.getLogger(this.getClass());

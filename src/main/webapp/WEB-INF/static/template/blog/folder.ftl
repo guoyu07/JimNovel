@@ -1,5 +1,42 @@
 <#include "header.ftl">
 <!-- Content-->
+<style type="text/css">
+    .contents .row{
+        margin: 20px 0;
+    }
+    a{
+        color: #fff;;
+    }
+    .items{
+        display: inline;
+        margin: auto;
+        display: block;
+        float: none;
+        vertical-align: top;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .items .col-md-2 {
+        padding: 10px 0;
+        box-shadow:0 0 10px #888;
+    }
+
+    .items .col-md-4{
+        background-color: rgba(187, 196, 200, 0.38);
+        height: 249px;
+
+    }
+    .items .col-md-4 h4{
+        color:#148216;
+    }
+    .items .col-md-4 h3{
+        color:#f38844 ;
+        font-weight: bold;
+    }
+    .ajax_load{
+        margin-bottom: 20px;
+    }
+</style>
 <div class="container">
     <div class="contents" id="contents">
         <div class="row">
@@ -13,7 +50,7 @@
                             <h3>${article.title}</h3>
                             <h4>作者：<span>${article.author}</span></h4>
                             <p>${article.keyword}</p>
-                            <a href="full-width.html" target="_blank"><button class="btn btn-success">点击阅读</button></a>
+                            <a href="<@shishuo_article_url_tag articleId=article.articleId/>" target="_blank"><button class="btn btn-success">点击阅读</button></a>
                             <a href="full-width.html" target="_blank"><button class="btn btn-success"><span class="glyphicon glyphicon-arrow-down"></span>阅读量：${article.viewCount}</button></a>
                             <a href="full-width.html" target="_blank"><button class="btn btn-success"><span  class="glyphicon glyphicon-star"></span>加入书架</button></a>
                         </div>
@@ -35,17 +72,5 @@
         </svg>
     </div>
 </div>
-<script type="text/javascript">
-    //      	$(".items .col-md-4 >button:eq(2)").on('click',function(){$(this).find('.glyphicon').toggleClass('glyphicon-star-empty')});
-
-    //多行文本溢出显示省略号
-    $('.col-md-4 p').each(function(){
-        var maxwidth=125;
-        if($(this).text().length>maxwidth){
-            $(this).text($(this).text().substring(0,maxwidth));
-            $(this).html($(this).html()+'...');
-        }
-    });
-</script>
 <!-- END content-->
 <#include "footer.ftl">

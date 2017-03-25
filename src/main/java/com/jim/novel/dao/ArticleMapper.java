@@ -21,6 +21,11 @@ public interface ArticleMapper {
 
     List<Article> selectByExample(ArticleExample example);
 
+    /**
+     * 文章信息包括作者姓名
+     * @param articleId
+     * @return
+     */
     ArticleVo selectByPrimaryKey(Integer articleId);
 
     int updateByExampleSelective(@Param("record") Article record, @Param("example") ArticleExample example);

@@ -9,18 +9,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-/**小说控制器
- * Created by run on 17/3/13.
- */
+/**
+ * 小说章节控制器
+ *
+ * @author
+ * @create 2017-03-25 22:40
+ **/
 @Controller
-@RequestMapping("/article")
-public class ArticleController extends BaseController {
-    @RequestMapping(value = "/{articleId}.htm", method = RequestMethod.GET)
-    public String article(@PathVariable int articleId,
+@RequestMapping("/chapter")
+public class ChapterController extends BaseController{
+    @RequestMapping(value = "/{chapter}.htm", method = RequestMethod.GET)
+    public String chapter(@PathVariable int articleId,
+                          @RequestParam(value = "p", defaultValue = "1") int p,
                           ModelMap modelMap) {
         try {
             ArticleVo article = articleService.getArticleWithAutorName(articleId);
             Folder folder = folderService.getFolderById(article.getFolderId());
+            modelMap.addAttribute("p", p);
             modelMap.addAttribute("folder", folder);
             modelMap.addAttribute("article", article);
             modelMap.addAttribute("g_folderId", folderService.firstFolderId(folder.getFolderId()));

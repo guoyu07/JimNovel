@@ -17,6 +17,16 @@ public class Chapter {
 
     private String content;
 
+    private Integer sort;
+
+    public Integer getSort() {
+        return sort;
+    }
+
+    public void setSort(Integer sort) {
+        this.sort = sort;
+    }
+
     public Integer getChapterId() {
         return chapterId;
     }
