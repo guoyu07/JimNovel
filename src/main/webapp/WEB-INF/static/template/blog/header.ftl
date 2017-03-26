@@ -89,7 +89,7 @@
                         </li>
                         <li class="active">
                             <span class="wsmenu-click"></span>
-                            <a href="index.html">首頁</a>
+                            <a href="/">首頁</a>
                         </li>
 					<@shishuo_folder_list_tag folderId= 0>
 						<#list tag_folder_list as tag_folder>

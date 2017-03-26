@@ -22,15 +22,12 @@ public interface CommentMapper {
 
     Comment selectByPrimaryKey(Integer commoentId);
 
-    int updateByExampleSelective(@Param("record") Comment record, @Param("example") CommentExample example);
-
-    int updateByExampleWithBLOBs(@Param("record") Comment record, @Param("example") CommentExample example);
-
-    int updateByExample(@Param("record") Comment record, @Param("example") CommentExample example);
 
     int updateByPrimaryKeySelective(Comment record);
 
     int updateByPrimaryKeyWithBLOBs(Comment record);
 
     int updateByPrimaryKey(Comment record);
+
+    List<Comment> selectCommentsByChapterId(Integer chapterID);
 }

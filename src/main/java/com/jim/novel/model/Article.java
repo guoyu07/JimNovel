@@ -13,6 +13,8 @@ public class Article {
 
     private String imgUrl;
 
+    private String smallImgUrl;
+
     private String title;
 
     private String keyword;
@@ -24,6 +26,14 @@ public class Article {
     private Date createTime;
 
     private Date modifyTime;
+
+    public String getSmallImgUrl() {
+        return smallImgUrl;
+    }
+
+    public void setSmallImgUrl(String smallImgUrl) {
+        this.smallImgUrl = smallImgUrl;
+    }
 
     public Integer getArticleId() {
         return articleId;

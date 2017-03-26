@@ -5,6 +5,8 @@ import java.util.Date;
 public class Comment {
     private Integer commoentId;
 
+    private Integer chapterId;
+
     private Integer userId;
 
     private Integer fatherId;
@@ -18,6 +20,14 @@ public class Comment {
     private Date modifyTime;
 
     private String content;
+
+    public Integer getChapterId() {
+        return chapterId;
+    }
+
+    public void setChapterId(Integer chapterId) {
+        this.chapterId = chapterId;
+    }
 
     public Integer getCommoentId() {
         return commoentId;
