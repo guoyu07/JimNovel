@@ -16,5 +16,17 @@
 <script src="${TEMPLATE_BASE_PATH}/js/bootstrap.min.js"></script>
 <!-- Custom JavaScript -->
 <script src="${TEMPLATE_BASE_PATH}/js/main.js"></script>
+<script type="text/javascript">
+    //      	$(".items .col-md-4 >button:eq(2)").on('click',function(){$(this).find('.glyphicon').toggleClass('glyphicon-star-empty')});
+
+    //多行文本溢出显示省略号
+    $('.col-md-4 p').each(function(){
+        var maxwidth=125;
+        if($(this).text().length>maxwidth){
+            $(this).text($(this).text().substring(0,maxwidth));
+            $(this).html($(this).html()+'...');
+        }
+    });
+</script>
 </body>
 </html>

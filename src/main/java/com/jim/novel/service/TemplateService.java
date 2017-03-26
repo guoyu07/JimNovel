@@ -34,6 +34,7 @@ public class TemplateService {
 
 	private static String FOLDER_TEMPLATE_PREFIX = "folder";
 	private static String FILE_TEMPLATE_PREFIX = "article";
+	private static String CHAPTER_TEMPLATE_PREFIX = "chapter";
 
 	protected final Logger logger = Logger.getLogger(this.getClass());
 
@@ -68,6 +69,7 @@ public class TemplateService {
 		themeOrderList.add("index");
 		themeOrderList.add(FOLDER_TEMPLATE_PREFIX);
 		themeOrderList.add(FILE_TEMPLATE_PREFIX);
+		themeOrderList.add(CHAPTER_TEMPLATE_PREFIX);
 		for (String theme : themeOrderList) {
 			if (this.isExist(theme)) {
 				return this.getTemplatePath(theme);
@@ -77,7 +79,7 @@ public class TemplateService {
 	}
 
 	/**
-	 * 得到文件夹模板
+	 * 得到x目录视图模板
 	 * 
 	 * @param folderId
 	 * @return

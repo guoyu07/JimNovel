@@ -119,6 +119,11 @@ public class FolderService {
         return folderDao.getFolderListByFatherId(fatherId, display.getValue());
     }
 
+    /**
+     * 获取当前id的顶级目录id
+     * @param folderId
+     * @return
+     */
     public int firstFolderId(int folderId) {
         FolderVo folder = folderDao.selectByPrimaryKey(folderId);
         String[] folderIdList = folder.getPath().split("#");

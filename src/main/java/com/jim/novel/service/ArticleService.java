@@ -7,6 +7,7 @@ import com.jim.novel.entity.FolderVo;
 import com.jim.novel.entity.PageVo;
 import com.jim.novel.exception.ArticleNotFoundException;
 import com.jim.novel.exception.FolderNotFoundException;
+import com.jim.novel.model.Article;
 import com.jim.novel.model.Folder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
@@ -121,6 +122,8 @@ public class ArticleService {
         for (ArticleVo artcle : articlelist) {
             FolderVo artcleFolder = folderService
                     .getFolderById(artcle.getFolderId());
+            String authorNmae = userService.getAuthorNmaeByUserId(artcle.getOwnerId());
+            artcle.setAuthor(authorNmae);
             artcle.setFolder(artcleFolder);
         }
         pageVo.setList(articlelist);
@@ -149,6 +152,11 @@ public class ArticleService {
         return articleList;
     }
 
+    public ArticleVo getArticleWithAutorName(int articleId){
+
+        return  articleDao.selectByPrimaryKey(articleId);
+
+    }
 
 
 }

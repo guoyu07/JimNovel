@@ -58,6 +58,7 @@ public class GlobalInterceptor implements HandlerInterceptor {
 				configService.getStringByKey("shishuo_seo_title"));
 		modelAndView.addObject("shishuo_seo_description",
 				configService.getStringByKey("shishuo_seo_description"));
+
 		MDC.put("ip", HttpUtils.getIp(request));
 	}
 
