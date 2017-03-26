@@ -146,7 +146,20 @@ a,a:hover,a:link{
 .wrap-logo {
     padding-top: 18px;
 }
-
+.user{
+    height: 70px;
+    line-height: 70px;
+}
+.user a:hover img{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.user .glyphicon-map-marker:hover{
+    transform: scale(1.2);
+}
+#user:hover{
+    background-color: #364452;
+}
 /* 2.1.Logo */
 .logo {
     display: block;

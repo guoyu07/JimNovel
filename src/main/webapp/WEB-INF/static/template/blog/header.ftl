@@ -9,7 +9,7 @@
     <meta name="HandheldFriendly" content="true">
     <meta content="telephone=no" name="format-detection">
 
-    <link href="${TEMPLATE_BASE_PATH}/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="${TEMPLATE_BASE_PATH}/css/main.css" rel="stylesheet" type="text/css"/>
 
     <title>Home</title>
 
@@ -25,31 +25,15 @@
                         <a href="index.html" class="logo"></a>
                     </div>
                 </div>
-                <div class="col-sm-offset-2 col-md-offset-5 col-sm-6 col-md-4 hidden-xs">
-                    <div class="col-xs-4 col-sm-5">
-                        <div class="weather">
-                            <div class="weather__temperature">
-                                <span class="glyphicon glyphicon-user"></span>
-                                <em class="active">用户名</em>
+                <div class="col-sm-offset-1 col-md-offset-4 col-sm-5 col-md- hidden-xs">
+                    <div class="col-xs-5 col-sm-5" id="user">
+                        <div class="user">
+                            <a href="#">
+                                <img src="static/template/blog/img/userlogo-default.png" alt="" width="40" height="40"/>
+                            </a>
+                            <em class="active" style="color: #fff;height: 40px;">none<span
+                                    class="glyphicon glyphicon-map-marker" style="padding-left:5px;"></span></em>
 
-
-                            </div>
-                            <div class="weather__city">
-                                <em>none</em>
-                                <div class="weather__city__list">
-                                    <ul>
-                                        <li class="active">
-                                            <a href="#">读者  come in</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">后台  come in </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">作家 come in</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div class="col-xs-6 col-sm-7">
@@ -57,7 +41,8 @@
                             <ul>
                                 <li><a href="register.html">注册</a></li>
                                 <li><a href="login.html">登陆</a></li>
-                                <li><a href="bookshelf.html"><span class="glyphicon glyphicon-align-left"></span>我的书架</a></li>
+                                <li><a href="bookshelf.html"><span
+                                        class="glyphicon glyphicon-align-left"></span>我的书架</a></li>
                             </ul>
                         </div>
                     </div>
@@ -91,14 +76,14 @@
                             <span class="wsmenu-click"></span>
                             <a href="index.html">首頁</a>
                         </li>
-					<@shishuo_folder_list_tag folderId= 0>
-						<#list tag_folder_list as tag_folder>
+                    <@shishuo_folder_list_tag folderId= 0>
+                        <#list tag_folder_list as tag_folder>
                             <li class="active">
                                 <span class="wsmenu-click"></span>
                                 <a href="index.html">${tag_folder.name}</a>
                             </li>
-						</#list>
-					</@shishuo_folder_list_tag>
+                        </#list>
+                    </@shishuo_folder_list_tag>
 
 
                         <li class="navbar-right hidden-xs">
@@ -125,10 +110,10 @@
                                             <div class="weather__city__list">
                                                 <ul>
                                                     <li class="active">
-                                                        <a href="#">读者  come in</a>
+                                                        <a href="#">读者 come in</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">后台  come in </a>
+                                                        <a href="#">后台 come in </a>
                                                     </li>
                                                     <li>
                                                         <a href="#">作家 come in</a>
@@ -143,7 +128,8 @@
                                         <ul>
                                             <li><a href="#">注册</a></li>
                                             <li><a href="#">登陆</a></li>
-                                            <li><a href="#"><span class="glyphicon glyphicon-align-left"></span>我的书架</a></li>
+                                            <li><a href="#"><span class="glyphicon glyphicon-align-left"></span>我的书架</a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
