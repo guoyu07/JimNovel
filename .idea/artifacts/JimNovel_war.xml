@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="JimNovel:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="JimNovel.war">
-      <element id="artifact" artifact-name="JimNovel:war exploded" />
-    </root>
-  </artifact>
-</component>
