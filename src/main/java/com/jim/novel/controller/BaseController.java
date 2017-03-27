@@ -1,9 +1,6 @@
 package com.jim.novel.controller;
 
-import com.jim.novel.service.ArticleService;
-import com.jim.novel.service.ChapterService;
-import com.jim.novel.service.FolderService;
-import com.jim.novel.service.TemplateService;
+import com.jim.novel.service.*;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -23,6 +20,8 @@ public class BaseController {
     @Autowired
     protected ChapterService chapterService;
 
+    @Autowired
+    protected UserService userService;
 
     protected final Logger logger = Logger.getLogger(this.getClass());
 }

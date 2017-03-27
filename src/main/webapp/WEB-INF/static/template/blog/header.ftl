@@ -10,8 +10,18 @@
     <meta content="telephone=no" name="format-detection">
 
     <link href="${TEMPLATE_BASE_PATH}/css/main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="${TEMPLATE_BASE_PATH}/css/login.css"/>
 
-    <title>Home</title>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+    <script src="${TEMPLATE_BASE_PATH}/js/html5shiv.js"></script>
+    <script src="${TEMPLATE_BASE_PATH}/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="${TEMPLATE_BASE_PATH}/js/jquery.min.js"></script>
+
+    <script src="${TEMPLATE_BASE_PATH}/js/Validform_v5.3.2_min.js"></script>
+
+    <title>JimNovel小说网站</title>
 
 </head>
 <body>
@@ -35,28 +45,17 @@
 
                             </div>
                             <div class="weather__city">
-                                <em>none</em>
-                                <div class="weather__city__list">
-                                    <ul>
-                                        <li class="active">
-                                            <a href="#">读者  come in</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">后台  come in </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">作家 come in</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <em><#if SESSION_USER??>${SESSION_USER.name}<#else>请先登录</#if></em>
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-6 col-sm-7">
                         <div class="exchange">
                             <ul>
-                                <li><a href="register.html">注册</a></li>
-                                <li><a href="login.html">登陆</a></li>
+                            <#if SESSION_USER??><li><a href="center/logout.htm">注销</a></li><#else>
+                                <li><a href="center/register.htm">注册</a></li>
+                                <li><a href="center/login.htm">登陆</a></li>
+                            </#if>
                                 <li><a href="bookshelf.html"><span class="glyphicon glyphicon-align-left"></span>我的书架</a></li>
                             </ul>
                         </div>
@@ -112,43 +111,7 @@
                                 </button>
                             </form>
                         </li>
-                        <li>
-                            <div class="visible-xs col-sm-offset-5 col-sm-4">
-                                <div class="col-sm-5">
-                                    <div class="weather">
-                                        <div class="weather__temperature">
-                                            <span class="glyphicon glyphicon-user"></span>
-                                            <em class="active">用户名</em>
-                                        </div>
-                                        <div class="weather__city">
-                                            <em>none</em>
-                                            <div class="weather__city__list">
-                                                <ul>
-                                                    <li class="active">
-                                                        <a href="#">读者  come in</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">后台  come in </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#">作家 come in</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-7">
-                                    <div class="exchange">
-                                        <ul>
-                                            <li><a href="#">注册</a></li>
-                                            <li><a href="#">登陆</a></li>
-                                            <li><a href="#"><span class="glyphicon glyphicon-align-left"></span>我的书架</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+
                     </ul>
                 </nav>
                 <!--Menu HTML Code-->

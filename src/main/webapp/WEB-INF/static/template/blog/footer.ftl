@@ -12,10 +12,11 @@
 </footer>
 <!-- END Footer -->
 <!-- All JavaScript libraries -->
-<script src="${TEMPLATE_BASE_PATH}/js/jquery.min.js"></script>
+
 <script src="${TEMPLATE_BASE_PATH}/js/bootstrap.min.js"></script>
 <!-- Custom JavaScript -->
 <script src="${TEMPLATE_BASE_PATH}/js/main.js"></script>
+
 <script type="text/javascript">
     //      	$(".items .col-md-4 >button:eq(2)").on('click',function(){$(this).find('.glyphicon').toggleClass('glyphicon-star-empty')});
 

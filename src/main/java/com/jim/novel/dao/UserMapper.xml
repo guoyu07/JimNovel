@@ -230,4 +230,8 @@
       email = #{email,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="getUserByEmail" resultType="com.jim.novel.entity.UserVo">
+    SELECT  * from user where email = #{email}
+  </select>
 </mapper>
