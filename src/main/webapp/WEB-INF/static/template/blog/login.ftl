@@ -16,7 +16,7 @@
         </form>
     </div>
     <div class="login-bottom">
-        <h3>新用户 &nbsp;<a href="register.html">注册</a>&nbsp;</h3>
+        <h3>新用户 &nbsp;<a href="register.htm">注册</a>&nbsp;</h3>
     </div>
 </div>
 <script type="text/javascript">

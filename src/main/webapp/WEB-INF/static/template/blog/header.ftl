@@ -52,9 +52,9 @@
                     <div class="col-xs-6 col-sm-7">
                         <div class="exchange">
                             <ul>
-                            <#if SESSION_USER??><li><a href="center/logout.htm">注销</a></li><#else>
-                                <li><a href="center/register.htm">注册</a></li>
-                                <li><a href="center/login.htm">登陆</a></li>
+                            <#if SESSION_USER??><li><a href="${BASE_PATH}/center/logout.htm">注销</a></li><#else>
+                                <li><a href="${BASE_PATH}/center/register.htm">注册</a></li>
+                                <li><a href="${BASE_PATH}/center/login.htm">登陆</a></li>
                             </#if>
                                 <li><a href="bookshelf.html"><span class="glyphicon glyphicon-align-left"></span>我的书架</a></li>
                             </ul>

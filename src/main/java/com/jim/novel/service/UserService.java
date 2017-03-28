@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Date;
 
 /**
  * Created by run on 17/3/22.
@@ -55,6 +56,31 @@ public class UserService {
         } else {
             throw new AuthException("邮箱或密码错误");
         }
+    }
+
+    /**
+     * 注册账户
+     * @param email
+     * @param password
+     */
+    public boolean register(String email,String password){
+        UserVo user = userDao.getUserByEmail(email);
+        if (user != null) {
+           return false;
+        }
+        String loginPassword = AuthUtils.getPassword(password);
+        User newUser = new User();
+        newUser.setPassword(loginPassword);
+        newUser.setEmail(email);
+        newUser.setType(0);
+        newUser.setName("未命名");
+        newUser.setOpenId("0");
+        newUser.setCreateTime(new Date());
+        newUser.setModifyTime(new Date());
+        if(userDao.insertSelective(newUser)==1){
+            return true;
+        }
+        return false;
     }
 
 }
