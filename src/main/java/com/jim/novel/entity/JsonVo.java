@@ -67,4 +67,14 @@ public class JsonVo<T> {
 			this.setResult(true);
 		}
 	}
+
+	public void setErrorMsg(String errorMsg){
+		this.setResult(false);
+		this.getErrors().put("msg",errorMsg);
+	}
+
+	public void setSuccessMsg(String errorMsg){
+		this.setResult(true);
+		this.getErrors().put("msg",errorMsg);
+	}
 }

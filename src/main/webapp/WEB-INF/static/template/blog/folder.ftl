@@ -44,7 +44,7 @@
                 <#list tag_article_page.list as article>
                     <div class="items" >
                         <div class="col-md-2">
-                            <img src="${article.imgUrl}" alt=""  width="200" height="229"/>
+                            <img src="${article.smallImgUrl}" alt=""  width="200" height="229"/>
                         </div>
                         <div class="col-md-4">
                             <h3>${article.title}</h3>

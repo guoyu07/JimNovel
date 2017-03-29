@@ -112,13 +112,10 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.jim.novel.model.User" >
-    insert into user (id, name, type, 
-      password, open_id, create_time, 
-      modify_time, avater_url, email
-      )
-    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, 
-      #{password,jdbcType=VARCHAR}, #{openId,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
-      #{modifyTime,jdbcType=TIMESTAMP}, #{avaterUrl,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}
+    insert into user ( name, password, create_time,
+      modify_time, avater_url, email)
+    values (#{name}, #{password,jdbcType=VARCHAR}, now(),
+      now(), #{avaterUrl,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.jim.novel.model.User" >
@@ -230,4 +227,8 @@
       email = #{email,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="getUserByEmail" resultType="com.jim.novel.entity.UserVo">
+    SELECT  * from user where email = #{email}
+  </select>
 </mapper>

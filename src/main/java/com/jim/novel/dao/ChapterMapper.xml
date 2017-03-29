@@ -5,4 +5,8 @@
     select * from chapter where article_id = #{articleId} order by sort
   </select>
 
+  <select id="getChapterById" resultType="com.jim.novel.entity.ChapterVo">
+    SELECT * from chapter where chapter_id = #{chapterId}
+  </select>
+
 </mapper>

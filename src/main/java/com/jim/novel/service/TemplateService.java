@@ -78,6 +78,8 @@ public class TemplateService {
 		throw new TemplateNotFoundException("模板文件：index 不存在！！");
 	}
 
+
+
 	/**
 	 * 得到x目录视图模板
 	 * 
@@ -130,6 +132,8 @@ public class TemplateService {
 			themeOrderList.add(themeString);
 		}
 		themeOrderList.add(themeString + "-" + articleId);
+
+
 		// 模板顺序反转
 		Collections.reverse(themeOrderList);
 		for (String theme : themeOrderList) {
@@ -139,6 +143,32 @@ public class TemplateService {
 		}
 		throw new TemplateNotFoundException("模板文件："
 				+ this.getTemplatePath(FILE_TEMPLATE_PREFIX) + " 不存在！！");
+	}
+
+
+	public String getChapterTemplate()
+			throws TemplateNotFoundException, FolderNotFoundException {
+//		List<FolderVo> folderPathList = folderService
+//				.getFolderPathListByFolderId(folderId);
+//		List<String> themeOrderList = new ArrayList<String>();
+//		themeOrderList.add(CHAPTER_TEMPLATE_PREFIX);
+//		String themeString = CHAPTER_TEMPLATE_PREFIX;
+//		for (Folder folder : folderPathList) {
+//			themeString = themeString + "-" + folder.getEname();
+//			themeOrderList.add(themeString);
+//		}
+//		themeOrderList.add(themeString + "-" + articleId);
+//
+//		// 模板顺序反转
+//		Collections.reverse(themeOrderList);
+//		for (String theme : themeOrderList) {
+//			if (this.isExist(theme)) {
+//				return this.getTemplatePath(theme);
+//			}
+//		}
+		return this.getTemplatePath("chapter");
+//		throw new TemplateNotFoundException("模板文件："
+//				+ this.getTemplatePath(CHAPTER_TEMPLATE_PREFIX) + " 不存在！！");
 	}
 
 	/**

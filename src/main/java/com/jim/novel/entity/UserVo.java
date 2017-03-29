@@ -1,9 +1,11 @@
 package com.jim.novel.entity;
 
+import com.jim.novel.model.User;
+
 /**
  * Created by run on 17/3/22.
  */
-public class UserVo {
+public class UserVo extends User{
 
     private String name;
     private String avaterUrl;

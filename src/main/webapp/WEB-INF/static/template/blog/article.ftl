@@ -13,7 +13,7 @@
 
 <div class="wrap wrap_white">
     <div class="container title">
-        <h1 class="title__h1 underscore">三生三世十里桃花</h1>
+        <h1 class="title__h1 underscore">${article.title}</h1>
     </div>
 </div>
 <!-- END title -->
@@ -24,7 +24,7 @@
                 <div class="thumbnail">
                     <div class="row" style="padding: 30px 0">
                         <div class="col-lg-2 col-md-3 col-sm-4"  >
-                            <img class="img-thumbnail" src="${article.imgUrl}" style="height: 157px;width: 120px;margin-left: 60px;" />
+                            <img class="img-thumbnail" src="${article.smallImgUrl}" style="height: 157px;width: 120px;margin-left: 60px;" />
                         </div>
                         <div class="col-lg-10 col-md-9 " >
                             <div class="col-lg-8  col-sm-12 col-xs-12   mt5" >
@@ -38,7 +38,7 @@
                     <ul class="main-list" style="padding: 0 5%;">
                         <@shishuo_chapter_list_tag  articleId=articleId>
                             <#list tag_chapter_list as chapter>
-                                <li> <a href="item.html" class="articleTitle" target="_blank">${chapter.chapterTitle}</a> </li>
+                                <li> <a href="<@shishuo_chapter_url_tag articleId=article.articleId chapterId=chapter.chapterId/>" class="articleTitle">${chapter.chapterTitle}</a> </li>
                             </#list>
                         </@shishuo_chapter_list_tag>
                     </ul>

@@ -11,7 +11,7 @@
 
                         <#list tag_hot_article.list as tag_article>
                             <div role="tabpanel" class="tab-pane fade<#if 0==tag_article_index> in active</#if>" id="${tag_article.folder.ename}">
-                                <a href="full-width.html"><img src="${tag_article.imgUrl}" alt="main img" class="tab-pane__img"></a>
+                                <a href="<@shishuo_article_url_tag articleId=tag_article.articleId/>"><img src="${tag_article.imgUrl}" alt="main img" class="tab-pane__img"></a>
                                 <div class="header_news_text tab-pane__block">
                                     <p class="tab-pane__category yel_line"> ${tag_article.createTime?string("yyyy-MM-dd")}</p>
                                     <a class="tab-pane__title">${tag_article.title}</a>
