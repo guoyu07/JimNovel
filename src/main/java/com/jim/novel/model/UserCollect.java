@@ -5,9 +5,9 @@ import java.util.Date;
 public class UserCollect {
     private Integer id;
 
-    private String articleId;
+    private Integer articleId;
 
-    private String userId;
+    private Integer userId;
 
     private Integer flag;
 
@@ -23,19 +23,19 @@ public class UserCollect {
         this.id = id;
     }
 
-    public String getArticleId() {
+    public Integer getArticleId() {
         return articleId;
     }
 
-    public void setArticleId(String articleId) {
+    public void setArticleId(Integer articleId) {
         this.articleId = articleId;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 

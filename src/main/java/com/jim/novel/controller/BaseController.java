@@ -23,5 +23,8 @@ public class BaseController {
     @Autowired
     protected UserService userService;
 
+    @Autowired
+    protected UserCollectService userCollectService;
+
     protected final Logger logger = Logger.getLogger(this.getClass());
 }

@@ -194,65 +194,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </select>
-  <update id="updateByExampleSelective" parameterType="map" >
-    update comment
-    <set >
-      <if test="record.commoentId != null" >
-        commoent_id = #{record.commoentId,jdbcType=INTEGER},
-      </if>
-      <if test="record.userId != null" >
-        user_id = #{record.userId,jdbcType=INTEGER},
-      </if>
-      <if test="record.fatherId != null" >
-        father_id = #{record.fatherId,jdbcType=INTEGER},
-      </if>
-      <if test="record.status != null" >
-        status = #{record.status,jdbcType=INTEGER},
-      </if>
-      <if test="record.ip != null" >
-        ip = #{record.ip,jdbcType=VARCHAR},
-      </if>
-      <if test="record.createTime != null" >
-        create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.modifyTime != null" >
-        modify_time = #{record.modifyTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.content != null" >
-        content = #{record.content,jdbcType=LONGVARCHAR},
-      </if>
-    </set>
-    <if test="_parameter != null" >
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByExampleWithBLOBs" parameterType="map" >
-    update comment
-    set commoent_id = #{record.commoentId,jdbcType=INTEGER},
-      user_id = #{record.userId,jdbcType=INTEGER},
-      father_id = #{record.fatherId,jdbcType=INTEGER},
-      status = #{record.status,jdbcType=INTEGER},
-      ip = #{record.ip,jdbcType=VARCHAR},
-      create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      modify_time = #{record.modifyTime,jdbcType=TIMESTAMP},
-      content = #{record.content,jdbcType=LONGVARCHAR}
-    <if test="_parameter != null" >
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByExample" parameterType="map" >
-    update comment
-    set commoent_id = #{record.commoentId,jdbcType=INTEGER},
-      user_id = #{record.userId,jdbcType=INTEGER},
-      father_id = #{record.fatherId,jdbcType=INTEGER},
-      status = #{record.status,jdbcType=INTEGER},
-      ip = #{record.ip,jdbcType=VARCHAR},
-      create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      modify_time = #{record.modifyTime,jdbcType=TIMESTAMP}
-    <if test="_parameter != null" >
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
+
   <update id="updateByPrimaryKeySelective" parameterType="com.jim.novel.model.Comment" >
     update comment
     <set >
@@ -301,4 +243,8 @@
       modify_time = #{modifyTime,jdbcType=TIMESTAMP}
     where commoent_id = #{commoentId,jdbcType=INTEGER}
   </update>
+
+  <select id="selectCommentsByChapterId" resultType="com.jim.novel.model.Comment">
+    select * from comment where chapter_id = #{chapterId}
+  </select>
 </mapper>

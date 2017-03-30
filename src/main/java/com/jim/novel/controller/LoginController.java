@@ -77,9 +77,6 @@ public class LoginController extends BaseController {
 
 
         } catch (Exception e) {
-//            // 异常，重置验证码
-//            request.getSession().removeAttribute(
-//                    com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY);
             json.setResult(false);
             json.getErrors().put("password", "邮箱或密码错误");
         }
@@ -103,7 +100,7 @@ public class LoginController extends BaseController {
                     && kaptcha.equalsIgnoreCase(captcha)) {
 
             } else {
-               // json.setErrorMsg("验证码错误");
+                json.setErrorMsg("验证码错误");
             }
 
             if (StringUtils.isBlank(password)||StringUtils.isBlank(checkpassword)) {
@@ -122,7 +119,6 @@ public class LoginController extends BaseController {
             }else {
                 json.setErrorMsg("邮箱已经存在，请直接登录！");
             }
-
 
 
         } catch (Exception e) {

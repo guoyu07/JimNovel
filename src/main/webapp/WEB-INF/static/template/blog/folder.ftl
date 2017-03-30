@@ -52,7 +52,7 @@
                             <p>${article.keyword}</p>
                             <a href="<@shishuo_article_url_tag articleId=article.articleId/>" target="_blank"><button class="btn btn-success">点击阅读</button></a>
                             <a href="full-width.html" target="_blank"><button class="btn btn-success"><span class="glyphicon glyphicon-arrow-down"></span>阅读量：${article.viewCount}</button></a>
-                            <a href="full-width.html" target="_blank"><button class="btn btn-success"><span  class="glyphicon glyphicon-star"></span>加入书架</button></a>
+                            <a href="javascript:void(0)"><button id="car" data="${article.articleId}" class="btn btn-success"><span  class="glyphicon glyphicon-star"></span>加入书架</button></a>
                         </div>
                     </div>
                         <#if article_index%2==1><div class="clearfix"></div></#if>
@@ -72,5 +72,21 @@
         </svg>
     </div>
 </div>
+<script type="text/javascript">
+    $('#car').click(function(){
+        var articleId = $(this).attr('data');
+        $.ajax({
+            type:'GET',
+            url:'addCollection.htm',
+            data:{'articleId':articleId},
+            dataType:'json',
+            success:function(d){
+                alert(d.errors.msg);
+            },
+
+        });
+    });
+
+</script>
 <!-- END content-->
 <#include "footer.ftl">

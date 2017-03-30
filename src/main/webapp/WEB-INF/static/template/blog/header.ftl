@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="HandheldFriendly" content="true">
     <meta content="telephone=no" name="format-detection">
+
     <link href="${TEMPLATE_BASE_PATH}/css/main.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="${TEMPLATE_BASE_PATH}/css/login.css"/>
 
@@ -34,22 +35,18 @@
                         <a href="index.html" class="logo"></a>
                     </div>
                 </div>
-                <div class="col-sm-offset-1 col-md-offset-4 col-sm-5 col-md- hidden-xs">
-                    <div class="col-xs-5 col-sm-5" id="user">
-                        <div class="user">
-                            <a href="#">
-                                <img src="static/template/blog/img/userlogo-default.png" alt="" width="40" height="40"/>
-                            </a>
-                            <em class="active" style="color: #fff;height: 40px;">none<span
-                                    class="glyphicon glyphicon-map-marker" style="padding-left:5px;"></span></em>
-
+                <div class="col-sm-offset-2 col-md-offset-5 col-sm-6 col-md-4 hidden-xs">
+                    <div class="col-xs-4 col-sm-5">
+                        <div class="weather">
+                            <div class="weather__temperature">
+                                <span class="glyphicon glyphicon-user"></span>
+                                <em class="active">用户名</em>
 
 
                             </div>
                             <div class="weather__city">
                                 <em><#if SESSION_USER??>${SESSION_USER.name}<#else>请先登录</#if></em>
                             </div>
-
                         </div>
                     </div>
                     <div class="col-xs-6 col-sm-7">
@@ -59,7 +56,7 @@
                                 <li><a href="${BASE_PATH}/center/register.htm">注册</a></li>
                                 <li><a href="${BASE_PATH}/center/login.htm">登陆</a></li>
                             </#if>
-            
+                                <li><a href="bookshelf.html"><span class="glyphicon glyphicon-align-left"></span>我的书架</a></li>
                             </ul>
                         </div>
                     </div>
@@ -93,9 +90,8 @@
                             <span class="wsmenu-click"></span>
                             <a href="/">首頁</a>
                         </li>
-
-					<@shishuo_folder_list_tag folderId= 0>
-						<#list tag_folder_list as tag_folder>
+                    <@shishuo_folder_list_tag folderId= 0>
+                        <#list tag_folder_list as tag_folder>
                             <li <#if tag_folder.folderId==g_folderId>class="active"</#if> >
                                 <span class="wsmenu-click"></span>
                                 <a href="<@shishuo_folder_url_tag folderId=tag_folder.folderId/>">${tag_folder.name}</a>

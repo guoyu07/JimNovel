@@ -6,7 +6,6 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 import java.util.HashMap;
 
-@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 public class JsonVo<T> {
 	/**
 	 * 结果
@@ -75,6 +74,9 @@ public class JsonVo<T> {
 
 	public void setSuccessMsg(String errorMsg){
 		this.setResult(true);
+		this.setMsg(errorMsg);
 		this.getErrors().put("msg",errorMsg);
 	}
+
+
 }
