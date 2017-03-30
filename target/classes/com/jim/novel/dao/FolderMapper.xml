@@ -429,4 +429,8 @@
     select * from folder
     where ename=#{ename}
   </select>
+
+  <select id="getFolderListBySort" resultType="com.jim.novel.model.Folder">
+    select * from folder order by sort
+  </select>
 </mapper>

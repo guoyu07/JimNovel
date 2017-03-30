@@ -75,6 +75,28 @@ public class ArticleService {
                 path);
     }
 
+    /**获取热门文章
+     *
+     * @param pageNum
+     * @param rows
+     * @return
+     */
+    public PageVo<ArticleVo> getRandomArticle(int pageNum,int rows,int count) throws FolderNotFoundException {
+        PageVo<ArticleVo> pageVo = new PageVo<>(pageNum);
+        pageVo.setRows(rows);
+        pageVo.setCount(count);
+        List<ArticleVo> articleVoList = articleDao.getPopularList(pageVo.getOffset(),rows);
+        for (ArticleVo article :
+                articleVoList) {
+            FolderVo articleFolder = folderService.getFolderById(article.getFolderId());
+            String authorNmae = userService.getAuthorNmaeByUserId(article.getOwnerId());
+            article.setAuthor(authorNmae);
+            article.setFolder(articleFolder);
+        }
+        pageVo.setList(articleVoList);
+        return pageVo;
+
+    }
 
     /**获取热门文章
      *

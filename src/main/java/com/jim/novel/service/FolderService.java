@@ -120,6 +120,17 @@ public class FolderService {
     }
 
     /**
+     * 得到推荐分类
+     *
+     * @param fatherId
+     * @return List<Folder>
+     */
+    @Cacheable(value = "folder")
+    public List<FolderVo> getPopularFolderList() {
+        return folderDao.getFolderListBySort();
+    }
+
+    /**
      * 获取当前id的顶级目录id
      * @param folderId
      * @return

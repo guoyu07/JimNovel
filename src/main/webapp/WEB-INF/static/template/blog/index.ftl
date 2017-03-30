@@ -64,275 +64,43 @@
     <div class="wrap wrap_gray pt20">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
-                    <div class="thumbnail thumbnail_big">
-                        <img src="img/content/news1.jpg" height="350" width="560" alt="News">
-                        <div class="caption thumbnail__caption">
-                            <div class="news caption__news">
-                                <p class="news__category yellow-line">Economy</p>
-                                <a href="#" class="news__head">The dollar has broken all records of positive change in the world and in the galaxy</a>
-                                <p class="news__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="posted">
-                                <span class="posted__date">today, 16:37</span>
-                                <ul class="posted__icon">
-                                    <li>
-                                                <span>
-                                                <i class="icon-comment-empty"></i>29
-                                            </span>
-                                    </li>
-                                    <li>
-                                                <span>
-                                                <i class="icon-eye"></i>2.3k
-                                            </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="thumbnail thumbnail_small">
-                        <a href="news.html" class="thumbnail__link">
-                            <img src="img/content/news2.jpg" height="153" width="270" alt="News">
-                        </a>
-                        <div class="caption thumbnail__caption">
-                            <div class="news caption__news">
-                                <p class="news__category yellow-line">Economy</p>
-                                <a href="news.html" class="news__link">
-                                    <p class="news__text">Еhe world's economy is improving and good times</p>
+                <@shishuo_random_article_tag  p=1 rows=10 count=100>
+                    <#list tag_random_article.list as tag_article>
+                        <div class="col-sm-<#if tag_article_index==0>6<#else>3</#if>">
+                            <div class="thumbnail thumbnail_<#if tag_article_index==0>big<#else>small</#if>">
+                                <a href="news.html" class="thumbnail__link">
+                                    <img src="${tag_article.imgUrl}" <#if tag_article_index==0>height="350" width="560"<#else>height="153" width="270"</#if> alt="News">
                                 </a>
-                            </div>
-                            <div class="posted">
-                                <span class="posted__date">today, 12:11</span>
-                                <ul class="posted__icon">
-                                    <li>
+                                <div class="caption thumbnail__caption">
+                                    <div class="news caption__news">
+                                        <p class="news__category yellow-line">${tag_article.title}</p>
+                                        <a href="<@shishuo_article_url_tag articleId=tag_article.articleId/>" class="news__link">
+                                            <p class="news__text">${tag_article.keyword}</p>
+                                        </a>
+                                    </div>
+                                    <div class="posted">
+                                        <span class="posted__date">${tag_article.createTime?string("EEE,MMM d,yy")}</span>
+                                        <ul class="posted__icon">
+                                            <li>
                                                 <span>
-                                                <i class="icon-comment-empty"></i>11
+                                                <i class="icon-comment-empty"></i>${tag_article.author}
                                             </span>
-                                    </li>
-                                    <li>
+                                            </li>
+                                            <li>
                                                 <span>
-                                                <i class="icon-eye"></i>1.1k
+                                                <i class="icon-eye"></i>${tag_article.viewCount}
                                             </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="thumbnail thumbnail_small">
-                        <a href="news.html" class="thumbnail__link">
-                            <img src="img/content/news3.jpg" height="153" width="270" alt="News">
-                        </a>
-                        <div class="caption thumbnail__caption">
-                            <div class="news caption__news">
-                                <p class="news__category yellow-line">Economy</p>
-                                <a href="news.html" class="news__link">
-                                    <p class="news__text">The euro needs to everyone in a large amount</p>
-                                </a>
-                            </div>
-                            <div class="posted">
-                                <span class="posted__date">today, 19:30</span>
-                                <ul class="posted__icon">
-                                    <li>
-                                                <span>
-                                                <i class="icon-comment-empty"></i>294
-                                            </span>
-                                    </li>
-                                    <li>
-                                                <span>
-                                                <i class="icon-eye"></i>2.9k
-                                            </span>
-                                    </li>
-                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="thumbnail thumbnail_small">
-                        <a href="news.html" class="thumbnail__link">
-                            <img src="img/content/news5.jpg" height="153" width="270" alt="News">
-                        </a>
-                        <div class="caption thumbnail__caption">
-                            <div class="news caption__news">
-                                <p class="news__category yellow-line">Sport</p>
-                                <a href="news.html" class="news__link">
-                                    <p class="news__text">Athletes are confident of victory in all competitions</p>
-                                </a>
-                            </div>
-                            <div class="posted">
-                                <span class="posted__date">today, 14:34</span>
-                                <ul class="posted__icon">
-                                    <li>
-                                                <span>
-                                                <i class="icon-comment-empty"></i>58
-                                            </span>
-                                    </li>
-                                    <li>
-                                                <span>
-                                                <i class="icon-eye"></i>8.8k
-                                            </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="thumbnail thumbnail_small">
-                        <a href="news.html" class="thumbnail__link">
-                            <img src="img/content/news5.jpg" height="153" width="270" alt="News">
-                        </a>
-                        <div class="caption thumbnail__caption">
-                            <div class="news caption__news">
-                                <p class="news__category yellow-line">Sport</p>
-                                <a href="news.html" class="news__link">
-                                    <p class="news__text">Athletes are confident of victory in all competitions</p>
-                                </a>
-                            </div>
-                            <div class="posted">
-                                <span class="posted__date">today, 14:34</span>
-                                <ul class="posted__icon">
-                                    <li>
-                                                <span>
-                                                <i class="icon-comment-empty"></i>58
-                                            </span>
-                                    </li>
-                                    <li>
-                                                <span>
-                                                <i class="icon-eye"></i>8.8k
-                                            </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="thumbnail thumbnail_small">
-                        <a href="news.html" class="thumbnail__link">
-                            <img src="img/content/news7.jpg" height="153" width="270" alt="News">
-                        </a>
-                        <div class="caption thumbnail__caption">
-                            <div class="news caption__news">
-                                <p class="news__category yellow-line">Economy</p>
-                                <a href="news.html" class="news__link">
-                                    <p class="news__text">Attention: The poor become rich, rich richer</p>
-                                </a>
-                            </div>
-                            <div class="posted">
-                                <span class="posted__date">today, 11:30</span>
-                                <ul class="posted__icon">
-                                    <li>
-                                                <span>
-                                                <i class="icon-comment-empty"></i>21
-                                            </span>
-                                    </li>
-                                    <li>
-                                                <span>
-                                                <i class="icon-eye"></i>1.9k
-                                            </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="thumbnail thumbnail_small">
-                        <a href="news.html" class="thumbnail__link">
-                            <img src="img/content/news9.jpg" height="153" width="270" alt="News">
-                        </a>
-                        <div class="caption thumbnail__caption">
-                            <div class="news caption__news">
-                                <p class="news__category yellow-line">Business</p>
-                                <a href="news.html" class="news__link">
-                                    <p class="news__text">The best exchange rates and motivation for you</p>
-                                </a>
-                            </div>
-                            <div class="posted">
-                                <span class="posted__date">today, 12:30</span>
-                                <ul class="posted__icon">
-                                    <li>
-                                                <span>
-                                                <i class="icon-comment-empty"></i>29
-                                            </span>
-                                    </li>
-                                    <li>
-                                                <span>
-                                                <i class="icon-eye"></i>2.3k
-                                            </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="thumbnail thumbnail_small">
-                        <a href="news.html" class="thumbnail__link">
-                            <img src="img/content/news9.jpg" height="153" width="270" alt="News">
-                        </a>
-                        <div class="caption thumbnail__caption">
-                            <div class="news caption__news">
-                                <p class="news__category yellow-line">Business</p>
-                                <a href="news.html" class="news__link">
-                                    <p class="news__text">The best exchange rates and motivation for you</p>
-                                </a>
-                            </div>
-                            <div class="posted">
-                                <span class="posted__date">today, 12:30</span>
-                                <ul class="posted__icon">
-                                    <li>
-                                                <span>
-                                                <i class="icon-comment-empty"></i>29
-                                            </span>
-                                    </li>
-                                    <li>
-                                                <span>
-                                                <i class="icon-eye"></i>2.3k
-                                            </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="thumbnail thumbnail_small">
-                        <a href="news.html" class="thumbnail__link">
-                            <img src="img/content/news9.jpg" height="153" width="270" alt="News">
-                        </a>
-                        <div class="caption thumbnail__caption">
-                            <div class="news caption__news">
-                                <p class="news__category yellow-line">Business</p>
-                                <a href="news.html" class="news__link">
-                                    <p class="news__text">The best exchange rates and motivation for you</p>
-                                </a>
-                            </div>
-                            <div class="posted">
-                                <span class="posted__date">today, 12:30</span>
-                                <ul class="posted__icon">
-                                    <li>
-                                                <span>
-                                                <i class="icon-comment-empty"></i>29
-                                            </span>
-                                    </li>
-                                    <li>
-                                                <span>
-                                                <i class="icon-eye"></i>2.3k
-                                            </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                    </#list>
+                </@shishuo_random_article_tag>
+
+
 
             </div>
         </div>
@@ -347,7 +115,7 @@
     </div>
     <!-- /container-->
 </section>
-<!-- /top news -->
+
 <section class="wrap wrap_gray">
     <div class="container">
         <div class="row">
@@ -356,55 +124,24 @@
                     <h2 class="block-title__h2">本月热搜</h2>
                 </div>
                 <div class="projects__row">
-                    <div class="special special_big">
-                        <img src="img/content/spec1.jpg" height="311" width="551" alt="image" class="special__img">
-                        <div class="special__box">
-                            <h5 class="special__category yel_line">Special project</h5>
-                            <a href="#" class="special__link">Lorem ipsum dolor sit amet</a>
-                            <p class="special__desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        </div>
-                    </div>
-                    <div class="special special_small">
-                        <img src="img/content/spec2.jpg" height="311" width="285" alt="image" class="special__img">
-                        <div class="special__box">
-                            <h5 class="special__category yel_line">Special project</h5>
-                            <a href="#" class="special__link">Lorem ipsum dolor</a>
-                            <p class="special__desc">Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-                        </div>
-                    </div>
+                    <@shishuo_popular_folder_tag>
+                        <#list tag_popular_folder_list as tag_folder>
+                            <div class="special special_<#if tag_folder_index%3==0>big<#else>small</#if>">
+                                <img src="${tag_folder.imgUrl}" <#if tag_folder_index==0>height="311" width="551" <#else>height="311" width="285" </#if>alt="image" class="special__img">
+                                <div class="special__box">
+                                    <h5 class="special__category yel_line">${tag_folder.name}</h5>
+                                    <a href="<@shishuo_folder_url_tag folderId=tag_folder.folderId/>" class="special__link">${tag_folder.content}</a>
+                                    <p class="special__desc">${tag_folder.ename}</p>
+                                </div>
+                            </div>
+                        </#list>
+                    </@shishuo_popular_folder_tag>
                 </div>
-                <div class="projects__row">
-                    <div class="special special_small">
-                        <img src="img/content/spec3.jpg" height="311" width="285" alt="image" class="special__img">
-                        <div class="special__box">
-                            <h5 class="special__category yel_line">Special project</h5>
-                            <a href="#" class="special__link">Lorem ipsum dolor</a>
-                            <p class="special__desc">Duis aute irure dolor in reprehenderit in voluptate velit.</p>
-                        </div>
-                    </div>
-                    <div class="special special_big">
-                        <img src="img/content/spec4.jpg" height="311" width="551" alt="image" class="special__img">
-                        <div class="special__box">
-                            <h5 class="special__category yel_line">Special project</h5>
-                            <a href="#" class="special__link">Lorem ipsum dolor sit amet</a>
-                            <p class="special__desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- banner -->
-                <div class="banner">
-                    <img src="img/content/banner.jpg" height="221" width="850" alt="image" class="banner__img">
-                    <div class="banner__box">
-                        <p class="banner__text first-text">广告位</p>
-                        <p class="banner__text second-text">出租</p>
-                        <a href="#" class="banner__link">进入了解</a>
-                    </div>
-                </div>
-                <!-- END banner -->
+
             </div>
             <div class="col-sm-3">
                 <div class="block-title">
-                    <h2 class="block-title__h2">热门推荐</h2>
+                    <h2 class="block-title__h2">热门评论</h2>
                 </div>
                 <div class="twitter">
                     <div class="twitter__header">
@@ -416,28 +153,28 @@
                             <p class="message__time">about 5 hours ago</p>
                             <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <a href="#" class="message__link">
-                                <i class="icon-reply"></i>Reply
+                                <i class="icon-reply"></i>查看
                             </a>
                         </div>
                         <div class="message">
                             <p class="message__time">about 5 hours ago</p>
                             <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <a href="#" class="message__link">
-                                <i class="icon-reply"></i>Reply
+                                <i class="icon-reply"></i>查看
                             </a>
                         </div>
                         <div class="message">
                             <p class="message__time">about 5 hours ago</p>
                             <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <a href="#" class="message__link">
-                                <i class="icon-reply"></i>Reply
+                                <i class="icon-reply"></i>查看
                             </a>
                         </div>
                         <div class="message">
                             <p class="message__time">about 5 hours ago</p>
                             <p class="message__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                             <a href="#" class="message__link">
-                                <i class="icon-reply"></i>Reply
+                                <i class="icon-reply"></i>查看
                             </a>
                         </div>
                     </div>
@@ -446,256 +183,6 @@
         </div>
     </div>
 </section>
-<section class="wrap wrap_gray">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-9">
-                <div class="row">
-                    <div class="block-title col-sm-12">
-                        <h2 class="block-title__h2">编辑推荐
-                            <a class="block-title__view-all" href="#" data-hover="查看全部">查看全部</a>
-                        </h2>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="thumbnail thumbnail_small">
-                            <a href="news.html" class="thumbnail__link">
-                                <img src="img/content/news10.jpg" height="153" width="270" alt="News">
-                            </a>
-                            <div class="caption thumbnail__caption">
-                                <div class="news caption__news">
-                                    <p class="news__category yellow-line">Policy</p>
-                                    <a href="news.html" class="news__link">
-                                        <p class="news__text">CEO who jacked up price of AIDS pill to $750 faces major backlash</p>
-                                    </a>
-                                </div>
-                                <div class="posted">
-                                    <span class="posted__date">today, 12:30</span>
-                                    <ul class="posted__icon">
-                                        <li>
-                                                    <span>
-                                                    <i class="icon-comment-empty"></i>29
-                                                </span>
-                                        </li>
-                                        <li>
-                                                    <span>
-                                                    <i class="icon-eye"></i>4.4k
-                                                </span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="thumbnail thumbnail_small">
-                            <a href="news.html" class="thumbnail__link">
-                                <img src="img/content/news11.jpg" height="153" width="270" alt="News">
-                            </a>
-                            <div class="caption thumbnail__caption">
-                                <div class="news caption__news">
-                                    <p class="news__category yellow-line">Policy</p>
-                                    <a href="news.html" class="news__link">
-                                        <p class="news__text">CEO who jacked up price of AIDS pill to $750 faces major backlash</p>
-                                    </a>
-                                </div>
-                                <div class="posted">
-                                    <span class="posted__date">today, 11:30</span>
-                                    <ul class="posted__icon">
-                                        <li>
-                                                    <span>
-                                                    <i class="icon-comment-empty"></i>22
-                                                </span>
-                                        </li>
-                                        <li>
-                                                    <span>
-                                                    <i class="icon-eye"></i>5.3k
-                                                </span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="wrap-article">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="article">
-                                        <i class="article__icon" style="background-image:url('img/content/circle.png');"></i>
-                                        <a href="#" class="article__text">Lorem ipsum dolor sit amet, consectetur adipisc</a>
-                                        <p class="article__time">today, 16:04</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wrap-article">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="article">
-                                        <i class="article__icon" style="background-image:url('img/content/circle.png');"></i>
-                                        <a href="#" class="article__text">Lorem ipsum dolor sit amet, consectetur adipisc</a>
-                                        <p class="article__time">today, 16:04</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wrap-article">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="article">
-                                        <i class="article__icon" style="background-image:url('img/content/circle.png');"></i>
-                                        <a href="#" class="article__text">Lorem ipsum dolor sit amet, consectetur adipisc</a>
-                                        <p class="article__time">today, 16:04</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wrap-article">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="article">
-                                        <i class="article__icon" style="background-image:url('img/content/circle.png');"></i>
-                                        <a href="#" class="article__text">Lorem ipsum dolor sit amet, consectetur adipisc</a>
-                                        <p class="article__time">today, 16:04</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="block-title col-sm-12">
-                        <h2 class="block-title__h2">本周强推
-                            <a class="block-title__view-all" href="#" data-hover="查看全部">查看全部</a>
-                        </h2>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="thumbnail thumbnail_small">
-                            <a href="news.html" class="thumbnail__link">
-                                <img src="img/content/news12.jpg" height="153" width="270" alt="News">
-                            </a>
-                            <div class="caption thumbnail__caption">
-                                <div class="news caption__news">
-                                    <p class="news__category yellow-line">People</p>
-                                    <a href="news.html" class="news__link">
-                                        <p class="news__text">CEO who jacked up price of AIDS pill to $750 faces major backlash</p>
-                                    </a>
-                                </div>
-                                <div class="posted">
-                                    <span class="posted__date">today, 11:31</span>
-                                    <ul class="posted__icon">
-                                        <li>
-                                                    <span>
-                                                    <i class="icon-comment-empty"></i>21
-                                                </span>
-                                        </li>
-                                        <li>
-                                                    <span>
-                                                    <i class="icon-eye"></i>2.1k
-                                                </span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="thumbnail thumbnail_small">
-                            <a href="news.html" class="thumbnail__link">
-                                <img src="img/content/news13.jpg" height="153" width="270" alt="News">
-                            </a>
-                            <div class="caption thumbnail__caption">
-                                <div class="news caption__news">
-                                    <p class="news__category yellow-line">Sport</p>
-                                    <a href="news.html" class="news__link">
-                                        <p class="news__text">CEO who jacked up price of AIDS pill to $750 faces major backlash</p>
-                                    </a>
-                                </div>
-                                <div class="posted">
-                                    <span class="posted__date">today, 10:30</span>
-                                    <ul class="posted__icon">
-                                        <li>
-                                                    <span>
-                                                    <i class="icon-comment-empty"></i>22
-                                                </span>
-                                        </li>
-                                        <li>
-                                                    <span>
-                                                    <i class="icon-eye"></i>2.1k
-                                                </span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-sm-4">
-                        <div class="row wrap-article">
-                            <div class="col-sm-12">
-                                <div class="article">
-                                    <i class="article__icon" style="background-image:url('img/content/circle.png');"></i>
-                                    <a href="#" class="article__text">Lorem ipsum dolor sit amet, consectetur adipisc</a>
-                                    <p class="article__time">today, 13:11</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row wrap-article">
-                            <div class="col-sm-12">
-                                <div class="article">
-                                    <i class="article__icon" style="background-image:url('img/content/circle.png');"></i>
-                                    <a href="#" class="article__text">Lorem ipsum dolor sit amet, consectetur adipisc</a>
-                                    <p class="article__time">today, 13:11</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row wrap-article">
-                            <div class="col-sm-12">
-                                <div class="article">
-                                    <i class="article__icon" style="background-image:url('img/content/circle.png');"></i>
-                                    <a href="#" class="article__text">Lorem ipsum dolor sit amet, consectetur adipisc</a>
-                                    <p class="article__time">today, 12:03</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row wrap-article">
-                            <div class="col-sm-12">
-                                <div class="article">
-                                    <i class="article__icon" style="background-image:url('img/content/circle.png');"></i>
-                                    <a href="#" class="article__text">Lorem ipsum dolor sit amet, consectetur adipisc</a>
-                                    <p class="article__time">today, 11:04</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="block-title">
-                    <h2 class="block-title__h2">热门作品</h2>
-                </div>
-                <div class="wrap-redaction wrap-redaction_white">
-                    <div class="redaction redaction_line">
-                        <p class="redaction__category yel_line">Policy</p>
-                        <a class="redaction__title">Lorem ipsum dolor sit amet, consectetur</a>
-                        <p class="redaction__text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris, quis nostrud ullamco laboris</p>
-                        <p class="redaction__time">today, 16:35</p>
-                    </div>
-                    <div class="redaction redaction_line">
-                        <p class="redaction__category yel_line">Policy</p>
-                        <a class="redaction__title">Lorem ipsum dolor sit amet, consectetur</a>
-                        <p class="redaction__text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris, quis nostrud ullamco laboris</p>
-                        <p class="redaction__time">today, 16:35</p>
-                    </div>
-                    <div class="redaction redaction_line">
-                        <p class="redaction__category yel_line">Policy</p>
-                        <a class="redaction__title">Lorem ipsum dolor sit amet, consectetur</a>
-                        <p class="redaction__text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris, quis nostrud ullamco laboris</p>
-                        <p class="redaction__time">today, 16:35</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 <#include "footer.ftl">

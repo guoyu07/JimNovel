@@ -56,4 +56,12 @@ public interface FolderMapper {
     public List<FolderVo> getFolderListByFatherId(
             @Param("fatherId") int fatherId,
             @Param("display") int display);
+
+    /**
+     * 得到所有子目录
+     *
+     * @param fatherId
+     * @return List<FolderVo>
+     */
+    public List<FolderVo> getFolderListBySort();
 }

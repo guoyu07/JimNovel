@@ -45,6 +45,7 @@
 /Users/run/Documents/learnspace/JimNovel/src/main/java/com/jim/novel/exception/ArticleNotFoundException.java
 /Users/run/Documents/learnspace/JimNovel/src/main/java/com/baidu/ueditor/Encoder.java
 /Users/run/Documents/learnspace/JimNovel/src/main/java/com/jim/novel/plugins/TagPlugin.java
+/Users/run/Documents/learnspace/JimNovel/src/main/java/com/jim/novel/tag/PopularFolderTag.java
 /Users/run/Documents/learnspace/JimNovel/src/main/java/com/jim/novel/service/ConfigService.java
 /Users/run/Documents/learnspace/JimNovel/src/main/java/com/baidu/ueditor/PathFormat.java
 /Users/run/Documents/learnspace/JimNovel/src/main/java/com/baidu/ueditor/upload/BinaryUploader.java
@@ -93,6 +94,7 @@
 /Users/run/Documents/learnspace/JimNovel/src/main/java/com/jim/novel/model/AdminFolder.java
 /Users/run/Documents/learnspace/JimNovel/src/main/java/com/jim/novel/tag/ArticleListTag.java
 /Users/run/Documents/learnspace/JimNovel/src/main/java/com/jim/novel/tag/ArticlePageTag.java
+/Users/run/Documents/learnspace/JimNovel/src/main/java/com/jim/novel/tag/RandomArticleTag.java
 /Users/run/Documents/learnspace/JimNovel/src/main/java/com/jim/novel/utils/MediaUtils.java
 /Users/run/Documents/learnspace/JimNovel/src/main/java/com/baidu/ueditor/ConfigManager.java
 /Users/run/Documents/learnspace/JimNovel/src/main/java/com/jim/novel/controller/IndexController.java
