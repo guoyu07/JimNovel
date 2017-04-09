@@ -1,4 +1,5 @@
 <style type="text/css">
+
     p.error {
         color: #DE5959;
     }
@@ -20,7 +21,7 @@
     }
 </style>
 <#include "header.ftl">
-
+<link rel="stylesheet" type="text/css" href="${TEMPLATE_BASE_PATH}/css/login.css"/>
 <div class="login">
     <h2></h2>
     <div class="login-top">

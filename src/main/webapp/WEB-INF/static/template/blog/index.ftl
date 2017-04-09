@@ -1,4 +1,9 @@
 <#include "header.ftl">
+<style type="text/css">
+    .footer{
+        bottom:auto;}
+</style>
+
 <!-- END header -->
 <!-- header slider -->
 <div class="slate_gray">

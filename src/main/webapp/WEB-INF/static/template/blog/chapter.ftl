@@ -1,23 +1,66 @@
 <#include "header.ftl">
+<style type="text/css">
+    .footer{
+        bottom:auto;}
+
+    .headline__category {
+        margin-top: 30px;
+    }
+
+    .nav-tabs>li {
+        width: 298px;
+    }
+    #scrollDiv {
+        height: 575px;
+        overflow: hidden
+    }
+
+
+    #btnNext,#btnPrev{
+        margin-top: 600px;
+    }
+    .right_sidebar1{
+        position: absolute;
+        background: #303e4b;
+        color: #fff;
+    }
+
+</style>
 <div class="wrapper">
     <article class="container articles">
         <div class="row">
             <div class="col-sm-4 col-md-3 right_sidebar hidden-xs hidden-sm" data-spy="affix" data-offset-top="112" data-offset-bottom="80">
                 <div class="news-tabs">
                     <p class="news-tabs__title h2">${article.title}</p>
-                    <ul class="news-tabs__nav nav nav-tabs shadow_text" role="tablist">
+                    <div id="scrollDiv"  class="col-sm-11 right_sidebar1  "  data-spy="affix" >
+                    <#--<ul class="news-tabs__nav nav nav-tabs shadow_text" role="tablist">-->
+                        <#--<@shishuo_chapter_list_tag  articleId=article.articleId>-->
+                            <#--<#list tag_chapter_list as chapters>-->
+                                <#--<li role="presentation" <#if chapters.chapterTitle==chapter.chapterTitle>class="active"</#if>>-->
+                                    <#--<a href="<@shishuo_chapter_url_tag articleId=article.articleId chapterId=chapters.chapterId/>">-->
+                                        <#--${chapters.chapterTitle}-->
+                                    <#--</a>-->
+                                <#--</li>-->
+                            <#--</#list>-->
+                        <#--</@shishuo_chapter_list_tag>-->
+                    <#--</ul>-->
+                        <ul class="news-tabs__nav nav nav-tabs shadow_text" role="tablist">
                         <@shishuo_chapter_list_tag  articleId=article.articleId>
                             <#list tag_chapter_list as chapters>
                                 <li role="presentation" <#if chapters.chapterTitle==chapter.chapterTitle>class="active"</#if>>
                                     <a href="<@shishuo_chapter_url_tag articleId=article.articleId chapterId=chapters.chapterId/>">
-                                        ${chapters.chapterTitle}
+                                    ${chapters.chapterTitle}
                                     </a>
                                 </li>
                             </#list>
                         </@shishuo_chapter_list_tag>
-                    </ul>
+                        </ul>
+                    </div>
+                    <div id="btnPrev" class="btn btn-info mt15 ml10">上一页</div>
+                    <div id="btnNext" class="btn btn-info mt15 ml10">下一页</div>
                 </div>
             </div>
+
             <div class="col-sm-12 col-md-9 p0 wrap-headline">
                 <img src="${folder.imgUrl}" alt="img" class="wrap-headline__img">
                 <div class="headline clearfix">
@@ -71,4 +114,61 @@
         </div>
     </article>
 </div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var page = 1;
+        var maxPage = 0;
+        $(function() {
+            initUlList();
+            console.log('test');
+            $(document).on('click', '#btnPrev', function() {
+                console.log('prev');
+                if(page === 1){
+                    return;
+                }
+                page--;
+                initUlList();
+            })
+            $(document).on('click', '#btnNext', function() {
+                console.log('next');
+                if(page === maxPage) {
+                    return;
+                }
+                page++;
+                initUlList();
+            })
+            $(document).on('click', '.shadow_text li a', function() {
+                var id = $(this).attr('href').substr(1);
+                console.log(id);
+                if(document.getElementById(id)) {
+                    document.getElementById(id).scrollIntoView();
+                }
+            })
+        })
+        function initUlList() {
+            var lis = $('.shadow_text li');
+            var len = lis.length;
+            maxPage = Math.ceil(len/10);
+            console.log(len);
+            for( var i=0; i<len; i++) {
+                if (i>page*10 || i<(page-1)*10) {
+                    lis.eq(i).hide();
+                } else {
+                    lis.eq(i).show();
+                }
+            }
+        }
+
+    });
+</script>
+
+<script>
+    $(document).on('click', '.shadow_text li a', function() {
+        var id = $(this).attr('href').substr(1);
+        console.log(id);
+        if(document.getElementById(id)) {
+            document.getElementById(id).scrollIntoView();
+        }
+    })
+</script>
 <#include "footer.ftl">

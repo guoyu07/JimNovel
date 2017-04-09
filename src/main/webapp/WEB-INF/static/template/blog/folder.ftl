@@ -1,13 +1,16 @@
 <#include "header.ftl">
 <!-- Content-->
 <style type="text/css">
-    .contents .row{
+    .contents .row {
         margin: 20px 0;
     }
-    a{
-        color: #fff;;
+
+    a {
+        color: #fff;
+
     }
-    .items{
+
+    .items {
         display: inline;
         margin: auto;
         display: block;
@@ -16,26 +19,47 @@
         margin-top: 15px;
         margin-bottom: 15px;
     }
+
     .items .col-md-2 {
         padding: 10px 0;
-        box-shadow:0 0 10px #888;
+        box-shadow: 0 0 10px #888;
     }
 
-    .items .col-md-4{
+    .items img:hover {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    .items img {
+        transition: transform .3s ease-out;
+    }
+
+    .items p {
+        width: 370px;
+        height: 100px;
+        font-size: 13px;
+    }
+
+    .items .col-md-4 {
         background-color: rgba(187, 196, 200, 0.38);
         height: 249px;
+    }
 
+    .items .col-md-4 h4 {
+        color: #148216;
     }
-    .items .col-md-4 h4{
-        color:#148216;
-    }
-    .items .col-md-4 h3{
-        color:#f38844 ;
+
+    .items .col-md-4 h3 {
+        color: #f38844;
         font-weight: bold;
     }
-    .ajax_load{
+
+    .ajax_load {
         margin-bottom: 20px;
     }
+
 </style>
 <div class="container">
     <div class="contents" id="contents">

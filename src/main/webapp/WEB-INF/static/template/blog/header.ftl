@@ -9,7 +9,7 @@
     <meta name="HandheldFriendly" content="true">
     <meta content="telephone=no" name="format-detection">
     <link href="${TEMPLATE_BASE_PATH}/css/main.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="${TEMPLATE_BASE_PATH}/css/login.css"/>
+    <#--<link rel="stylesheet" type="text/css" href="${TEMPLATE_BASE_PATH}/css/login.css"/>-->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
     <!--[if lt IE 9]>
@@ -57,7 +57,7 @@
                                 <li><a href="${BASE_PATH}/center/register.htm">注册</a></li>
                                 <li><a href="${BASE_PATH}/center/login.htm">登陆</a></li>
                             </#if>
-
+                                <li><a href="bookshelf.html"><span class="glyphicon glyphicon-align-left"></span>我的书架</a></li>
                             </ul>
                         </div>
                     </div>
