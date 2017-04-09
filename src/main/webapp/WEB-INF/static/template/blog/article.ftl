@@ -11,7 +11,7 @@
 
 </style>
 
-请问
+
 <div class="wrap wrap_white">
     <div class="container title">
         <h1 class="title__h1 underscore">${article.title}</h1>

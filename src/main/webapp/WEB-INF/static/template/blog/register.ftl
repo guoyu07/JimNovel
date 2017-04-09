@@ -33,9 +33,9 @@
             <input type="password" name="password" datatype="*6-15" placeholder="密码" value="123456" class="inputxt">
             <input type="password" name="checkpassword" datatype="*6-15" recheck="password" placeholder="重复密码" value="123456" class="inputxt">
             <input type="text" name="captcha" class="form-control"
-                   placeholder="验证码" style="width: 100px; float: left;"> <img
+                   placeholder="验证码" style="width: 100px; float: left;height: 50px;"> <img
                 id="captcha"
-                style="cursor: pointer; cursor: hand; margin-top: -13px;"
+                style="cursor: pointer; cursor: hand; border-radius: 10px;"
                 onclick="this.src='${BASE_PATH}/center/captcha.htm?'+Math.random();"
                 src="${BASE_PATH}/center/captcha.htm">
 
