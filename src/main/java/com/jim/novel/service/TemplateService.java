@@ -58,6 +58,10 @@ public class TemplateService {
 		return this.getTemplatePath("500");
 	}
 
+	public String getAdminTemplate(String template){
+		return this.getAdminTemplatePath(template);
+	}
+
 	/**
 	 * 得到首页（默认页）模板
 	 * 
@@ -107,7 +111,7 @@ public class TemplateService {
 			}
 		}
 		throw new TemplateNotFoundException("模板文件："
-				+ this.getTemplatePath(FOLDER_TEMPLATE_PREFIX) + ".ftl"
+				+ this.getTemplatePath(FOLDER_TEMPLATE_PREFIX) + ".html"
 				+ " 不存在！！");
 	}
 
@@ -183,6 +187,20 @@ public class TemplateService {
 				+ "/" + template;
 	}
 
+	/**得到管理后台的模板相对路径
+	 *
+	 * @param template
+	 * @return
+	 */
+	private String getAdminTemplatePath(String template) {
+		return "/template/"
+				+ configService.getStringByKey(ConfigConstant.ADMIN_TEMPLATE)
+				+ "/" + template;
+	}
+
+
+
+
 	/**
 	 * 模板物理地址是否存在
 	 * 
@@ -193,7 +211,7 @@ public class TemplateService {
 	public Boolean isExist(String theme) {
 		String themePath = "/WEB-INF/static/template/"
 				+ configService.getStringByKey(ConfigConstant.NOVEL_TEMPLATE)
-				+ "/" + theme + ".ftl";
+				+ "/" + theme + ".html";
 		File file = new File(SystemConstant.SHISHUO_CMS_ROOT + themePath);
 		if (file.exists()) {
 			logger.info("尝试使用模板：" + themePath+"【存在】");
@@ -204,7 +222,4 @@ public class TemplateService {
 		}
 	}
 
-	// ///////////////////////////////
-	// ///// 查詢 ////////
-	// ///////////////////////////////
 }

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" < <meta name="renderer" content="webkit">
+		<title>吉米小说JimNovel</title>
+
+		<!-- CSS文件 -->
+		<link href="${ADMIN_TEMPLATE_BASE_PATH}/css/bootstrap.min.css" rel="stylesheet">
+		<link href="${ADMIN_TEMPLATE_BASE_PATH}/css/font-awesome.css" rel="stylesheet">
+		<link href="${ADMIN_TEMPLATE_BASE_PATH}/css/animate.css" rel="stylesheet">
+		<link href="${ADMIN_TEMPLATE_BASE_PATH}/css/style.css" rel="stylesheet">
+
+	</head>
+
+	<body class="fixed-sidebar full-height-layout gray-bg">
+		<div id="wrapper">
+			<!--左侧导航开始-->
+			<nav class="navbar-default navbar-static-side" role="navigation">
+				<div class="nav-close"><i class="fa fa-times-circle"></i></div>
+				<div class="sidebar-collapse">
+					<ul class="nav" id="side-menu">
+						<li class="nav-header">
+							<div class="dropdown profile-element">
+								<span><img alt="image" class="img-circle" src="${ADMIN_TEMPLATE_BASE_PATH}/img/profile_small.jpg" /></span>
+								<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+									<span class="clear">
+                               <span class="block m-t-xs"><strong class="font-bold">Run</strong></span>
+									<span class="text-muted text-xs block">超级管理员<b class="caret"></b></span>
+									</span>
+								</a>
+								<ul class="dropdown-menu animated fadeInRight m-t-xs">
+									<li>
+										<a class="J_menuItem" href="form_avatar.html">修改头像</a>
+									</li>
+									<li>
+										<a class="J_menuItem" href="reuserinfo.html">修改用户信息</a>
+									</li>
+									<li>
+										<a class="J_menuItem" href="repassword.html">修改用户密码</a>
+									</li>
+
+								</ul>
+							</div>
+							<div class="logo-element">JimNovel
+							</div>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-home"></i>
+								<span class="nav-label">小说管理</span>
+								<span class="fa arrow"></span>
+							</a>
+							<ul class="nav nav-second-level">
+								<li>
+									<a class="J_menuItem" href="article.htm" data-index="0">作品信息管理</a>
+									<!--默认主页需在对应的菜单a元素上添加data-index="0"-->
+								</li>
+								<li>
+									<a class="J_menuItem" href="add.htm" >作品上传</a>
+								</li>
+							
+							</ul>
+						</li>
+						<li>
+							<a class="J_menuItem" href="history.htm">
+								<i class="fa fa-cloud"></i>
+								<span class="nav-label">我的上传记录</span>
+								<!--<span class="fa arrow"></span>-->
+							</a>
+						</li>
+						<li>
+							<a class="J_menuItem" href="comment.htm">
+								<i class="fa fa-pencil-square"></i>
+								<span class="nav-label">评论管理</span>
+								<!--<span class="fa arrow"></span>-->
+							</a>
+							<!--<ul class="nav nav-second-level">
+								<li>
+									<a class="J_menuItem" href="contacts.html" data-index="0">列表</a>-->
+									<!--默认主页需在对应的菜单a元素上添加data-index="0"-->
+								<!--</li>
+
+							</ul>-->
+						</li>
+
+					</ul>
+				</div>
+			</nav>
+			<!--左侧导航结束-->
+			<!--右侧部分开始-->
+			<div id="page-wrapper" class="gray-bg dashbard-1">
+				<div class="row border-bottom">
+					<div class="navbar-header">
+						<a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+					</div>
+					<ul class="nav navbar-top-links navbar-right">
+						<li class="dropdown">
+							<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+								<i class="fa fa-bell"></i> <span class="label label-primary">8</span>
+							</a>
+
+						</li>
+						<li class="dropdown hidden-xs">
+							<a class="right-sidebar-toggle" aria-expanded="false">
+								<i class="fa fa fa-sign-out"></i> 退出
+							</a>
+						</li>
+
+					</ul>
+				</div>
+				<div class="row content-tabs">
+					<button class="roll-nav roll-left J_tabLeft"><i class="fa fa-angle-double-left"></i>
+                </button>
+					<nav class="page-tabs J_menuTabs">
+						<div class="page-tabs-content">
+							<a href="javascript:;" class="active J_menuTab" data-id="article.htm">首页</a>
+							<!--默认主页需在对应的选项卡a元素上添加data-id="默认主页的url"-->
+						</div>
+					</nav>
+					<button class="roll-nav roll-right J_tabRight"><i class="fa fa-angle-double-right"></i>
+                </button>
+
+				</div>
+				<div class="row J_mainContent" id="content-main">
+					<iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="article.htm" frameborder="0" data-id="index_v1.html" seamless></iframe>
+					<!--默认主页需在对应的页面显示iframe元素上添加name="iframe0"和data-id="默认主页的url"-->
+				</div>
+				<div class="footer">
+					<div class="pull-right">© 2017-2018
+						<a href="http://blog.iwannarun.cn/" target="_blank">我要稳稳的RUN's blog</a>
+					</div>
+				</div>
+			</div>
+			<!--右侧部分结束-->
+		</div>
+
+		<!-- 全局js -->
+		<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.min.js?v=2.1.4"></script>
+		<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/bootstrap.min.js?v=3.3.6"></script>
+		<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+		<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+		<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/plugins/layer/layer.min.js"></script>
+
+		<!-- 自定义js -->
+		<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/hplus.js?v=4.1.0"></script>
+		<script type="text/javascript" src="${ADMIN_TEMPLATE_BASE_PATH}/js/contabs.js"></script>
+
+		<!-- 第三方插件 -->
+		<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/plugins/pace/pace.min.js"></script>
+
+	</body>
+
+</html>

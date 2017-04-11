@@ -9,6 +9,7 @@ package com.jim.novel.filter;
 
 import com.jim.novel.constant.SystemConstant;
 import com.jim.novel.model.Admin;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 
 import javax.servlet.*;
@@ -20,34 +21,61 @@ import java.io.IOException;
  * 
  * 管理过滤器
  * 
- * @author Herbert
+ * @author run
  * 
  */
 public class ManageFilter implements Filter {
 
+	/**
+	 * 需要排除的页面
+	 */
+
+	private String excludedUrl;
+	private String[] excludedPageArray;
+
 	protected final Logger logger = Logger.getLogger(this.getClass());
 
-	public void init(FilterConfig filterConfig) throws ServletException {
-		// TODO Auto-generated method stub
-
+	public void init(FilterConfig fConfig) throws ServletException {
+		excludedUrl = fConfig.getInitParameter("excludedUrl");
+		if(StringUtils.isNotEmpty(excludedUrl)) {
+			excludedPageArray = excludedUrl.split(",");
+		}
+		return;
 	}
+
 
 	public void doFilter(ServletRequest servletRequest,
 			ServletResponse servletResponse, FilterChain chain)
 			throws IOException, ServletException {
+
 		HttpServletRequest request = (HttpServletRequest) servletRequest;
 		HttpServletResponse response = (HttpServletResponse) servletResponse;
-		Admin admin = (Admin) request.getSession().getAttribute(
-				SystemConstant.SESSION_ADMIN);
-		if (admin == null) {
-			String path = request.getContextPath();
-			String basePath = request.getScheme() + "://"
-					+ request.getServerName() + ":" + request.getServerPort()
-					+ path;
-			response.sendRedirect(basePath + "/admin/login.htm");
-		} else {
-			chain.doFilter(request, response);
+
+		Boolean isExcludedPage = false;
+		for (String page : excludedPageArray) {//判断是否在过滤url之外
+			if(request.getRequestURI().equals(page)){
+
+				isExcludedPage = true;
+				break;
+			}
 		}
+		if(isExcludedPage){
+			chain.doFilter(request, response);
+		}else{
+			Admin admin = (Admin) request.getSession().getAttribute(
+					SystemConstant.SESSION_ADMIN);
+			if (admin == null) {
+				String path = request.getContextPath();
+				String basePath = request.getScheme() + "://"
+						+ request.getServerName() + ":" + request.getServerPort()
+						+ path;
+				response.sendRedirect(basePath + "/admin/login.htm");
+			} else {
+				chain.doFilter(request, response);
+			}
+		}
+
+
 	}
 
 	public void destroy() {

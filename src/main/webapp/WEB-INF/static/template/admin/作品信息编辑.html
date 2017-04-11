@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>H+ 后台主题UI框架 - 文章页面</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min.css?v=4.1.0" rel="stylesheet">
+    
+    <style type="text/css">
+    
+			ul {
+				padding: 0;
+			}
+			
+			.nice-select input {			  
+			    
+			    display: inline-block;
+			    width: 100%;
+				height: 34px;
+				padding: 6px 12px;
+				font-size: 14px;
+				line-height: 1.42857143;
+				color: #555;
+				background-color: #fff;
+				background-image: none;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+			}
+			
+			.nice-select ul {
+			display: none;
+			height: 145px;
+			position: absolute;
+			left: 15px;
+			top: 40px;
+			overflow: hidden;
+			background-color: #fff;
+			overflow-y: auto;
+			border: 1px solid #E0E0E0;
+			border-radius: 3px;
+			z-index: 999;
+			width: 400px;/*临时*/
+
+			}
+			
+			.nice-select ul li {
+			    height: 30px;
+			    line-height: 30px;
+			    overflow: hidden;
+			    cursor: pointer;
+			    list-style: none;
+			    font-size: 13px;
+			    font-weight: normal;
+			    padding: 0 10px;
+			}
+			
+			.nice-select ul li.on {
+				background-color: #e0e0e0;
+			}
+			input[type="file"] {
+    		display: inline-block;
+}
+			.form-control1{
+				width: 30%;
+				height: 34px;
+				font-size: 14px;
+				line-height: 1.42857143;	
+			}
+			.btn-to{
+				margin: 0 auto;
+			}
+		</style>
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content  animated fadeInRight article">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <div class="ibox" style="margin: 5% auto;">
+                    <div class="ibox-content">
+                    	<h2>作品信息编辑</h2>
+                    	<hr>
+                        <form method="get" class="form-horizontal">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">小说名称</label>
+
+                                <div class="col-sm-10">
+                                    <input class="form-control" type="text">
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label class="col-sm-2 control-label">小说类别</label>
+
+                                <div class="col-sm-10">
+							<div class="nice-select " name="nice-select" >
+								
+								<input type="text" value="请选择'作品分类'">
+								<ul>
+									<li data-value="1">武侠</li>
+									<li data-value="2">励志</li>
+									<li data-value="2">玄幻</li>
+									<li data-value="3">科幻</li>
+
+								</ul>
+								 </div>
+
+							</div>
+							
+                            </div>
+                           
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">小说简介</label>
+                                <div class="col-sm-10">
+                                	<textarea  class="form-control" type="text" name="" rows="" cols=""></textarea>
+                                  
+                                </div>
+                            </div>
+                              <div class="form-group">
+                                <label class="col-sm-2 control-label">小说封面图</label>
+
+                                <div class="col-sm-10">
+                                 
+                                  	<input class="form-control1 input-file" id="fileInput" type="file" style="border: 0;">
+                               		<span style="display: inline-block;"><a href="#"> 查看</a></span>
+                                </div>
+                            </div>
+                            <hr>
+                           <div class="form-group">
+                           	<div class="col-sm-12" style="margin: 0 40%;">
+                           		<input class="btn btn-success" type="submit" value="提 交" style="margin: 0 18px;" > <input class="btn btn-success" type="reset" value="重 置">
+                           	</div>
+								
+							</div>
+                           </form>	
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="js/content.min.js?v=1.0.0"></script>
+    
+    <script>
+			$('[name="nice-select"]').click(function(e) {
+				$('[name="nice-select"]').find('ul').hide();
+				$(this).find('ul').show();
+				e.stopPropagation();
+			});
+			$('[name="nice-select"] li').hover(function(e) {
+				$(this).toggleClass('on');
+				e.stopPropagation();
+			});
+			$('[name="nice-select"] li').click(function(e) {
+				var val = $(this).text();
+				$(this).parents('[name="nice-select"]').find('input').val(val);
+				$('[name="nice-select"] ul').hide();
+				e.stopPropagation();
+			});
+			$(document).click(function() {
+				$('[name="nice-select"] ul').hide();
+			});
+//			var w_nice=$(".nice-select input").outerWidth();
+//			console.log(w_nice);
+//			$(".nice-select ul ").css('width',w_nice);
+		</script>
+</body>
+
+</html>

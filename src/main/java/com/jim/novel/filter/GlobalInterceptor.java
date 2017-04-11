@@ -47,6 +47,10 @@ public class GlobalInterceptor implements HandlerInterceptor {
 		String basePath = HttpUtils.getBasePath(request);
 		modelAndView.addObject("BASE_PATH", basePath);
 		modelAndView.addObject("UPLOAD_BASE_PATH", basePath + "/upload");
+		modelAndView.addObject("ADMIN_TEMPLATE_BASE_PATH", 	basePath
+				+ "/static/template/"
+				+ configService
+				.getStringByKey(ConfigConstant.ADMIN_TEMPLATE));
 		modelAndView
 				.addObject(
 						"TEMPLATE_BASE_PATH",

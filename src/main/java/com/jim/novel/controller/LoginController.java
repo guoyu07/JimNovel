@@ -6,6 +6,7 @@ import com.jim.novel.entity.JsonVo;
 import com.jim.novel.exception.TemplateNotFoundException;
 import com.jim.novel.utils.HttpUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Controller;
@@ -30,6 +31,7 @@ import java.awt.image.BufferedImage;
 @Controller
 @RequestMapping("center")
 public class LoginController extends BaseController {
+    protected final Logger logger = Logger.getLogger(this.getClass());
 
     /**
      * Kaptcha 验证码
@@ -58,6 +60,8 @@ public class LoginController extends BaseController {
         request.getSession().removeAttribute(SystemConstant.SESSION_USER);
         return "redirect:" + "/";
     }
+
+
 
     @ResponseBody
     @RequestMapping(value = "/login.json", method = RequestMethod.POST)
@@ -148,6 +152,7 @@ public class LoginController extends BaseController {
         response.setHeader("Pragma", "no-cache");
         response.setContentType("image/jpeg");
         String capText = captchaProducer.createText();
+        logger.info( "capText="+capText);
         request.getSession().setAttribute(
                 com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY, capText);
         BufferedImage bi = captchaProducer.createImage(capText);

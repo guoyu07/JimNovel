@@ -1,10 +1,14 @@
 package com.jim.novel.service;
 
 import com.jim.novel.constant.SystemConstant;
+import com.jim.novel.dao.AdminMapper;
 import com.jim.novel.dao.UserMapper;
 import com.jim.novel.entity.UserVo;
 import com.jim.novel.exception.AuthException;
+import com.jim.novel.model.Admin;
+import com.jim.novel.model.AdminExample;
 import com.jim.novel.model.User;
+import com.jim.novel.model.UserExample;
 import com.jim.novel.utils.AuthUtils;
 import com.jim.novel.utils.PropertyUtils;
 import org.apache.log4j.Logger;
@@ -15,6 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by run on 17/3/22.
@@ -26,9 +31,54 @@ public class UserService {
     @Autowired
     private UserMapper userDao;
 
+    @Autowired
+    private AdminMapper adminDao;
+
     public String getAuthorNmaeByUserId(int id){
         UserVo user =  userDao.selectByPrimaryKey(id);
         return user.getName();
+    }
+
+    /**
+     * 判断管理员是否存在
+     * @param name
+     * @param pwd
+     * @return
+     */
+    public Admin adminIsExist(String name){
+        AdminExample adminExample = new AdminExample();
+        adminExample.or().andNameEqualTo(name);
+        List<Admin> admin = adminDao.selectByExample(adminExample);
+        if (admin.isEmpty()){
+            return null;
+        }
+        return admin.get(0);
+    }
+
+    /**
+     * 判断管理员是否存在
+     * @param name
+     * @param pwd
+     * @return
+     */
+    public User userIsExist(String name){
+        UserExample userExample = new UserExample();
+        userExample.or().andNameEqualTo(name);
+        List<User> user = userDao.selectByExample(userExample);
+        if (user.isEmpty()){
+            return null;
+        }
+        return user.get(0);
+    }
+
+    public boolean checkPwd(String name,String pwd){
+        AdminExample adminExample = new AdminExample();
+        adminExample.or().andNameEqualTo(name).andPasswordEqualTo(pwd);
+        List<Admin> admin = adminDao.selectByExample(adminExample);
+        if (admin.isEmpty()){
+            return false;
+        }
+        return true;
     }
 
     /**
