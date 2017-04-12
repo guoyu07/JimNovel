@@ -22,7 +22,7 @@
 			padding: 0;
 		}
 
-		.nice-select input {
+		.zpm input,.zpfl input {
 			width: 150px;
 			height: 30px;
 			background: #fff;
@@ -32,14 +32,28 @@
 			border: 1px solid #ddd;
 			box-shadow: 0 0 10px rgba(161, 161, 161, 0.5);
 			display: inline-block;
+			position: relative;
 		}
 
-		.nice-select ul {
+		.zpm ul {
 			width: 150px;
 			display: none;
 			height: 145px;
 			position: absolute;
-			left: 85px;
+			left: 308px;
+			top: 105px;
+			overflow: hidden;
+			background-color: #fff;
+			overflow-y: auto;
+			border: 1px solid #E0E0E0;
+			border-radius: 3px;
+		}
+		.zpfl ul{
+			width: 150px;
+			display: none;
+			height: 145px;
+			position: absolute;
+			left: 98px;
 			top: 105px;
 			overflow: hidden;
 			background-color: #fff;
@@ -48,7 +62,7 @@
 			border-radius: 3px;
 		}
 
-		.nice-select ul li {
+		.zpm ul li,.zpfl ul li {
 			height: 30px;
 			line-height: 30px;
 			overflow: hidden;
@@ -59,7 +73,7 @@
 			padding: 0 10px;
 		}
 
-		.nice-select ul li.on {
+		.zpm ul li.on,.zpfl ul li.on  {
 			background-color: #e0e0e0;
 		}
 	</style>
@@ -91,25 +105,30 @@
 					</div>
 				</div>
 				<div class="ibox-title">
-					<div class="nice-select" name="nice-select" >
-						<label class="control-label">分类：</label>
-						<input type="text" value="请选择'分类'">
-						<ul class="folder">
-
+					<div class="zpfl" name="nice-select" style="display: inline-block;">
+						<label class="control-label">作品分类：</label>
+						<input type="text" value="请选择'作品分类'">
+						<ul>
+							<li data-value="1" class="">武侠</li>
+							<li data-value="2" class="">1</li>
+							<li data-value="3" class="">3</li>
+							<li data-value="4">4</li>
 						</ul>
+					</div>
 
-
+					<div class="zpm" name="nice-select" style="display: inline-block;">
 						<label class="control-label">作品名：</label>
 						<input type="text" value="请选择'作品名'">
 						<ul>
-							<li data-value="1">三生三世十里桃花</li>
-							<li data-value="2">时间之虚</li>
-							<li data-value="2">微微一笑很倾城</li>
-							<li data-value="3">微微一笑很倾城1</li>
+							<li data-value="1" class="">三生三世十里桃花</li>
+							<li data-value="2" class="">时间之虚</li>
+							<li data-value="3" class="">微微一笑很倾城</li>
+							<li data-value="4">微微一笑很倾城1</li>
 						</ul>
 						<label class="" style="margin-left: 20px;">章节名：</label>
-						<input type="text"  style="width: 300px;" >
+						<input type="text" style="width: 300px;">
 					</div>
+
 				</div>
 				<div class="ibox-content" id="eg">
 					<div class="click2edit wrapper"></div>
@@ -140,11 +159,11 @@
             });
 			//Ajax为封装过的方法 具体见content.js，格式参照下面的写法{}可以传参数
 			//接口数据对应的Controller为
-        	Ajax('/fo/list',{},function(d){
-					if(d.code==200){
+        	Ajax('/fo/list',{},function(d){//这个是Ajax请求
+					if(d.code==200){// 200表示数据拿到了 d表示拿到的数据
 					    var data = d.data;
 					    for(i=0;i<data.length;i++){
-					        console.log(data[i]);
+					        console.log(data[i]);//这里就是拿到数据了你把这些数据用
 					        //这里需要动态展示小说分类 目前的下拉列表不能显示 需要你改一下@安吉
 					        var s = '<li data-value='+i+'>'+data[i].content+'</li>';
                             $('.folder').append(s);
