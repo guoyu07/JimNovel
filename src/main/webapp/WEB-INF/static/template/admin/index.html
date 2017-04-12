@@ -5,7 +5,7 @@
 
 		<!-- Meta -->
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" < <meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="renderer" content="webkit">
 		<title>吉米小说JimNovel</title>
 
 		<!-- CSS文件 -->
@@ -28,19 +28,19 @@
 								<span><img alt="image" class="img-circle" src="${ADMIN_TEMPLATE_BASE_PATH}/img/profile_small.jpg" /></span>
 								<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 									<span class="clear">
-                               <span class="block m-t-xs"><strong class="font-bold">Run</strong></span>
-									<span class="text-muted text-xs block">超级管理员<b class="caret"></b></span>
+                               <span class="block m-t-xs"><strong class="font-bold"><#if SESSION_USER??>${SESSION_USER.name}<#else>${SESSION_ADMIN.name}</#if></strong></span>
+									<span class="text-muted text-xs block"><#if SESSION_USER??>普通用户<#else>管理员</#if><b class="caret"></b></span>
 									</span>
 								</a>
 								<ul class="dropdown-menu animated fadeInRight m-t-xs">
 									<li>
-										<a class="J_menuItem" href="form_avatar.html">修改头像</a>
+										<a class="J_menuItem" href="form_avatar.htm">修改头像</a>
 									</li>
 									<li>
-										<a class="J_menuItem" href="reuserinfo.html">修改用户信息</a>
+										<a class="J_menuItem" href="change_info.htm">修改用户信息</a>
 									</li>
 									<li>
-										<a class="J_menuItem" href="repassword.html">修改用户密码</a>
+										<a class="J_menuItem" href="change_pwd.htm">修改用户密码</a>
 									</li>
 
 								</ul>

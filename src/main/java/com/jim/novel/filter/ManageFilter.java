@@ -9,6 +9,7 @@ package com.jim.novel.filter;
 
 import com.jim.novel.constant.SystemConstant;
 import com.jim.novel.model.Admin;
+import com.jim.novel.model.User;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 
@@ -64,7 +65,8 @@ public class ManageFilter implements Filter {
 		}else{
 			Admin admin = (Admin) request.getSession().getAttribute(
 					SystemConstant.SESSION_ADMIN);
-			if (admin == null) {
+			User user = (User) request.getSession().getAttribute(SystemConstant.SESSION_USER);
+			if (admin == null && user == null) {
 				String path = request.getContextPath();
 				String basePath = request.getScheme() + "://"
 						+ request.getServerName() + ":" + request.getServerPort()

@@ -39,6 +39,18 @@ public class UserService {
         return user.getName();
     }
 
+    public User getUserInfo(Integer userId){
+        UserExample userExample = new UserExample();
+        userExample.or().andIdEqualTo(userId);
+        return userDao.selectByExample(userExample).get(0);
+    }
+
+    public boolean updateUserInfoById(User user){
+        UserExample userExample = new UserExample();
+
+        return  userDao.updateByPrimaryKey(user)==1?true:false;
+    }
+
     /**
      * 判断管理员是否存在
      * @param name
@@ -61,9 +73,9 @@ public class UserService {
      * @param pwd
      * @return
      */
-    public User userIsExist(String name){
+    public User userIsExist(String email){
         UserExample userExample = new UserExample();
-        userExample.or().andNameEqualTo(name);
+        userExample.or().andEmailEqualTo(email);
         List<User> user = userDao.selectByExample(userExample);
         if (user.isEmpty()){
             return null;

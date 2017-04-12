@@ -56,5 +56,20 @@ public class AdminController {
         return templateService.getAdminTemplate("history");
     }
 
+    @RequestMapping("/form_avatar.htm")
+    public String avater(){
+        return templateService.getAdminTemplate("form_avatar");
+    }
+
+    @RequestMapping("/change_info.htm")
+    public String change_info(){
+        return templateService.getAdminTemplate("change_info");
+    }
+
+    @RequestMapping("/change_pwd.htm")
+    public String change_pwd(){
+        return templateService.getAdminTemplate("change_pwd");
+    }
+
     //***static/template/admin/index.html这个页面中的iframe需要通过这个控制器路由，注意后缀是.htm，freemarker会自动找到static/template/admin下的xxx.html进行渲染
 }

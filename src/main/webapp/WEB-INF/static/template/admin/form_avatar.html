@@ -15,8 +15,11 @@
 		 	
 		 </canvas>
         <!-- <img src="" alt="" id="img"> -->
-        <input type="file" accept="image/png,image/jpeg" id="imgInput">
-       
+		 <form action="/info/uploadImg.htm" method="post" enctype="multipart/form-data">
+			 <input type="hidden" name="userId" value="10001">
+       		 <input type="file" name="file" accept="image/png,image/jpeg" id="imgInput">
+			 <button class="btn btn-sm btn-white" type="submit">上传</button>
+		 </form>
         <script>
             var canvas = document.getElementById('canvas');
             var ctx = canvas.getContext('2d');
