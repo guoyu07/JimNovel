@@ -2,7 +2,7 @@ package com.jim.novel.model;
 
 import java.util.Date;
 
-public class Admin {
+public class Admin extends Base {
     private Integer id;
 
     private String name;

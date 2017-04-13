@@ -2,7 +2,7 @@ package com.jim.novel.model;
 
 import java.util.Date;
 
-public class User {
+public class User extends Base{
     private Integer id;
 
     private String name;

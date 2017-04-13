@@ -7,6 +7,7 @@ import com.jim.novel.exception.AuthException;
 import com.jim.novel.model.Admin;
 import com.jim.novel.model.Response;
 import com.jim.novel.model.User;
+import com.jim.novel.utils.AuthUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -19,7 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-/**
+/**管理后台登录控制器(用户和管理员均可登录)
  *
  *
  * @author run
@@ -45,12 +46,13 @@ public class AdminLoginController extends BaseController{
 
         //如果是管理员
         if(admin!=null){
-            if (userService.checkPwd(admin.getName(),password)){
+            if (userService.checkPwd(admin.getName(), AuthUtils.getPassword(password))){
                 //密码校验通过，保存session
                 HttpSession session = request.getSession();
                 admin.setPassword("");
                 session.setAttribute(SystemConstant.SESSION_ADMIN,
                         admin);
+
             }else {
                 Response response = new Response(Response.ERROR_FORBIDDEN_400,"管理员密码错误",null);
                 return response.toJsonString();

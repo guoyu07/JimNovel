@@ -35,7 +35,7 @@ public class FolderUrlTag extends TagPlugin {
 			TemplateDirectiveBody body) throws TemplateException, IOException {
 		String folderId = params.get("folderId").toString();
 		String basePath = HttpUtils.getBasePath(request);
-		if (Boolean.getBoolean(PropertyUtils.getValue("shishuo.static"))) {
+		if (Boolean.getBoolean(PropertyUtils.getValue("jim.static"))) {
 			env.getOut().write(basePath + "/html/folder/" + folderId + ".html");
 		} else {
 			env.getOut().write(basePath + "/folder/" + folderId + ".htm");

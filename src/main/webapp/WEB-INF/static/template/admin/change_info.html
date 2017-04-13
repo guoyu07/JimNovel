@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>registerform</title>
-<link href="${ADMIN_TEMPLATE_BASE_PATH}/css/demo/repassword.css" type="text/css" rel="stylesheet" />
-<style>
-.registerform li{padding-bottom:20px;}
-.Validform_checktip{margin-left:10px;}
-.registerform .label{display:inline-block; width:70px;}
-.action{padding-left:92px;}
+    <meta charset="utf-8" />
+    <title>registerform</title>
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/demo/repassword.css" type="text/css" rel="stylesheet" />
+    <style>
+    .registerform li{padding-bottom:20px;}
+    .Validform_checktip{margin-left:10px;}
+    .registerform .label{display:inline-block; width:70px;}
+    .action{padding-left:92px;}
 
-</style>
+    </style>
+
 </head>
 
 <body>  
@@ -18,20 +19,36 @@
     <div class="wraper-i">
   
         
-        <form class="registerform" id="registerform" action="">
+        <form class="modify" id="modify" action="/info/changeInfo.htm" >
             <ul>
+             <!--普通用户显示   -->
+            <#if SESSION_USER??>
+                <input name="role" type="hidden" value="0">
                 <li>
                     <label class="label"><span class="need">*</span> 用户名：</label>
-                    <input type="text" value="" name="name" class="inputxt" id="username"/>
+                    <input type="text" value="${SESSION_USER.name}" name="name" class="inputxt" id="username"/>
                 </li>
-                
-                 <li>
-                     <label class="label"><span class="need">*</span> 邮箱：</label>
-                    <input type="email" value="" name="email" class="inputxt" id="email" />
+
+                <li>
+                    <label class="label"><span class="need">*</span> 邮箱：</label>
+                    <input type="email" value="${SESSION_USER.email}" name="email" class="inputxt" id="email" />
                 </li>
+                <!--管理员s显示   -->
+                <#else>
+                    <input name="role" type="hidden" value="1">
+                <li>
+
+                    <label class="label"><span class="need">*</span> 用户名：</label>
+                    <input type="text" value="${SESSION_ADMIN.name}" name="name" class="inputxt" id="username"/>
+                </li>
+
+            </#if>
+
+
                 
             </ul>
             <div class="action">
+
                 <input type="submit" value="提 交" /> <input type="reset" value="重 置" />
             </div>
         </form>
@@ -41,21 +58,35 @@
 
 
 
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript" src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.min.js"></script>
+<script type="text/javascript" src="${ADMIN_TEMPLATE_BASE_PATH}/js/Validform_v5.3.2_min.js"></script>
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/plugins/layer/layer.min.js"></script>
 
 
 <script type="text/javascript">
 $(function(){
 	//$(".registerform").Validform();  //就这一行代码！;
-		
-	var demo=$(".registerform").Validform({
+
+	var demo=$(".modify").Validform({
 		tiptype:3,
 		label:".label",
 		showAllError:false,
 		datatype:{
 			"zh1-6":/^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/
 		},
+        callback:function(data){
+		    console.log(data);
+            if(data.code==200){
+                layer.load(1);
+                setTimeout(function(){
+                    layer.closeAll('loading');
+                }, 2000);
+
+            }
+            else{
+                alert(data.msg);
+            }
+        },
 		ajaxPost:true
 	});
 	

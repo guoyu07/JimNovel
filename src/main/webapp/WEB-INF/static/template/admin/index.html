@@ -25,7 +25,15 @@
 					<ul class="nav" id="side-menu">
 						<li class="nav-header">
 							<div class="dropdown profile-element">
-								<span><img alt="image" class="img-circle" src="${ADMIN_TEMPLATE_BASE_PATH}/img/profile_small.jpg" /></span>
+								<span>
+								<#if SESSION_USER??>
+										<img alt="image" height="64px" width="64px" class="img-circle" src="<#if SESSION_USER.avaterUrl??>${SESSION_USER.avaterUrl}<#else>upload/userlogo-default.png</#if>" />
+
+									<#else>
+
+										<img alt="image" height="64px" width="64px" class="img-circle" src="upload/userlogo-default.png" />
+								</#if>
+								</span>
 								<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 									<span class="clear">
                                <span class="block m-t-xs"><strong class="font-bold"><#if SESSION_USER??>${SESSION_USER.name}<#else>${SESSION_ADMIN.name}</#if></strong></span>
@@ -33,9 +41,11 @@
 									</span>
 								</a>
 								<ul class="dropdown-menu animated fadeInRight m-t-xs">
-									<li>
-										<a class="J_menuItem" href="form_avatar.htm">修改头像</a>
-									</li>
+									<#if SESSION_USER??>
+										<li>
+											<a class="J_menuItem" href="form_avatar.htm">修改头像</a>
+										</li>
+									</#if>
 									<li>
 										<a class="J_menuItem" href="change_info.htm">修改用户信息</a>
 									</li>
@@ -139,6 +149,7 @@
 		</div>
 
 		<!-- 全局js -->
+		<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/content.js?v=1.0.0"></script>
 		<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.min.js?v=2.1.4"></script>
 		<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/bootstrap.min.js?v=3.3.6"></script>
 		<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/plugins/metisMenu/jquery.metisMenu.js"></script>

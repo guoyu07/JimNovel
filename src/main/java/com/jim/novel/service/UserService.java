@@ -45,10 +45,18 @@ public class UserService {
         return userDao.selectByExample(userExample).get(0);
     }
 
-    public boolean updateUserInfoById(User user){
-        UserExample userExample = new UserExample();
+    public Admin getAdminInfo(Integer userId){
+        AdminExample adminExample = new AdminExample();
+        adminExample.or().andIdEqualTo(userId);
+        return adminDao.selectByExample(adminExample).get(0);
+    }
 
+    public boolean updateUserInfoById(User user){
         return  userDao.updateByPrimaryKey(user)==1?true:false;
+    }
+
+    public boolean updateAdminInfoById(Admin user){
+        return  adminDao.updateByPrimaryKey(user)==1?true:false;
     }
 
     /**
@@ -108,8 +116,8 @@ public class UserService {
         if (user == null) {
             throw new AuthException("邮箱或密码错误");
         }
-//        String loginPassword = AuthUtils.getPassword(password);
-        String loginPassword = password;
+       String loginPassword = AuthUtils.getPassword(password);
+   //     String loginPassword = password;
         if (loginPassword.equals(user.getPassword())) {
             HttpSession session = request.getSession();
             user.setPassword("");

@@ -10,17 +10,52 @@
             }
         </style>
 	</head>
+	<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.min.js?v=2.1.4" charset="utf-8"></script>
+	<script type="text/javascript" src="${ADMIN_TEMPLATE_BASE_PATH}/js/easyui/jquery.easyui.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="${ADMIN_TEMPLATE_BASE_PATH}/js/easyui/locale/easyui-lang-zh_CN.js" charset="utf-8"></script>
+	<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/plugins/layer/layer.min.js"></script>
+	<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/content.js?v=1.0.0"></script>
 	<body>
 		 <canvas id="canvas" width="400" height="400"  >
 		 	
 		 </canvas>
         <!-- <img src="" alt="" id="img"> -->
-		 <form action="/info/uploadImg.htm" method="post" enctype="multipart/form-data">
-			 <input type="hidden" name="userId" value="10001">
-       		 <input type="file" name="file" accept="image/png,image/jpeg" id="imgInput">
-			 <button class="btn btn-sm btn-white" type="submit">上传</button>
+		 <form id="upload" method="post" enctype="multipart/form-data">
+       		 <input type="file" name="file" accept="image/png,image/jpeg"  id="imgInput">
+			 <a class="btn-primary" onclick="submitForm()">上传</a>
 		 </form>
         <script>
+
+            function submitForm(){
+                $('#upload').submit();
+            }
+
+            // 登录
+            $('#upload').form({
+                url: '/info/uploadImg.htm',
+                onSubmit : function() {
+                    var isValid = $(this).form('validate');
+                    if(!isValid){
+                        alert();
+                    }
+                    return isValid;
+                },
+                success:function(result){
+                    result = $.parseJSON(result);
+                    if (result.code==200) {
+
+                        layer.load(1);
+//此处演示关闭
+                        setTimeout(function(){
+                            layer.closeAll('loading');
+                        }, 2000);
+                        parent.location.reload();
+                    }else{
+                        showMsg(result.msg);
+                    }
+                }
+            });
+
             var canvas = document.getElementById('canvas');
             var ctx = canvas.getContext('2d');
             var imgInput = document.getElementById('imgInput');

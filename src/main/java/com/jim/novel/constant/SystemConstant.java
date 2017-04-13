@@ -20,12 +20,12 @@ public class SystemConstant {
 	/**
 	 * 应用部署路径的KEY
 	 */
-	public static String SHISHUO_CMS_ROOT = PropertyUtils.getRoot();
+	public static String JIM_NOVEL_ROOT = PropertyUtils.getRoot();
 
 	/**
-	 * 上传文件夹
+	 * 上传图片文件夹
 	 */
-	public static String UPLOAD_FOLDER = "upload/photo";
+	public static String UPLOAD_FOLDER = "/WEB-INF/upload/";
 
 	/**
 	 * 备份文件夹
