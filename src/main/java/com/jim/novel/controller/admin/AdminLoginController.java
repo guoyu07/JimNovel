@@ -8,6 +8,7 @@ import com.jim.novel.model.Admin;
 import com.jim.novel.model.Response;
 import com.jim.novel.model.User;
 import com.jim.novel.utils.AuthUtils;
+import com.jim.novel.utils.HttpUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -73,6 +74,14 @@ public class AdminLoginController extends BaseController{
         }
         Response response = new Response(Response.OK_200,"登录成功",null);
         return response.toJsonString();
+
+    }
+
+    @RequestMapping(value = "/adminLogout.htm", method = RequestMethod.GET)
+    public String adminLogout(HttpServletRequest request){
+        request.getSession().removeAttribute(SystemConstant.SESSION_USER);
+        request.getSession().removeAttribute(SystemConstant.SESSION_ADMIN);
+        return "redirect:" + HttpUtils.getBasePath(request);
 
     }
 

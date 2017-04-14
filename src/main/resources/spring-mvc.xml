@@ -45,7 +45,7 @@
 
     <mvc:resources mapping="/static/**" location="/WEB-INF/static/"
                    cache-period="31556926" />
-    <mvc:resources mapping="/upload/**" location="/WEB-INF/upload/"
+    <mvc:resources mapping="/upload/**" location="/upload/"
                    cache-period="31556926" />
     <mvc:interceptors>
         <mvc:interceptor>
