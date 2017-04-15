@@ -3,6 +3,7 @@ package com.jim.novel.controller.admin;
 import com.jim.novel.service.TemplateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -35,6 +36,14 @@ public class AdminController {
     public String article(){
         return templateService.getAdminTemplate("article");
     }
+
+
+    @RequestMapping("/chapter.htm")
+    public String chapter(ModelMap modelMap,String articleId){
+        modelMap.put("articleId",articleId);
+        return templateService.getAdminTemplate("chapter");
+    }
+
 
     @RequestMapping("/login.htm")
     public String login(){

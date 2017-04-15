@@ -86,4 +86,11 @@ public interface ArticleMapper {
 
     List<ArticleVo> getPopularList(@Param("offset") int offset, @Param("rows") int rows);
 
+
+    /**
+     * 添加一篇文章
+     *
+     * @return Integer
+     */
+    public int addArticle(Article article);
 }

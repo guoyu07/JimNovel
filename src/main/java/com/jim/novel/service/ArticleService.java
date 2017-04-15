@@ -1,5 +1,6 @@
 package com.jim.novel.service;
 
+import com.jim.novel.constant.ArticleConstant;
 import com.jim.novel.constant.enums.ArticleStatus;
 import com.jim.novel.dao.ArticleMapper;
 import com.jim.novel.entity.ArticleVo;
@@ -9,10 +10,18 @@ import com.jim.novel.exception.ArticleNotFoundException;
 import com.jim.novel.exception.FolderNotFoundException;
 import com.jim.novel.model.Article;
 import com.jim.novel.model.Folder;
+import com.jim.novel.utils.MediaUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -199,6 +208,38 @@ public class ArticleService {
 
     }
 
+
+    /**
+     * @param folderId
+     * @param adminId
+     * @param title
+     * @param summary
+     * @param status
+     * @param content
+     * @param file
+     * @param createTime
+     * @return
+     * @throws FolderNotFoundException
+     * @throws UploadException
+     * @throws IOException
+     */
+    @CacheEvict(value = "article", allEntries = true)
+    public Article addArticle(int folderId, int ownerId, String title, String keyword) throws FolderNotFoundException, IOException {
+        FolderVo folder = folderService.getFolderById(folderId);
+        Article article = new Article();
+        Date now = new Date();
+        article.setFolderId(folder.getFolderId());
+        article.setPath(folder.getPath());
+        article.setOwnerId(ownerId);
+        article.setTitle(title);
+        article.setViewCount(0);
+        article.setStatus(ArticleStatus.ORIGIN.getValue());
+        article.setCreateTime(now);
+        article.setModifyTime(now);
+        article.setKeyword(keyword);
+        articleDao.addArticle(article);
+        return articleDao.selectByPrimaryKey(article.getArticleId());
+    }
 
 }
 

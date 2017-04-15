@@ -21,8 +21,18 @@ function Ajax(url,data,callBack,type){
 }
 
 function showMsg(msg){
+
     layer.alert(msg, {
         skin: 'layui-layer-lan',
         shift: 4 //动画类型
+    });
+}
+
+function comfirmMsg(msg){
+    layer.alert(msg, {
+        skin: 'layui-layer-molv' //样式类名
+        ,closeBtn: 0
+    }, function(){
+        self.location.reload();
     });
 }

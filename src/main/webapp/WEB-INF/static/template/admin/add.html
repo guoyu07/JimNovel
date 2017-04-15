@@ -205,7 +205,9 @@
 
 <!-- 全局js -->
 <script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.min.js?v=2.1.4"></script>
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.form.min.js?v=2.1.4"></script>
 <script src="${ADMIN_TEMPLATE_BASE_PATH}/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/plugins/layer/layer.min.js"></script>
 
 <!-- 自定义js -->
 <script src="${ADMIN_TEMPLATE_BASE_PATH}/js/content.js?v=1.0.0"></script>
@@ -217,11 +219,12 @@
             dataType : 'json',
             success : function(data) {
                 if (data.result) {
-                    bootbox.alert("保存成功，将刷新页面", function() {
-                        window.location.reload();
-                    });
+
+                    parent.location.reload(true);
+                   // self.opener.location.reload();
+
                 }else{
-                    showErrors($('#add_article_form'),data.errors);
+                    showMsg(data.msg);
                 }
             }
         });
