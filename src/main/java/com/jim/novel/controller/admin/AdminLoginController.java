@@ -81,7 +81,7 @@ public class AdminLoginController extends BaseController{
     public String adminLogout(HttpServletRequest request){
         request.getSession().removeAttribute(SystemConstant.SESSION_USER);
         request.getSession().removeAttribute(SystemConstant.SESSION_ADMIN);
-        return "redirect:" + HttpUtils.getBasePath(request);
+        return "redirect:/admin/login" ;
 
     }
 
