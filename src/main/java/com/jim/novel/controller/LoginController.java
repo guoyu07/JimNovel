@@ -31,7 +31,6 @@ import java.awt.image.BufferedImage;
 @Controller
 @RequestMapping("center")
 public class LoginController extends BaseController {
-    protected final Logger logger = Logger.getLogger(this.getClass());
 
     /**
      * Kaptcha 验证码

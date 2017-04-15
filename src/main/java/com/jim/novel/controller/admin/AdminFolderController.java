@@ -23,8 +23,6 @@ import java.util.List;
 @RequestMapping("/fo")
 public class AdminFolderController extends BaseController {
 
-    protected final Logger logger = Logger.getLogger(this.getClass());
-
     @Autowired
     private FolderService folderService;
 
@@ -38,7 +36,7 @@ public class AdminFolderController extends BaseController {
         //ajax异步请求的时候，需要从data取出对应的对象
         Response response = new Response(Response.OK_200,"ok",list);
 
-        logger.info("/fo/list返回数据格式"+response.toJsonString());
+     //   logger.info("/fo/list返回数据格式"+response.toJsonString());
         return response.toJsonString();
     }
 

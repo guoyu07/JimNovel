@@ -16,6 +16,9 @@ import javax.servlet.http.HttpServletRequest;
  * Created by run on 17/3/13.
  */
 public class BaseController {
+
+    protected final Logger logger = Logger.getLogger(this.getClass());
+
     @Autowired
     protected FolderService folderService;
 
@@ -34,7 +37,6 @@ public class BaseController {
     @Autowired
     protected UserCollectService userCollectService;
 
-    protected final Logger logger = Logger.getLogger(this.getClass());
 
     //通过session获取当前用户信息(带密码)
     protected User me(){
