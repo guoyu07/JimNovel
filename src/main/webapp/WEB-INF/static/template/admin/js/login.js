@@ -82,6 +82,7 @@ $(document).keydown(function (e) {
  * 显示消息
  */
 function showMsg(msg) {
+    console.log(msg)
     top.window.$.messager.show({
         title: '提示',
         msg:'<div class="light-info"><div class="light-tip icon-tip"></div><div>' + msg||"消息内容！" + '</div></div>',
@@ -150,11 +151,13 @@ $(function () {
             return isValid;
         },
         success:function(result){
+            console.log(result)
             progressClose();
             result = $.parseJSON(result);
             if (result.code==200) {
                 window.location.href = 'index.htm';
             }else{
+
                 showMsg(result.msg);
             }
         }

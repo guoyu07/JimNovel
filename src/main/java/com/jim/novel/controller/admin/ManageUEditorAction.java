@@ -1,8 +1,3 @@
-/*
- *	Copyright © 2013 Changsha Shishuo Network Technology Co., Ltd. All rights reserved.
- *	长沙市师说网络科技有限公司 版权所有
- *	http://www.shishuo.com
- */
 package com.jim.novel.controller.admin;
 
 import com.baidu.ueditor.ActionEnter;
@@ -30,14 +25,11 @@ public class ManageUEditorAction extends BaseController {
 	@RequestMapping(value = "/ueditor.htm")
 	public String config(@RequestParam(value = "action") String action,
                          HttpServletResponse response, HttpServletRequest request) {
-//		response.setContentType("text/html;charset=UTF-8");
+//
 		// String root = HttpUtils.getBasePath(request);
 		String root = PropertyUtils.getRoot()
 				+ java.io.File.separatorChar;
-		// root = root.replace("\\", "/");
-		// if (!root.endsWith("/")) {
-		// root += "/";
-		// }
+
 		logger.info("ueditor root:"+root);
 		return new ActionEnter(request, "/Users/run/Documents/learnspace/JimNovel/target/JimNovel").exec();
 	}

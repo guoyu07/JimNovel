@@ -2,9 +2,11 @@ package com.jim.novel.service;
 
 import com.jim.novel.constant.enums.FolderDisplay;
 import com.jim.novel.dao.FolderMapper;
+import com.jim.novel.entity.UserFolderVo;
 import com.jim.novel.entity.FolderVo;
 import com.jim.novel.exception.FolderNotFoundException;
 import com.jim.novel.model.Folder;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
@@ -12,6 +14,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -23,6 +26,9 @@ public class FolderService {
 
     @Autowired
     private FolderMapper folderDao;
+    
+    @Autowired
+    private UserFolderService userFolderService;
 
 
 
@@ -67,9 +73,49 @@ public class FolderService {
     }
 
 
-    // ///////////////////////////////
-    // ///// 查詢 ////////
-    // ///////////////////////////////
+    /**
+     * 得到所有的四层目录
+     *
+     * @return
+     * @throws FolderNotFoundException
+     */
+    @Cacheable(value = "folder")
+    public List<FolderVo> getAllFolderList(int userId) {
+        List<FolderVo> folderList = folderDao.getAllFolderList();
+        HashMap<String, FolderVo> folderMap = new HashMap<String, FolderVo>();
+        for (FolderVo folder : folderList) {
+            folderMap.put(folder.getFolderId() + "", folder);
+        }
+        for (FolderVo folder : folderList) {
+            folderMap.put(folder.getFolderId() + "", folder);
+            UserFolderVo adminFolder = userFolderService.getUserFolderById(
+                    userId, folder.getFolderId());
+            if (adminFolder == null) {
+                folder.setOwner("no");
+            } else {
+                folder.setOwner("yes");
+            }
+        }
+        for (FolderVo folder : folderList) {
+            folder.setPathName(getPathName(folderMap, folder.getPath()));
+        }
+        return folderList;
+    }
+
+
+    @Cacheable(value = "folder")
+    private String getPathName(HashMap<String, FolderVo> folderMap, String path) {
+        List<String> names = new ArrayList<String>();
+        try {
+            String[] folderIds = path.split("#");
+            for (String folderId : folderIds) {
+                names.add(folderMap.get(folderId).getName());
+            }
+        } catch (NullPointerException e) {
+            logger.fatal(path + " - " + StringUtils.join(path.split("#"), ","));
+        }
+        return StringUtils.join(names, " - ");
+    }
 
     /**
      * 得到指定目录

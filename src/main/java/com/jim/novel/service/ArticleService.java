@@ -160,17 +160,36 @@ public class ArticleService {
      * @return
      * @throws FolderNotFoundException
      */
-    public List<ArticleVo> getArticleListByAdminIdAndFolderId(int adminId,
-                                                              int folderId, ArticleStatus status,
-                                                              int offset, int rows) throws FolderNotFoundException {
+    public List<ArticleVo> getArticleListByOwnerIdAndFolderId(int ownerId,
+                                                              int folderId, ArticleStatus status) throws FolderNotFoundException {
         String path = "";
         if (folderId != 0) {
             Folder folder = folderService.getFolderById(folderId);
             path = folder.getPath();
         }
         List<ArticleVo> articleList = articleDao
-                .getArticleListByAdminIdAndPath(adminId, path,
-                        status.getValue(), offset, rows);
+                .getArticleListByOwnerIdAndPath(ownerId, path,
+                        status.getValue());
+        return articleList;
+    }
+
+    /**
+     * @param adminId
+     * @param folderId
+     * @param offset
+     * @param rows
+     * @return
+     * @throws FolderNotFoundException
+     */
+    public List<ArticleVo> getArticleListByOwnerId(int ownerId) throws FolderNotFoundException {
+        List<ArticleVo> articleList = articleDao.getArticleListByOwnerId(ownerId);
+        for (ArticleVo article :
+                articleList) {
+            FolderVo articleFolder = folderService.getFolderById(article.getFolderId());
+            String authorNmae = userService.getAuthorNmaeByUserId(article.getOwnerId());
+            article.setAuthor(authorNmae);
+            article.setFolder(articleFolder);
+        }
         return articleList;
     }
 

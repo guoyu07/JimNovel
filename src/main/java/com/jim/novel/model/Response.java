@@ -34,8 +34,8 @@ public class Response {
 	
 	
 	/* 消息类型 */
-	public static final int MSG_TYPE_NORMAL = 0;         // 普通类型
-	public static final int MSG_TYPE_TRADE_STRATEGY = 1; // 操盘策略
+	public static final int MSG_TYPE_NORMAL = 0;
+	public static final int MSG_TYPE_TRADE_STRATEGY = 1;
 
 	public int code;
 	public String msg = "";
@@ -67,6 +67,20 @@ public class Response {
 	 */
 	public static String successResponseJson (Object data){
 		Response response = new Response(Response.OK_200,"操作成功",data);
+		return response.toJsonString();
+	}
+
+	/**
+	 *
+	 * @Description: 生成失败的response,并转出json字符串
+	 * @Author lee
+	 * @Created 16/10/9 下午3:22
+	 * @Param  请求成分返回的数据模型
+	 * @Return
+	 *
+	 */
+	public static String errorResponseJson (String msg){
+		Response response = new Response(Response.ERROR_SERVER_500,msg,null);
 		return response.toJsonString();
 	}
 

@@ -2,8 +2,8 @@ package com.jim.novel.model;
 
 import java.util.Date;
 
-public class AdminFolder {
-    private Integer adminId;
+public class UserFolder {
+    private Integer userId;
 
     private Integer folderId;
 
@@ -11,12 +11,12 @@ public class AdminFolder {
 
     private Date modifyTime;
 
-    public Integer getAdminId() {
-        return adminId;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setAdminId(Integer adminId) {
-        this.adminId = adminId;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public Integer getFolderId() {

@@ -69,10 +69,20 @@ public interface ArticleMapper {
      * @param foderId
      * @return List<FileVo>
      */
-    List<ArticleVo> getArticleListByAdminIdAndPath(
-            @Param("adminId") int adminId, @Param("path") String path,
-            @Param("status") int status,
-            @Param("offset") int offset, @Param("rows") int rows);
+    List<ArticleVo> getArticleListByOwnerIdAndPath(
+            @Param("ownerId") int ownerId, @Param("path") String path,
+            @Param("status") int status);
+
+
+    /**
+     * 得到某种显示的文件的列表
+     *
+     * @param foderId
+     * @return List<FileVo>
+     */
+    List<ArticleVo> getArticleListByOwnerId(
+            @Param("ownerId") int ownerId);
+
 
     List<ArticleVo> getPopularList(@Param("offset") int offset, @Param("rows") int rows);
 

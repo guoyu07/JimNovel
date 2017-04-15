@@ -3,6 +3,7 @@ package com.jim.novel.controller;
 import com.jim.novel.constant.SystemConstant;
 import com.jim.novel.model.Admin;
 import com.jim.novel.model.Base;
+import com.jim.novel.model.Response;
 import com.jim.novel.model.User;
 import com.jim.novel.service.*;
 import org.apache.log4j.Logger;
@@ -63,5 +64,16 @@ public class BaseController {
     protected void SessionedAdmin(Admin user){
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
         request.getSession().setAttribute(SystemConstant.SESSION_ADMIN,user);
+    }
+
+    protected String renderSuccess(Object data){
+        return Response.successResponseJson(data);
+    }
+
+    protected String renderError(String msg){
+        if(msg==null){
+            msg = "操作失败！";
+        }
+        return Response.errorResponseJson(msg);
     }
 }

@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 public abstract class TagPlugin extends ApplicationObjectSupport implements
 		TemplateDirectiveModel, Plugin {
 
-	private Logger logger = Logger.getLogger(this.getClass());
+	protected Logger logger = Logger.getLogger(this.getClass());
 
 	@Autowired
 	protected HttpServletRequest request;

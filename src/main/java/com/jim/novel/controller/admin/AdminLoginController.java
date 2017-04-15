@@ -66,11 +66,14 @@ public class AdminLoginController extends BaseController{
                 userService.Authlogin(user.getEmail(),password,request);
             } catch (AuthException e) {
                 e.printStackTrace();
-                Response response = new Response(Response.ERROR_FORBIDDEN_400,"用户密码错误",null);
+                Response response = new Response(Response.ERROR_FORBIDDEN_400,"Password Error",null);
                 return response.toJsonString();
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+        if(user==null && admin==null){
+            return renderError("Username not exist");
         }
         Response response = new Response(Response.OK_200,"登录成功",null);
         return response.toJsonString();
@@ -81,7 +84,7 @@ public class AdminLoginController extends BaseController{
     public String adminLogout(HttpServletRequest request){
         request.getSession().removeAttribute(SystemConstant.SESSION_USER);
         request.getSession().removeAttribute(SystemConstant.SESSION_ADMIN);
-        return "redirect:/admin/login" ;
+        return "redirect:/damin" + HttpUtils.getBasePath(request);
 
     }
 

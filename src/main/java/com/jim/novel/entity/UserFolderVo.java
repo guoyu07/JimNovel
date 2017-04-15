@@ -1,9 +1,9 @@
 package com.jim.novel.entity;
 
 
-import com.jim.novel.model.AdminFolder;
+import com.jim.novel.model.UserFolder;
 
-public class AdminFolderVo extends AdminFolder {
+public class UserFolderVo extends UserFolder {
 
 	private FolderVo folder;
 

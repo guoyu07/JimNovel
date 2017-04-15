@@ -433,4 +433,9 @@
   <select id="getFolderListBySort" resultType="com.jim.novel.model.Folder">
     select * from folder order by sort
   </select>
+
+  <select id="getAllFolderList" resultType="com.jim.novel.entity.FolderVo">
+    select * from folder order by path,sort
+  </select>
+
 </mapper>

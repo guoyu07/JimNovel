@@ -76,7 +76,6 @@
 				<div class="col-sm-12">
 					<div class="ibox">
 						<div class="ibox-content">
-							<span class="text-muted small pull-right">最后更新：<i class="fa fa-clock-o"></i> 2015-09-01 12:00</span>
 							<h2>我的作品信息<button class="btn btn-success" style="margin-left: 20px;" onclick="showBg()" >新增</button></h2>
 
 							<div class="input-group">
@@ -89,52 +88,23 @@
 								<div class="table-responsive">
 									<table class="table table-striped table-hover">
 										<tbody>
-											<tr>
-												<td class="client-avatar">1 </td>
-												<td class="client-status"><span class="label label-primary">武侠</span>
-												</td>
-												<td>
-													<a data-toggle="tab" href="#contact-1" class="client-link">三生三世十里桃花三生三世十里桃花</a>
-												</td>
-												<td class="spill"> 三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花</td>
-												<td class="contact-type"><span class="btn btn-default btn-sm" onclick="showBg()"><a href="#">编辑</a></span>
-												</td>
-												<td class="contact-type"><span class="btn btn-default btn-sm"><a href="#">删除</a></span>
-												</td>
-
-
-											</tr>
-											<tr>
-												<td class="client-avatar">1 </td>
-												<td class="client-status"><span class="label label-primary">玄幻</span>
-												</td>
-												<td>
-													<a data-toggle="tab" href="#contact-1" class="client-link">三生三世十里桃花三生三世十里桃花</a>
-												</td>
-												<td class="spill"> 三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花三生三世十里桃花</td>
-												<td class="contact-type"><span class="btn btn-default btn-sm" onclick="showBg()"><a href="#">编辑</a></span>
-												</td>
-												<td class="contact-type"><span class="btn btn-default btn-sm"><a href="#">删除</a></span>
-												</td>
-
-
-											</tr>
-											<tr>
-												<td class="client-avatar">1 </td>
-												<td class="client-status"><span class="label label-primary">励志</span>
-												</td>
-												<td>
-													<a data-toggle="tab" href="#contact-1" class="client-link">三生三世十里桃花三生三世十里桃花</a>
-												</td>
-												<td class="spill"> 文章简，介文章，简介，文章简介， 文，章简介，，文章，简介，文章，简，介文章，简介文章简，，介文章简介文章简介文章简介</td>
-												<td class="contact-type"><span class="btn btn-default btn-sm" onclick="showBg()"><a href="#">编辑</a></span>
-												</td>
-												<td class="contact-type"><span class="btn btn-default btn-sm"><a href="#">删除</a></span>
-												</td>
-
-
-											</tr>
-
+										<@shishuo_my_article_list_tag  userId=10005>
+											<#list tag_article_list as tag_article>
+												<tr>
+													<td class="client-avatar">${tag_article_index+1} </td>
+													<td class="client-status"><span class="label label-primary">${tag_article.folder.name}</span>
+													</td>
+													<td>
+														<a data-toggle="tab" href="#contact-1" class="client-link">${tag_article.title}</a>
+													</td>
+													<td class="spill">${tag_article.keyword}</td>
+													<td class="contact-type"><span class="btn btn-default btn-sm" onclick="showBg()"><a href="#">编辑</a></span>
+													</td>
+													<td class="contact-type"><span class="btn btn-default btn-sm"><a href="#">删除</a></span>
+													</td>
+												</tr>
+											</#list>
+										</@shishuo_my_article_list_tag>
 										</tbody>
 									</table>
 								</div>

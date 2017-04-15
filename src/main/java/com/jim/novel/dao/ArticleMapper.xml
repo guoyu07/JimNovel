@@ -316,14 +316,20 @@
     create_time desc limit #{offset},#{rows}
   </select>
 
-
-  <select id="getArticleListByAdminIdAndPath" resultType="com.jim.novel.entity.ArticleVo">
+  <select id="getArticleListByOwnerId" resultType="com.jim.novel.entity.ArticleVo">
     select * from
     article
-    where path like #{path}"%" and folder_id in (select folder_id from admin_folder where admin_id = #{admin_id}) <if test="status !=null">and `status` = #{status}</if>
+    where folder_id in (select folder_id from user_folder where user_id = #{ownerId})
     order by create_time
-    desc limit
-    #{offset},#{rows}
+    desc
+  </select>
+
+  <select id="getArticleListByOwnerIdAndPath" resultType="com.jim.novel.entity.ArticleVo">
+    select * from
+    article
+    where path like #{path}"%" and folder_id in (select folder_id from user_folder where user_id = #{ownerId}) <if test="status !=null">and `status` = #{status}</if>
+    order by create_time
+    desc
   </select>
 
   <select id="getArticleCountOfDisplayByPath" resultType="Integer">
@@ -333,6 +339,7 @@
     where
     path like #{path}"%" and status = '1'
   </select>
+
   <select id="getPopularList" resultType="com.jim.novel.entity.ArticleVo">
     select *
     from article

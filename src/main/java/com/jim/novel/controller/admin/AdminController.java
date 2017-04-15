@@ -21,6 +21,11 @@ public class AdminController {
     @Autowired
     private TemplateService templateService;
 
+    @RequestMapping("/main.htm")
+    public String mains(){
+        return templateService.getAdminTemplate("main");
+    }
+
     @RequestMapping("/index.htm")
     public String index(){
         return templateService.getAdminTemplate("index");

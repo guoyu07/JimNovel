@@ -64,4 +64,7 @@ public interface FolderMapper {
      * @return List<FolderVo>
      */
     public List<FolderVo> getFolderListBySort();
+
+    public List<FolderVo> getAllFolderList();
+
 }
