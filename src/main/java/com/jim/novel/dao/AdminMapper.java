@@ -1,5 +1,6 @@
 package com.jim.novel.dao;
 
+import com.jim.novel.constant.enums.ArticleStatus;
 import com.jim.novel.model.Admin;
 import com.jim.novel.model.AdminExample;
 import java.util.List;
@@ -27,4 +28,6 @@ public interface AdminMapper {
     int updateByPrimaryKeySelective(Admin record);
 
     int updateByPrimaryKey(Admin record);
+
+    int updateStatus(ArticleStatus status,Integer articleId);
 }

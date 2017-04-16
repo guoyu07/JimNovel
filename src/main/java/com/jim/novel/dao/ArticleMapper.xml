@@ -346,6 +346,15 @@
     order by view_count desc limit #{offset},#{rows}
   </select>
 
+  <select id="getAllArticle" resultType="com.jim.novel.entity.ArticleVo">
+    select *
+    from article
+    order by create_time
+  </select>
+
+  <update id="updateStatus" parameterType="Integer">
+    UPDATE article set   status = #{status,jdbcType=INTEGER} where article_id = #{articleId}
+  </update>
 
   <insert id="addArticle" parameterType="com.jim.novel.model.Article">
     insert into

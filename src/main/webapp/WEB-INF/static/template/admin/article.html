@@ -165,7 +165,7 @@
 								<div class="table-responsive">
 									<table class="table table-striped table-hover">
 										<tbody>
-										<@shishuo_my_article_list_tag  userId=10005>
+										<@shishuo_my_article_list_tag  userId=SESSION_USER.id>
 											<#list tag_article_list as tag_article>
 												<tr>
 													<td class="client-avatar">${tag_article_index+1} </td>

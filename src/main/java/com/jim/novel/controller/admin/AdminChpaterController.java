@@ -35,7 +35,7 @@ public class AdminChpaterController extends BaseController
             @RequestParam(value = "articleId", required = true) Integer articleId,
             @RequestParam("title") String title, @RequestParam("content")String content, @RequestParam(value = "createTime", required = false)String createTime, @RequestParam(value = "sort", required = false)Integer sort){
 
-        Chapter chapter = chapterService.addChapter(SSUtils.toText(title.trim()), articleId, SSUtils.toText(content), createTime, sort);
+        Chapter chapter = chapterService.addChapter(SSUtils.toText(title.trim()), articleId, content, createTime, sort);
 
         return renderSuccess(chapter);
 

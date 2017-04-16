@@ -12,6 +12,7 @@ import com.jim.novel.exception.FolderNotFoundException;
 import com.jim.novel.model.Article;
 import com.jim.novel.model.Chapter;
 import com.jim.novel.model.Folder;
+import com.jim.novel.model.User;
 import com.jim.novel.utils.MediaUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -74,6 +75,22 @@ public class ArticleService {
         return articlelist;
     }
 
+    public List<ArticleVo> getArticleList(){
+        List<ArticleVo> articleVoList = articleDao.getAllArticle();
+        for (ArticleVo article :
+                articleVoList) {
+            FolderVo articleFolder = null;
+            try {
+                articleFolder = folderService.getFolderById(article.getFolderId());
+            } catch (FolderNotFoundException e) {
+                e.printStackTrace();
+            }
+            User user = userService.getUserInfo(article.getOwnerId());
+            article.setUser(user);
+            article.setFolder(articleFolder);
+        }
+        return articleVoList;
+    }
 
     /**
      * @param adminId
@@ -171,10 +188,10 @@ public class ArticleService {
     }
 
     /**
-     * @param adminId
+     * 查询用户指定分类的目录下的小说列表
+     * @param ownerId
      * @param folderId
-     * @param offset
-     * @param rows
+     * @param status
      * @return
      * @throws FolderNotFoundException
      */
@@ -192,10 +209,8 @@ public class ArticleService {
     }
 
     /**
-     * @param adminId
-     * @param folderId
-     * @param offset
-     * @param rows
+     * 查询某个用户所有小说的列表
+     * @param ownerId
      * @return
      * @throws FolderNotFoundException
      */
@@ -272,6 +287,17 @@ public class ArticleService {
 
         }
     }
+
+    /**
+     * 审核更新状态
+     * @param status
+     * @param articleId
+     * @return
+     */
+    public int updateStatus(Integer status,Integer articleId){
+        return articleDao.updateStatus(status,articleId);
+    }
+
 
 }
 

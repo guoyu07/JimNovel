@@ -3,6 +3,7 @@ package com.jim.novel.entity;
 
 import com.jim.novel.model.Article;
 import com.jim.novel.model.Folder;
+import com.jim.novel.model.User;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
@@ -16,6 +17,16 @@ public class ArticleVo extends Article {
 	private String pictureUrl;
 
 	private String author;
+
+	private User user;
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
 
 	public String getPictureUrl() {
 		if (StringUtils.isBlank(this.getPictureUrl())) {

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>H+ 后台主题UI框架 - 客户管理</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/animate.css" rel="stylesheet">
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/style.css?v=4.1.0" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+
+
+<div class=" wrapper-content  animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <h2>${articleTitle}</h2>
+                    <div class="clients-list">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <tbody id="chapterList">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+        </div>
+
+    </div>
+</div>
+</div>
+
+
+
+<!-- 全局js -->
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.min.js?v=2.1.4"></script>
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.form.min.js?v=2.1.4"></script>
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/plugins/layer/layer.min.js"></script>
+
+<!-- 自定义js -->
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/content.js?v=1.0.0"></script>
+
+<!--统计代码，可删除-->
+<script type="text/javascript">
+
+
+    //Ajax为封装过的方法 具体见content.js，格式参照下面的写法{}可以传参数
+    //接口数据对应的Controller为
+    Ajax('/fo/chapterList',{"articleId":${articleId}},function(d){//这个是Ajax请求
+        if(d.code==200){// 200表示数据拿到了 d表示拿到的数据
+            var data = d.data;
+            for(var i=0; i<data.length; i++){
+                var s = '  <tr>';
+                s = s  + ' <td class="client-avatar">'+parseInt(i+1)+' </td>';
+                s = s + '  <td><a data-toggle="tab" href="#contact-1" class="client-link">'+data[i].chapterTitle+'</a></td>';
+                s = s + ' <td class="contact-type"><span class="btn btn-default btn-sm"><a  href="blog.htm?chapterId='+data[i].chapterId+'">预览</a></span> </td>';
+                s = s + ' </tr>';
+
+                $('#chapterList').append(s);
+            }
+            if(data.length==0){
+                $('#chapterList').append('请添加新的章节');
+            }
+
+        }
+    });
+
+    function deleteChp(chapterId){
+
+        Ajax('/ch/deleteChapter',{"chapterId":chapterId},function(d){//这个是Ajax请求
+            if(d.code==200){// 200表示数据拿到了 d表示拿到的数据
+
+                comfirmMsg(d.msg)
+            }
+        });
+    }
+</script>
+
+</body>
+
+</html>

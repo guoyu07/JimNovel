@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>H+ 后台主题UI框架 - 客户管理</title>
+
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="${ADMIN_TEMPLATE_BASE_PATH}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+		<link href="${ADMIN_TEMPLATE_BASE_PATH}/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+		<link href="${ADMIN_TEMPLATE_BASE_PATH}/css/animate.css" rel="stylesheet">
+		<link href="${ADMIN_TEMPLATE_BASE_PATH}/css/style.css?v=4.1.0" rel="stylesheet">
+
+	</head>
+
+	<body class="gray-bg">
+
+		<div class="wrapper wrapper-content  animated fadeInRight">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="ibox">
+						<div class="ibox-content">
+							<h2>我的作品信息
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+								增加
+								</button>
+							</h2>
+
+							<div class="input-group">
+								<input type="text" placeholder="查找作品名" class="input form-control">
+								<span class="input-group-btn">
+                                        <button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> 搜索</button>
+                                </span>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		</div>
+
+
+		<!-- 全局js -->
+		<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.min.js?v=2.1.4"></script>
+		<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/bootstrap.min.js?v=3.3.6"></script>
+		<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.form.min.js?v=2.1.4"></script>
+		<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/plugins/layer/layer.min.js"></script>
+
+		<!-- 自定义js -->
+		<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/content.js?v=1.0.0"></script>
+
+		<!--统计代码，可删除-->
+		<script type="text/javascript">
+
+            function deleteArt(articleId){
+                layer.confirm('删除该小说将一并删除其所有章节，是否确定？', {
+                    btn: ['取消','确定'] //按钮
+                }, function(){
+                    layer.msg('好险...', {icon: 1});
+                }, function(){
+                    Ajax('/fo/deleteArticle',{"articleId":articleId},function(d){//这个是Ajax请求
+                        if(d.code==200){// 200表示数据拿到了 d表示拿到的数据
+
+                            comfirmMsg(d.msg)
+                        }
+                    });
+                });
+
+            }
+            $('#add_article').ajaxForm({
+                dataType : 'json',
+                success : function(data) {
+                    if (data.code==200) {
+                        comfirmMsg(data.msg)
+
+
+                    }else{
+                        showMsg(data.msg);
+                    }
+                }
+            });
+
+            //Ajax为封装过的方法 具体见content.js，格式参照下面的写法{}可以传参数
+            //接口数据对应的Controller为
+            Ajax('/fo/list',{},function(d){//这个是Ajax请求
+                if(d.code==200){// 200表示数据拿到了 d表示拿到的数据
+                    var data = d.data;
+                    console.log(data);//这里就是拿到数据了你把这些数据用
+                    for(var i=0; i<data.length; i++){
+                        var s = '<option value='+data[i].folderId+'>'+data[i].pathName+'</option>';
+                        $('#folderList').append(s);
+                    }
+
+                }
+            });
+
+
+		</script>
+
+	</body>
+
+</html>

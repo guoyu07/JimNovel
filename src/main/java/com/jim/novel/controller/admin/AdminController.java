@@ -45,12 +45,47 @@ public class AdminController extends BaseController{
     }
 
 
+    @RequestMapping("/admin_article.htm")
+    public String adminArticle(){
+        return templateService.getAdminTemplate("admin_article");
+    }
+    @RequestMapping("/admin_folder.htm")
+    public String adminFolder(){
+        return templateService.getAdminTemplate("admin_folder");
+    }
+
+    @RequestMapping("/blog.htm")
+    public String blog(Integer chapterId,ModelMap modelMap){
+        ArticleVo articleVo = null;
+        Chapter chapter = chapterService.getChapterDetail(chapterId);
+        try {
+            articleVo = articleService.getArticleById(chapter.getArticleId());
+        } catch (ArticleNotFoundException e) {
+            e.printStackTrace();
+        } catch (FolderNotFoundException e) {
+            e.printStackTrace();
+        }
+        modelMap.put("chapter",chapter);
+        modelMap.put("article",articleVo);
+        return templateService.getAdminTemplate("blog");
+    }
+
+
     @RequestMapping("/chapter.htm")
     public String chapter(ModelMap modelMap,String articleId,String title){
         modelMap.put("articleId",articleId);
         String articleTitle = "《"+title+"》";
         modelMap.put("articleTitle",articleTitle);
         return templateService.getAdminTemplate("chapter");
+    }
+
+
+    @RequestMapping("/chapter_detail.htm")
+    public String chapterDetail(ModelMap modelMap,String articleId,String title){
+        modelMap.put("articleId",articleId);
+        String articleTitle = "《"+title+"》";
+        modelMap.put("articleTitle",articleTitle);
+        return templateService.getAdminTemplate("chapter_detail");
     }
 
     @RequestMapping("/editChapter.htm")
