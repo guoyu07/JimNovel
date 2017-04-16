@@ -115,7 +115,12 @@ public class AdminFolderController extends BaseController {
 
     }
 
-
+    @ResponseBody
+    @RequestMapping(value = "/deleteArticle", method = RequestMethod.GET)
+    public String deteleArticle(Integer articleId){
+        articleService.deleteArticle(articleId);
+        return renderSuccess(null);
+    }
 
 
 }

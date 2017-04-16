@@ -9,4 +9,37 @@
     SELECT * from chapter where chapter_id = #{chapterId}
   </select>
 
+
+  <insert id="addChapter" parameterType="com.jim.novel.model.Chapter">
+    insert into
+    chapter(article_id,sort,content,chapter_title,comment_count,create_time,modify_time)
+    values(#{articleId},#{sort},#{content},#{chapterTitle},#{commentCount},#{createTime},#{modifyTime})
+    <selectKey resultType="long" keyProperty="chapter_id">
+      SELECT
+      LAST_INSERT_ID()
+    </selectKey>
+  </insert>
+
+  <select id="selectByPrimaryKey" resultType="com.jim.novel.entity.ChapterVo" parameterType="java.lang.Integer" >
+    select * from chapter where chapter_id = #{chapterId};
+  </select>
+
+  <update id="updateChapter" parameterType="com.jim.novel.model.Chapter">
+    UPDATE chapter SET
+    chapter_title=#{chapterTitle},
+    content=#{content},
+    content=#{content},
+    sort=#{sort},
+    modify_time=#{modifyTime}
+    WHERE
+    chapter_id=#{chapterId}
+  </update>
+
+  <delete id="deleteByArticleId" parameterType="Integer">
+    DELETE  from chapter where article_id = #{articleId}
+  </delete>
+
+  <delete id="deleteById" parameterType="Integer">
+    DELETE  from chapter where chapter_id = #{chapterId}
+  </delete>
 </mapper>

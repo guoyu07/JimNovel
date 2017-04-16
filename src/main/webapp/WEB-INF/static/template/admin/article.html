@@ -20,7 +20,7 @@
 				padding-top: 90px;
 				text-align: center;
 			}
-			
+
 			#fullbg {
 				background-color: gray;
 				left: 0;
@@ -32,7 +32,7 @@
 				-moz-opacity: 0.5;
 				-khtml-opacity: 0.5;
 			}
-			
+
 			#dialog {
 				background-color: #fff;
 				border: 5px solid rgba(0, 0, 0, 0.4);
@@ -49,19 +49,19 @@
 				border-radius: 5px;
 				display: none;
 			}
-			
+
 			#dialog p {
 				margin: 0 0 12px;
 				height: 24px;
 				line-height: 24px;
 				/*background: #CCCCCC;*/
 			}
-			
+
 			#dialog p.close {
 				text-align: right;
 				padding-right: 10px;
 			}
-			
+
 			#dialog p.close a {
 				color: #000;
 				text-decoration: none;
@@ -175,9 +175,9 @@
 														<a data-toggle="tab" href="#contact-1" class="client-link">${tag_article.title}</a>
 													</td>
 													<td class="spill">${tag_article.keyword}</td>
-													<td class="contact-type"><span class="btn btn-default btn-sm""><a data-toggle="modal" href="chapter.htm?articleId=${tag_article.articleId}&title=${tag_article.title}" data-target="#chapter">章节列表</a></span>
+													<td class="contact-type"><span class="btn btn-default btn-sm"><a data-toggle="modal" href="chapter.htm?articleId=${tag_article.articleId}&title=${tag_article.title}" data-target="#chapter">章节列表</a></span>
 													</td>
-													<td class="contact-type"><span class="btn btn-default btn-sm"><a href="#">删除</a></span>
+													<td class="contact-type"><span class="btn btn-default btn-sm"><a href="#" onclick="deleteArt('${tag_article.articleId}')">删除</a></span>
 													</td>
 												</tr>
 											</#list>
@@ -207,6 +207,21 @@
 		<!--统计代码，可删除-->
 		<script type="text/javascript">
 
+            function deleteArt(articleId){
+                layer.confirm('删除该小说将一并删除其所有章节，是否确定？', {
+                    btn: ['取消','确定'] //按钮
+                }, function(){
+                    layer.msg('好险...', {icon: 1});
+                }, function(){
+                    Ajax('/fo/deleteArticle',{"articleId":articleId},function(d){//这个是Ajax请求
+                        if(d.code==200){// 200表示数据拿到了 d表示拿到的数据
+
+                            comfirmMsg(d.msg)
+                        }
+                    });
+                });
+
+            }
             $('#add_article').ajaxForm({
                 dataType : 'json',
                 success : function(data) {
@@ -233,6 +248,8 @@
 
                 }
             });
+
+
 		</script>
 
 	</body>

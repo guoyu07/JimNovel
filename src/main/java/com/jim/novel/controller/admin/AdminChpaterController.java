@@ -1,16 +1,13 @@
 package com.jim.novel.controller.admin;
 
 import com.jim.novel.controller.BaseController;
-import com.jim.novel.exception.FolderNotFoundException;
-import com.jim.novel.model.Article;
+import com.jim.novel.model.Chapter;
+import com.jim.novel.utils.SSUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.multipart.MultipartFile;
-
-import java.io.IOException;
 
 /**
  * 小说章节创建控制器
@@ -24,54 +21,57 @@ public class AdminChpaterController extends BaseController
 {
 
     /**
-     * 创建新章节
-     * @param folderId
+     * 添加新的章节
+     * @param articleId
      * @param title
+     * @param content
      * @param createTime
-     * @param status
+     * @param sort
      * @return
      */
     @ResponseBody
     @RequestMapping(value = "/addChapter", method = RequestMethod.POST)
     public String addChapter(
-            @RequestParam("folderId") int folderId,
-            @RequestParam("title") String title, @RequestParam("keyword")String keyword, @RequestParam(value = "fileBig", required = false) MultipartFile fileBig, @RequestParam(value = "fileSmall", required = false) MultipartFile fileSmall){
-        Article article = null;
-        try {
-            article = articleService.addArticle(folderId, me().getId(),title,keyword,fileBig,fileSmall);
-        } catch (FolderNotFoundException e) {
-            e.printStackTrace();
-            return renderError("添加失败");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return renderSuccess(article);
+            @RequestParam(value = "articleId", required = true) Integer articleId,
+            @RequestParam("title") String title, @RequestParam("content")String content, @RequestParam(value = "createTime", required = false)String createTime, @RequestParam(value = "sort", required = false)Integer sort){
+
+        Chapter chapter = chapterService.addChapter(SSUtils.toText(title.trim()), articleId, SSUtils.toText(content), createTime, sort);
+
+        return renderSuccess(chapter);
 
     }
 
     /**
-     * 预添加小说
-     * @param folderId
+     * 更新指定章节信息
+     * @param chapterId
+     * @param articleId
      * @param title
+     * @param content
      * @param createTime
-     * @param status
+     * @param sort
      * @return
      */
     @ResponseBody
     @RequestMapping(value = "/updateChapter", method = RequestMethod.POST)
-    public String updateChapter(
-            @RequestParam("folderId") int folderId,
-            @RequestParam("title") String title, @RequestParam("keyword")String keyword, @RequestParam(value = "fileBig", required = false) MultipartFile fileBig, @RequestParam(value = "fileSmall", required = false) MultipartFile fileSmall){
-        Article article = null;
-        try {
-            article = articleService.addArticle(folderId, me().getId(),title,keyword,fileBig,fileSmall);
-        } catch (FolderNotFoundException e) {
-            e.printStackTrace();
-            return renderError("添加失败");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return renderSuccess(article);
+    public String updateChapter( @RequestParam(value = "chapterId")Integer chapterId,@RequestParam(value = "articleId", required = false) Integer articleId,
+                                 @RequestParam("title") String title, @RequestParam("content")String content, @RequestParam(value = "createTime", required = false)String createTime, @RequestParam(value = "sort", required = false)Integer sort){
+        int success = chapterService.updateChapter(chapterId, title, articleId, SSUtils.toText(title.trim()),sort);
+        return renderSuccess(success);
 
     }
+
+    /**
+     * 删除指定章节
+     * @param chapterId
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/deleteChapter", method = RequestMethod.GET)
+    public String updateChapter(Integer chapterId){
+        int success = chapterService.delete(chapterId);
+        return renderSuccess(null);
+
+    }
+
+
 }

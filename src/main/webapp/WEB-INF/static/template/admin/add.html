@@ -109,7 +109,7 @@
 		<div class="col-sm-12">
 			<section class="wrapper">
 				<!-- page start-->
-				<form id="add_article_form" class="form-horizontal" action="${BASE_PATH}/manage/article/add.json"  autocomplete="off"  method="post"
+				<form id="add_chapter" class="form-horizontal" action="${BASE_PATH}/ch/addChapter"  autocomplete="off"  method="post"
 					  enctype="multipart/form-data">
 					<div class="row">
 						<input type="hidden" name="articleId">
@@ -135,9 +135,7 @@
 										<label class="col-sm-2 col-sm-2 control-label">所属文章</label>
 										<div class="col-sm-10">
 
-											<select class="form-control" id="articleList"  style="font-size:15px;width: 300px;">
-
-
+											<select class="form-control" id="articleList" name="articleId" style="font-size:15px;width: 300px;">
 
 											</select>
 										</div>
@@ -146,8 +144,8 @@
 									<div class="form-group">
 										<label class="col-sm-2 col-sm-2 control-label">章节</label>
 										<div class="col-sm-10">
-											<input type="text" style="font-size:15px;" class="form-control" name="chapter"
-												   placeholder="章节" id="chapter" >
+											<input type="text" style="font-size:15px;" class="form-control" name="title"
+												   placeholder="章节" id="title" >
 											</input>
 										</div>
 									</div>
@@ -173,11 +171,9 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="col-sm-2 col-sm-2 control-label">文章状态</label>
+										<label class="col-sm-2 col-sm-2 control-label">文章</label>
 										<div class="col-sm-10" style="margin-bottom:10px;">
-											<input name="status" value="display" type="radio" checked> 显示
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-											<input name="status" value="hidden" type="radio"> 隐藏
+											<input name="sort" value="0" type="text" >
 										</div>
 									</div>
 									<div class="form-group">
@@ -251,7 +247,7 @@
 					            console.log("默认分类");
                                 var s = '<option selected value='+data[i].folderId+'>'+data[i].pathName+'</option>';
                                 $('#folderList').append(s);
-                                var c = '<option selected value=${(article.articleId)!""}>${(article.title)!""}</option>';
+                                var c = '<option selected value=\"${(article.articleId)!""}\">${(article.title)!""}</option>';
                                 $('#articleList').append(c);
                             }else{
                                 var s = '<option value='+data[i].folderId+'>'+data[i].pathName+'</option>';
@@ -275,7 +271,7 @@
                         for(var i=0; i<data.length; i++){
 
                             //这里需要动态展示小说分类 目前的下拉列表不能显示 需要你改一下@安吉
-                            var s = '<option value='+data[i].id+'>'+data[i].title+'</option>';
+                            var s = '<option value=\"'+data[i].articleId+'\">'+data[i].title+'</option>';
 
                             $('#articleList').append(s);
                         }
@@ -284,7 +280,20 @@
                 });
             });
 
-			}
+
+        $('#add_chapter').ajaxForm({
+            dataType : 'json',
+            success : function(data) {
+                if (data.code==200) {
+                    comfirmMsg(data.msg)
+
+                }else{
+                    showMsg(data.msg);
+                }
+            }
+        });
+
+		}
 
 
     );

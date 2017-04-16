@@ -3,12 +3,14 @@ package com.jim.novel.service;
 import com.jim.novel.constant.ArticleConstant;
 import com.jim.novel.constant.enums.ArticleStatus;
 import com.jim.novel.dao.ArticleMapper;
+import com.jim.novel.dao.ChapterMapper;
 import com.jim.novel.entity.ArticleVo;
 import com.jim.novel.entity.FolderVo;
 import com.jim.novel.entity.PageVo;
 import com.jim.novel.exception.ArticleNotFoundException;
 import com.jim.novel.exception.FolderNotFoundException;
 import com.jim.novel.model.Article;
+import com.jim.novel.model.Chapter;
 import com.jim.novel.model.Folder;
 import com.jim.novel.utils.MediaUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -37,6 +39,9 @@ public class ArticleService {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private ChapterMapper chapterDao;
 
     @Cacheable(value = "article", key = "'getArticleById_'+#articleId")
     public ArticleVo getArticleById(int articleId)
@@ -254,6 +259,18 @@ public class ArticleService {
         article.setKeyword(keyword);
         articleDao.addArticle(article);
         return articleDao.selectByPrimaryKey(article.getArticleId());
+    }
+
+    public void deleteArticle(Integer articleId){
+        int c = articleDao.deleteByPrimaryKey(articleId);
+        if(c!=0){
+            List<Chapter> list = chapterDao.selectChapterByArticleId(articleId);
+            for (Chapter tmp:list
+                 ) {
+                chapterDao.deleteById(tmp.getArticleId());
+            }
+
+        }
     }
 
 }

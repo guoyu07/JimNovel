@@ -87,7 +87,7 @@
                 s = s  + ' <td class="client-avatar">'+parseInt(i+1)+' </td>';
                 s = s + '  <td><a data-toggle="tab" href="#contact-1" class="client-link">'+data[i].chapterTitle+'</a></td>';
                 s = s + ' <td class="contact-type"><span class="btn btn-default btn-sm"><a  href="edit.htm?chapterId='+data[i].chapterId+'">修改</a></span> </td>';
-                s = s + ' <td class="contact-type"><span class="btn btn-default btn-sm"><a href="delete.htm?chapterId">删除</a></span> </td>';
+                s = s + ' <td class="contact-type"><span class="btn btn-default btn-sm"><a href="#" onclick="deleteChp('+data[i].chapterId+')">删除</a></span> </td>';
                 s = s + ' </tr>';
 
                 $('#chapterList').append(s);
@@ -98,6 +98,16 @@
 
         }
     });
+
+    function deleteChp(chapterId){
+
+        Ajax('/ch/deleteChapter',{"chapterId":chapterId},function(d){//这个是Ajax请求
+            if(d.code==200){// 200表示数据拿到了 d表示拿到的数据
+
+                comfirmMsg(d.msg)
+            }
+        });
+    }
 </script>
 
 </body>
