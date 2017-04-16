@@ -349,8 +349,8 @@
 
   <insert id="addArticle" parameterType="com.jim.novel.model.Article">
     insert into
-    article(folder_id,path,owner_id,title,status,keyword,create_time,modify_time)
-    values(#{folderId},#{path},#{ownerId},#{title},#{status},#{keyword},#{createTime},#{modifyTime})
+    article(folder_id,path,owner_id,title,status,keyword,img_url,small_img_url,create_time,modify_time)
+    values(#{folderId},#{path},#{ownerId},#{title},#{status},#{keyword},#{imgUrl},#{smallImgUrl},#{createTime},#{modifyTime})
     <selectKey resultType="long" keyProperty="article_ids">
       SELECT
       LAST_INSERT_ID()

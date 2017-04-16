@@ -122,7 +122,7 @@ public class MediaUtils {
 			int height) throws IOException {
 		logger.info("压缩图片尺寸："+width+" x "+height);
 		SimpleDateFormat formater = new SimpleDateFormat("yyyy/MM/dd");
-		String path = "upload/" + formater.format(new Date()) + "/"
+		String path = "/upload/" + formater.format(new Date()) + "/"
 				+ UUID.randomUUID().toString().replaceAll("-", "") + ".jpg";
 		String filePath = SystemConstant.JIM_NOVEL_ROOT + "/" + path;
 		File file = new File(SystemConstant.JIM_NOVEL_ROOT + "/" + path);

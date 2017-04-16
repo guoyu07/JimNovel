@@ -8,6 +8,7 @@ import com.jim.novel.entity.ArticleVo;
 import com.jim.novel.entity.FolderVo;
 import com.jim.novel.exception.FolderNotFoundException;
 import com.jim.novel.model.Article;
+import com.jim.novel.model.Chapter;
 import com.jim.novel.model.Response;
 import com.jim.novel.model.User;
 import com.jim.novel.service.FolderService;
@@ -77,6 +78,18 @@ public class AdminFolderController extends BaseController {
     }
 
     /**
+     * 指定用户在当前目录下的小说记录
+     * @return
+     */
+    @RequestMapping("/chapterList")
+    @ResponseBody
+    public String getPersonlChapterList(Integer articleId){
+        List<Chapter> list = chapterService.getChapterList(articleId);
+        return renderSuccess(list);
+    }
+
+
+    /**
      * 预添加小说
      * @param folderId
      * @param title
@@ -88,10 +101,10 @@ public class AdminFolderController extends BaseController {
     @RequestMapping(value = "/addArticle", method = RequestMethod.POST)
     public String addArticle(
             @RequestParam("folderId") int folderId,
-            @RequestParam("title") String title,@RequestParam("keyword")String keyword){
+            @RequestParam("title") String title,@RequestParam("keyword")String keyword,@RequestParam(value = "fileBig", required = false) MultipartFile fileBig,@RequestParam(value = "fileSmall", required = false) MultipartFile fileSmall){
         Article article = null;
         try {
-             article = articleService.addArticle(folderId, me().getId(),title,keyword);
+             article = articleService.addArticle(folderId, me().getId(),title,keyword,fileBig,fileSmall);
         } catch (FolderNotFoundException e) {
             e.printStackTrace();
             return renderError("添加失败");
@@ -101,6 +114,8 @@ public class AdminFolderController extends BaseController {
         return renderSuccess(article);
 
     }
+
+
 
 
 }

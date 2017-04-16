@@ -40,8 +40,12 @@ public class ArticleService {
 
     @Cacheable(value = "article", key = "'getArticleById_'+#articleId")
     public ArticleVo getArticleById(int articleId)
-            throws ArticleNotFoundException {
+            throws ArticleNotFoundException, FolderNotFoundException {
         ArticleVo articleVo = articleDao.selectByPrimaryKey(articleId);
+        FolderVo articleFolder = folderService.getFolderById(articleVo.getFolderId());
+        String authorNmae = userService.getAuthorNmaeByUserId(articleVo.getOwnerId());
+        articleVo.setAuthor(authorNmae);
+        articleVo.setFolder(articleFolder);
         if (articleVo == null) {
             throw new ArticleNotFoundException(articleId
                     + " 文件，不存在");
@@ -224,10 +228,21 @@ public class ArticleService {
      * @throws IOException
      */
     @CacheEvict(value = "article", allEntries = true)
-    public Article addArticle(int folderId, int ownerId, String title, String keyword) throws FolderNotFoundException, IOException {
+    public Article addArticle(int folderId, int ownerId, String title, String keyword,MultipartFile fileBig,MultipartFile fileSmall) throws FolderNotFoundException, IOException {
         FolderVo folder = folderService.getFolderById(folderId);
         Article article = new Article();
         Date now = new Date();
+        String imgBig = "",imgSmall = "";
+        if (fileBig != null && !fileBig.isEmpty()) {
+            imgBig = MediaUtils.saveImage(fileBig, folder.getWidth(),
+                    folder.getHeight());
+        }
+        if (fileSmall != null && !fileSmall.isEmpty()) {
+            imgSmall = MediaUtils.saveImage(fileSmall, folder.getWidth(),
+                    folder.getHeight());
+        }
+        article.setImgUrl(imgBig);
+        article.setSmallImgUrl(imgSmall);
         article.setFolderId(folder.getFolderId());
         article.setPath(folder.getPath());
         article.setOwnerId(ownerId);

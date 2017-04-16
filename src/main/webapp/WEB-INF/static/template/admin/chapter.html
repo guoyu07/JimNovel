@@ -5,103 +5,101 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> - 文章页面</title>
-    <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
-    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
 
-    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
-    <link href="css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <title>H+ 后台主题UI框架 - 客户管理</title>
 
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/style.min.css?v=4.1.0" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/font-awesome.css?v=4.4.0" rel="stylesheet">
 
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/animate.css" rel="stylesheet">
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/style.css?v=4.1.0" rel="stylesheet">
 </head>
 
-<body class="gray-bg" >
-<div class="wrapper wrapper-content  animated fadeInRight article">
+<body class="gray-bg">
+
+
+<div class=" wrapper-content  animated fadeInRight">
     <div class="row">
-        <div class="col-lg-10 col-lg-offset-1">
+        <div class="col-sm-12">
             <div class="ibox">
                 <div class="ibox-content">
-                    <!--<div class="pull-right">
-                        <button class="btn btn-white btn-xs" type="button">武侠</button>
+                    <h2>${articleTitle}
+                        <a type="button" class="btn btn-primary" href="${BASE_PATH}/admin/add.htm?articleId=${articleId}">
+                            新建章节
+                        </a>
+                    </h2>
 
-                    </div>-->
-                    <div class="text-center article-title">
-                        <h1>三生三世十里桃花<span class="small">作者名</span> <button class="btn btn-white btn-xs" type="button">武侠</button>  </h1>
+                    <div class="clients-list">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <tbody id="chapterList">
+
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <hr>
-                    <p style="width: 80%;margin: 0 auto;">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui officia dolorum accusantium id sapiente
-                        nesciunt at mollitia in nemo iure ipsa tempore dolor aut voluptatibus placeat odio debitis quo? Repudiandae?
-
-                    </p>
-                    <hr>
-
-
-
                 </div>
             </div>
         </div>
-    </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-white" data-dismiss="modal">关闭</button>
+        </div>
 
+    </div>
 </div>
-    <script src="js/jquery.min.js?v=2.1.4"></script>
-    <script src="js/bootstrap.min.js?v=3.3.6"></script>
-    <script src="js/content.min.js?v=1.0.0"></script>
+</div>
+
+
+
+<!-- 全局js -->
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.min.js?v=2.1.4"></script>
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.form.min.js?v=2.1.4"></script>
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/plugins/layer/layer.min.js"></script>
+
+<!-- 自定义js -->
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/content.js?v=1.0.0"></script>
+
+<!--统计代码，可删除-->
+<script type="text/javascript">
+
+    $('#add_article').ajaxForm({
+        dataType : 'json',
+        success : function(data) {
+            if (data.code==200) {
+                comfirmMsg(data.msg)
+
+
+            }else{
+                showMsg(data.msg);
+            }
+        }
+    });
+
+    //Ajax为封装过的方法 具体见content.js，格式参照下面的写法{}可以传参数
+    //接口数据对应的Controller为
+    Ajax('/fo/chapterList',{"articleId":${articleId}},function(d){//这个是Ajax请求
+        if(d.code==200){// 200表示数据拿到了 d表示拿到的数据
+            var data = d.data;
+            for(var i=0; i<data.length; i++){
+                var s = '  <tr>';
+                s = s  + ' <td class="client-avatar">'+parseInt(i+1)+' </td>';
+                s = s + '  <td><a data-toggle="tab" href="#contact-1" class="client-link">'+data[i].chapterTitle+'</a></td>';
+                s = s + ' <td class="contact-type"><span class="btn btn-default btn-sm"><a  href="edit.htm?chapterId='+data[i].chapterId+'">修改</a></span> </td>';
+                s = s + ' <td class="contact-type"><span class="btn btn-default btn-sm"><a href="delete.htm?chapterId">删除</a></span> </td>';
+                s = s + ' </tr>';
+
+                $('#chapterList').append(s);
+            }
+            if(data.length==0){
+                $('#chapterList').append('请添加新的章节');
+            }
+
+        }
+    });
+</script>
+
 </body>
 
 </html>

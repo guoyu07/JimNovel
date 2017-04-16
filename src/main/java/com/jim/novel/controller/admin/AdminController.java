@@ -1,5 +1,12 @@
 package com.jim.novel.controller.admin;
 
+import com.jim.novel.controller.BaseController;
+import com.jim.novel.entity.ArticleVo;
+import com.jim.novel.exception.ArticleNotFoundException;
+import com.jim.novel.exception.FolderNotFoundException;
+import com.jim.novel.model.Article;
+import com.jim.novel.model.Base;
+import com.jim.novel.model.Chapter;
 import com.jim.novel.service.TemplateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,7 +24,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  **/
 @Controller
 @RequestMapping("/admin")
-public class AdminController {
+public class AdminController extends BaseController{
 
     @Autowired
     private TemplateService templateService;
@@ -39,9 +46,18 @@ public class AdminController {
 
 
     @RequestMapping("/chapter.htm")
-    public String chapter(ModelMap modelMap,String articleId){
+    public String chapter(ModelMap modelMap,String articleId,String title){
         modelMap.put("articleId",articleId);
+        String articleTitle = "《"+title+"》";
+        modelMap.put("articleTitle",articleTitle);
         return templateService.getAdminTemplate("chapter");
+    }
+
+    @RequestMapping("/editChapter.htm")
+    public String editChapter(ModelMap modelMap,String chapterId){
+
+
+        return templateService.getAdminTemplate("edit");
     }
 
 
@@ -50,8 +66,39 @@ public class AdminController {
         return templateService.getAdminTemplate("login");
     }
 
+    @RequestMapping("/edit.htm")
+    public String exit(Integer chapterId,ModelMap modelMap){
+        ArticleVo articleVo = null;
+        Chapter chapter = chapterService.getChapterDetail(chapterId);
+        try {
+            articleVo = articleService.getArticleById(chapter.getArticleId());
+        } catch (ArticleNotFoundException e) {
+            e.printStackTrace();
+        } catch (FolderNotFoundException e) {
+            e.printStackTrace();
+        }
+        modelMap.put("chapter",chapter);
+        modelMap.put("article",articleVo);
+        return templateService.getAdminTemplate("edit");
+    }
+
+
+
     @RequestMapping("/add.htm")
-    public String add(){
+    public String add(String articleId,ModelMap modelMap)
+    {
+        if(articleId!=null){
+            ArticleVo articleVo = null;
+            try {
+                articleVo = articleService.getArticleById(Integer.parseInt(articleId));
+                logger.info(articleVo);
+            } catch (ArticleNotFoundException e) {
+                e.printStackTrace();
+            } catch (FolderNotFoundException e) {
+                e.printStackTrace();
+            }
+            modelMap.put("article",articleVo);
+        }
         return templateService.getAdminTemplate("add");
     }
 
