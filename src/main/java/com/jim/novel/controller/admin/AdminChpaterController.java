@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 /**
  * 小说章节创建控制器
  *
@@ -71,6 +73,17 @@ public class AdminChpaterController extends BaseController
         int success = chapterService.delete(chapterId);
         return renderSuccess(null);
 
+    }
+
+    /**
+     * 指定用户在当前目录下的小说记录
+     * @return
+     */
+    @RequestMapping("/chapterList")
+    @ResponseBody
+    public String getPersonlChapterList(Integer articleId){
+        List<Chapter> list = chapterService.getChapterList(articleId);
+        return renderSuccess(list);
     }
 
 

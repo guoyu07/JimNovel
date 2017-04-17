@@ -6,14 +6,19 @@ import com.jim.novel.entity.UserFolderVo;
 import com.jim.novel.entity.FolderVo;
 import com.jim.novel.exception.FolderNotFoundException;
 import com.jim.novel.model.Folder;
+import com.jim.novel.utils.MediaUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -80,26 +85,27 @@ public class FolderService {
      * @throws FolderNotFoundException
      */
     @Cacheable(value = "folder")
-    public List<FolderVo> getAllFolderList(int userId) {
+    public List<FolderVo> getAllFolderList() {
         List<FolderVo> folderList = folderDao.getAllFolderList();
         HashMap<String, FolderVo> folderMap = new HashMap<String, FolderVo>();
         for (FolderVo folder : folderList) {
             folderMap.put(folder.getFolderId() + "", folder);
         }
         for (FolderVo folder : folderList) {
-            folderMap.put(folder.getFolderId() + "", folder);
-            UserFolderVo adminFolder = userFolderService.getUserFolderById(
-                    userId, folder.getFolderId());
-            if (adminFolder == null) {
-                folder.setOwner("no");
-            } else {
-                folder.setOwner("yes");
-            }
-        }
-        for (FolderVo folder : folderList) {
             folder.setPathName(getPathName(folderMap, folder.getPath()));
         }
         return folderList;
+    }
+
+
+    @Cacheable(value = "folder")
+    public boolean isFolderByEname(String ename) {
+        Folder folder = folderDao.getFolderByEname(ename);
+        if (folder == null) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
 
@@ -185,5 +191,70 @@ public class FolderService {
         FolderVo folder = folderDao.selectByPrimaryKey(folderId);
         String[] folderIdList = folder.getPath().split("#");
         return Integer.parseInt(folderIdList[0]);
+    }
+
+
+    /**
+     * 增加目录
+     *
+     * @param fatherId
+     * @param name
+     * @param ename
+     * @param status
+     * @param type
+     * @return Folder
+     * @throws FolderNotFoundException
+     */
+    @CacheEvict(value = "folder", allEntries = true)
+    @Transactional
+    public Folder addFolder(Integer fatherId, String name, String ename,
+                            String display, String content, MultipartFile file)
+            throws FolderNotFoundException, IOException {
+        Folder folder = new Folder();
+        folder.setFatherId(fatherId);
+        folder.setHeight(0);
+        folder.setWidth(0);
+        if (fatherId == 0) {
+            folder.setLevel(1);
+        } else {
+            Folder fatherFolder = this.getFolderById(fatherId);
+            folder.setLevel(fatherFolder.getLevel() + 1);
+        }
+        String imgBig = "";
+        if (file != null && !file.isEmpty()) {
+            imgBig = MediaUtils.saveImage(file, folder.getWidth(),
+                    folder.getHeight());
+        }
+        folder.setImgUrl(imgBig);
+        folder.setName(name);
+        folder.setEname(ename);
+        folder.setContent(content);
+        folder.setPath("");
+        folder.setCount(0);
+        folder.setSort(1);
+        folder.setDisplay(display);
+        folder.setCreateTime(new Date());
+        folder.setModifyTime(new Date());
+        folderDao.addFolder(folder);
+
+        if (fatherId == 0) {
+            this.updatePath(folder.getFolderId(), folder.getFolderId() + "");
+        } else {
+            Folder fatherFolder = this.getFolderById(fatherId);
+            this.updatePath(folder.getFolderId(), fatherFolder.getPath() + "#"
+                    + folder.getFolderId());
+        }
+        return folder;
+    }
+
+    /**
+     * 通过指定Id修改其目录的路径
+     *
+     * @param folderId
+     * @param path
+     * @return Integer
+     */
+    public int updatePath(long folderId, String path) {
+        return folderDao.updatePath(folderId, path);
     }
 }

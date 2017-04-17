@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <#assign config_v="20140830004">
 	<html lang="en">
-
 	<head>
-
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<title></title>
+		<title>JimNovel-作品上传</title>
 		<link rel="shortcut icon" href="favicon.ico">
 		<link href="${ADMIN_TEMPLATE_BASE_PATH}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
 		<link href="${ADMIN_TEMPLATE_BASE_PATH}/css/font-awesome.css?v=4.4.0" rel="stylesheet">
 		<link href="${ADMIN_TEMPLATE_BASE_PATH}/css/animate.css" rel="stylesheet">
 		<link href="${ADMIN_TEMPLATE_BASE_PATH}/css/style.css?v=4.1.0" rel="stylesheet">
-
 		<link href="${ADMIN_TEMPLATE_BASE_PATH}/assets/uploadify/uploadify.css?v=${config_v}" rel="stylesheet" />
 		<link href="${ADMIN_TEMPLATE_BASE_PATH}/assets/bootstrap.datetimepicker/css/bootstrap-datetimepicker.min.css?v=${config_v}" rel="stylesheet" />
 
@@ -267,7 +263,7 @@
                 $('#folderList').change(function(){
                     var cur = $(this).val();
                     $('#articleList').empty();
-                    Ajax('/fo/articleList',{"folderId":cur},function(d){
+                    Ajax('${BASE_PATH}/ar/articleList',{"folderId":cur},function(d){
                         console.log(d)
                         if(d.code==200){// 200表示数据拿到了 d表示拿到的数据
                             var data = d.data;

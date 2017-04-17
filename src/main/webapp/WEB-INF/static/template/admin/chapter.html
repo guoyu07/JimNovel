@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>H+ 后台主题UI框架 - 客户管理</title>
-
+    <title>JimNovel-章节管理</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
     <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/font-awesome.css?v=4.4.0" rel="stylesheet">
@@ -79,7 +75,7 @@
 
     //Ajax为封装过的方法 具体见content.js，格式参照下面的写法{}可以传参数
     //接口数据对应的Controller为
-    Ajax('/fo/chapterList',{"articleId":${articleId}},function(d){//这个是Ajax请求
+    Ajax('/ch/chapterList',{"articleId":${articleId}},function(d){//这个是Ajax请求
         if(d.code==200){// 200表示数据拿到了 d表示拿到的数据
             var data = d.data;
             for(var i=0; i<data.length; i++){

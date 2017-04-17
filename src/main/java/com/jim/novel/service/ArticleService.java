@@ -250,6 +250,8 @@ public class ArticleService {
     @CacheEvict(value = "article", allEntries = true)
     public Article addArticle(int folderId, int ownerId, String title, String keyword,MultipartFile fileBig,MultipartFile fileSmall) throws FolderNotFoundException, IOException {
         FolderVo folder = folderService.getFolderById(folderId);
+        folder.setWidth(0);
+        folder.setHeight(0);
         Article article = new Article();
         Date now = new Date();
         String imgBig = "",imgSmall = "";

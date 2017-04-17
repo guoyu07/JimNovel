@@ -438,4 +438,20 @@
     select * from folder order by path,sort
   </select>
 
+  <insert id="addFolder" parameterType="com.jim.novel.model.Folder">
+    insert into
+    folder(father_id,ename,name,content,path,level,sort,count,display,img_url,create_time,modify_time)
+    value(#{fatherId},#{ename},#{name},#{content},#{path},#{level},#{sort},#{count},#{display},#{imgUrl},#{createTime},#{modifyTime})
+    <selectKey resultType="Integer" keyProperty="folderId">
+      SELECT
+      LAST_INSERT_ID()
+    </selectKey>
+  </insert>
+
+
+  <update id="updatePath">
+    update folder set path=#{path} where
+    folder_id=#{folderId}
+  </update>
+
 </mapper>

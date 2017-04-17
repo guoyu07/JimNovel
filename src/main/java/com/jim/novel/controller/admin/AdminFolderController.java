@@ -12,7 +12,9 @@ import com.jim.novel.model.Chapter;
 import com.jim.novel.model.Response;
 import com.jim.novel.model.User;
 import com.jim.novel.service.FolderService;
+import com.jim.novel.utils.RegexUtils;
 import com.jim.novel.utils.SSUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -50,8 +52,7 @@ public class AdminFolderController extends BaseController {
     @RequestMapping("/list")
     @ResponseBody
     public String getFolderList(){
-        User me = me();
-        List<FolderVo> list = folderService.getAllFolderList(me.getId());
+        List<FolderVo> list = folderService.getAllFolderList();
 
         //返回的json数据统一封装到Response这个对象中 具体包括code,msg,data
         //ajax异步请求的时候，需要从data取出对应的对象
@@ -59,68 +60,43 @@ public class AdminFolderController extends BaseController {
     }
 
 
-    /**
-     * 指定用户在当前目录下的小说记录
-     * @return
-     */
-    @RequestMapping("/articleList")
+
+
+
+
+
+
+
     @ResponseBody
-    public String getPersonlArticleList(Integer folderId){
-        try {
-            User me = me();
-            List<ArticleVo> list = articleService.getArticleListByOwnerIdAndFolderId(me.getId(),folderId, ArticleStatus.ORIGIN);
-            return renderSuccess(list);
-        } catch (FolderNotFoundException e) {
-            e.printStackTrace();
-            return renderError(null);
+    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    public String add(@RequestParam(value = "fatherId", defaultValue = "0") Integer fatherId,
+                      @RequestParam(value = "folderName") String folderName,
+                      @RequestParam(value = "folderEname") String folderEname,
+                      @RequestParam(value = "display") String display,
+                      @RequestParam(value = "content") String content,
+                      @RequestParam(value = "img", required = false) MultipartFile img){
+        if (StringUtils.isBlank(folderName)) {
+            return renderError("分类名称不能为空");
         }
-
-    }
-
-    /**
-     * 指定用户在当前目录下的小说记录
-     * @return
-     */
-    @RequestMapping("/chapterList")
-    @ResponseBody
-    public String getPersonlChapterList(Integer articleId){
-        List<Chapter> list = chapterService.getChapterList(articleId);
-        return renderSuccess(list);
-    }
-
-
-    /**
-     * 预添加小说
-     * @param folderId
-     * @param title
-     * @param createTime
-     * @param status
-     * @return
-     */
-    @ResponseBody
-    @RequestMapping(value = "/addArticle", method = RequestMethod.POST)
-    public String addArticle(
-            @RequestParam("folderId") int folderId,
-            @RequestParam("title") String title,@RequestParam("keyword")String keyword,@RequestParam(value = "fileBig", required = false) MultipartFile fileBig,@RequestParam(value = "fileSmall", required = false) MultipartFile fileSmall){
-        Article article = null;
+        if (StringUtils.isBlank(folderEname)) {
+            return renderError("英文名称不能为空");
+        } else if (!RegexUtils.isAlphaUnderline(folderEname)) {
+            return renderError("只能是英文字母，数字和下划线");
+        } else if (StringUtils.isBlank(content)) {
+            return renderError("分类详情不能为空");
+        }else if (folderService.isFolderByEname(folderEname)) {
+            return renderError("英文名称不能重复");
+        }
         try {
-             article = articleService.addArticle(folderId, me().getId(),title,keyword,fileBig,fileSmall);
+            folderService.addFolder(fatherId,
+                    SSUtils.toText(folderName.trim()),
+                    SSUtils.toText(folderEname.toLowerCase().trim()),display, SSUtils.toText(content.trim()),img);
         } catch (FolderNotFoundException e) {
             e.printStackTrace();
-            return renderError("添加失败");
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return renderSuccess(article);
-
-    }
-
-    @ResponseBody
-    @RequestMapping(value = "/deleteArticle", method = RequestMethod.GET)
-    public String deteleArticle(Integer articleId){
-        articleService.deleteArticle(articleId);
         return renderSuccess(null);
     }
-
 
 }

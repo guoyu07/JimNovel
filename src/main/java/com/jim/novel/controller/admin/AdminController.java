@@ -2,6 +2,8 @@ package com.jim.novel.controller.admin;
 
 import com.jim.novel.controller.BaseController;
 import com.jim.novel.entity.ArticleVo;
+import com.jim.novel.entity.FolderVo;
+import com.jim.novel.entity.UserFolderVo;
 import com.jim.novel.exception.ArticleNotFoundException;
 import com.jim.novel.exception.FolderNotFoundException;
 import com.jim.novel.model.Article;
@@ -12,6 +14,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 1.管理后台不采用freemarker渲染的方式
@@ -49,8 +54,11 @@ public class AdminController extends BaseController{
     public String adminArticle(){
         return templateService.getAdminTemplate("admin_article");
     }
+
     @RequestMapping("/admin_folder.htm")
-    public String adminFolder(){
+    public String adminFolder( ModelMap modelMap){
+        List<FolderVo> folderAll = folderService.getAllFolderList();
+        modelMap.put("folderAll", folderAll);
         return templateService.getAdminTemplate("admin_folder");
     }
 

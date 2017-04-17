@@ -36,6 +36,9 @@ public class BaseController {
     protected UserService userService;
 
     @Autowired
+    protected UserFolderService userFolderService;
+
+    @Autowired
     protected UserCollectService userCollectService;
 
 

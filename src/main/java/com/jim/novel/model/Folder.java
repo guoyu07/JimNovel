@@ -13,9 +13,9 @@ public class Folder {
 
     private String path;
 
-    private Byte level;
+    private Integer level;
 
-    private Byte sort;
+    private Integer sort;
 
     private Integer width;
 
@@ -83,19 +83,19 @@ public class Folder {
         this.path = path;
     }
 
-    public Byte getLevel() {
+    public Integer getLevel() {
         return level;
     }
 
-    public void setLevel(Byte level) {
+    public void setLevel(Integer level) {
         this.level = level;
     }
 
-    public Byte getSort() {
+    public Integer getSort() {
         return sort;
     }
 
-    public void setSort(Byte sort) {
+    public void setSort(Integer sort) {
         this.sort = sort;
     }
 

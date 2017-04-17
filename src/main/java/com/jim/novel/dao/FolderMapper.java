@@ -67,4 +67,14 @@ public interface FolderMapper {
 
     public List<FolderVo> getAllFolderList();
 
+    /**
+     * 增加目录
+     *
+     * @return Integer
+     */
+    public int addFolder(Folder folder);
+
+    public int updatePath(@Param("folderId") long folderId,
+                          @Param("path") String path);
+
 }
