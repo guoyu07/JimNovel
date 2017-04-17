@@ -1,6 +1,7 @@
 package com.jim.novel.dao;
 
 import com.jim.novel.entity.UserVo;
+import com.jim.novel.exception.MyRuntimeException;
 import com.jim.novel.model.User;
 import com.jim.novel.model.UserExample;
 import org.apache.ibatis.annotations.Param;
@@ -14,9 +15,9 @@ public interface UserMapper {
 
     int deleteByPrimaryKey(Integer id);
 
-    int insert(User record);
+    int insert(User record) throws MyRuntimeException;;
 
-    int insertSelective(User record);
+    int insertSelective(User record) throws MyRuntimeException;
 
     List<User> selectByExample(UserExample example);
 

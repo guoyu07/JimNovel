@@ -5,15 +5,18 @@ import com.jim.novel.dao.AdminMapper;
 import com.jim.novel.dao.UserMapper;
 import com.jim.novel.entity.UserVo;
 import com.jim.novel.exception.AuthException;
+import com.jim.novel.exception.MyRuntimeException;
 import com.jim.novel.model.Admin;
 import com.jim.novel.model.AdminExample;
 import com.jim.novel.model.User;
 import com.jim.novel.model.UserExample;
 import com.jim.novel.utils.AuthUtils;
 import com.jim.novel.utils.PropertyUtils;
+import com.jim.novel.utils.SSUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -133,6 +136,7 @@ public class UserService {
      * @param email
      * @param password
      */
+    @Transactional(rollbackFor = MyRuntimeException.class)
     public boolean register(String email,String password){
         UserVo user = userDao.getUserByEmail(email);
         if (user != null) {
@@ -143,14 +147,21 @@ public class UserService {
         newUser.setPassword(loginPassword);
         newUser.setEmail(email);
         newUser.setType(0);
-        newUser.setName("未命名");
+        newUser.setName("");
         newUser.setOpenId("0");
         newUser.setCreateTime(new Date());
         newUser.setModifyTime(new Date());
-        if(userDao.insertSelective(newUser)==1){
+        try {
+            userDao.insertSelective(newUser);
+            newUser.setName(SSUtils.randomNickName(newUser.getId()));
+            userDao.updateByPrimaryKey(newUser);
             return true;
+        } catch (MyRuntimeException e) {
+            e.printStackTrace();
         }
-        return false;
+       return false;
+
+
     }
 
 }
