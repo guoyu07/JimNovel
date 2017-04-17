@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -35,12 +36,12 @@ public class MyArticleListTag extends TagPlugin {
                         TemplateDirectiveBody body) throws TemplateException, IOException {
         // 获取页面的参数
         Integer userId = Integer.parseInt(params.get("userId").toString());
+        List<ArticleVo> articlelist = new ArrayList<>();
         // 获取文件的分页
         try {
-            List<ArticleVo> articlelist = articleService.getArticleListByOwnerId(userId);
-            logger.info(articlelist.get(0).getCreateTime());
-            Date lastTime = articlelist.get(0).getCreateTime();
-            env.setVariable("tag_article_list", BEANS_WRAPPER.wrap(articlelist));
+              articlelist = articleService.getArticleListByOwnerId(userId);
+              env.setVariable("tag_article_list", BEANS_WRAPPER.wrap(articlelist));
+
         } catch (FolderNotFoundException e) {
             env.setVariable("tag_article_list", BEANS_WRAPPER.wrap(null));
         }
