@@ -78,18 +78,7 @@ $(document).keydown(function (e) {
         e.preventDefault();
 });
 
-/**
- * 显示消息
- */
-function showMsg(msg) {
-    console.log(msg)
-    top.window.$.messager.show({
-        title: '提示',
-        msg:'<div class="light-info"><div class="light-tip icon-tip"></div><div>' + msg||"消息内容！" + '</div></div>',
-        timeout: 3000,
-        showType: 'slide'
-    });
-}
+
 
 // 判断时候在Iframe框架内,在则刷新父页面
 if (self != top) {
