@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<#assign config_v="201704170001">
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JimNovel-用户中心</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+        <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+        <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/animate.css" rel="stylesheet">
+        <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/style.css?v=4.1.0" rel="stylesheet">
+
+        <link href="${ADMIN_TEMPLATE_BASE_PATH}/assets/uploadify/uploadify.css?v=${config_v}" rel="stylesheet" />
+        <link href="${ADMIN_TEMPLATE_BASE_PATH}/assets/bootstrap.datetimepicker/css/bootstrap-datetimepicker.min.css?v=${config_v}" rel="stylesheet" />
+
+        <script type="text/javascript">
+            window.BasePath = "${BASE_PATH}";
+            window.UEDITOR_HOME_URL = "${BASE_PATH}";
+            kindId = 0;
+            kind = "article";
+        </script>
+        <script src="${ADMIN_TEMPLATE_BASE_PATH}/assets/jquery.js?v=${config_v}"></script>
+        <style type="text/css">
+            ul {
+                padding: 0;
+            }
+
+            .zpm input,.zpfl input {
+                width: 150px;
+                height: 30px;
+                background: #fff;
+                border-radius: 0 5px 5px 0;
+                font-size: 14px;
+                padding-left: 5px;
+                border: 1px solid #ddd;
+                box-shadow: 0 0 10px rgba(161, 161, 161, 0.5);
+                display: inline-block;
+                position: relative;
+            }
+
+            .zpm ul {
+                width: 150px;
+                display: none;
+                height: 145px;
+                position: absolute;
+                left: 308px;
+                top: 105px;
+                overflow: hidden;
+                background-color: #fff;
+                overflow-y: auto;
+                border: 1px solid #E0E0E0;
+                border-radius: 3px;
+            }
+            .zpfl ul{
+                width: 150px;
+                display: none;
+                height: 145px;
+                position: absolute;
+                left: 98px;
+                top: 105px;
+                overflow: hidden;
+                background-color: #fff;
+                overflow-y: auto;
+                border: 1px solid #E0E0E0;
+                border-radius: 3px;
+            }
+
+            .zpm ul li,.zpfl ul li {
+                height: 30px;
+                line-height: 30px;
+                overflow: hidden;
+                cursor: pointer;
+                list-style: none;
+                font-size: 13px;
+                font-weight: normal;
+                padding: 0 10px;
+            }
+
+            .zpm ul li.on,.zpfl ul li.on  {
+                background-color: #e0e0e0;
+            }
+            .zjm{
+                display: inline-block;
+            }
+            .zjm input{
+                height: 30px;
+                background: #fff;
+                border-radius: 0 5px 5px 0;
+                font-size: 14px;
+                padding-left: 5px;
+                border: 1px solid #ddd;
+                box-shadow: 0 0 10px rgba(161, 161, 161, 0.5)
+            }
+        </style>
+
+    </head>
+
+    <body class="gray-bg">
+    <div class="wrapper wrapper-content">
+        <div class="col-sm-4">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>最新小说</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="index.html#">
+                            <i class="fa fa-wrench"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="index.html#">选项1</a>
+                            </li>
+                            <li><a href="index.html#">选项2</a>
+                            </li>
+                        </ul>
+                        <a class="close-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content no-padding">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <p><a class="text-info" href="index.html#">#感谢有你#</a> 感谢你们一路的相伴，未来也请让我为你们撑腰，我们会更好</p>
+                            <small class="block text-muted"><i class="fa fa-clock-o"></i> 1分钟前</small>
+                        </li>
+                        <li class="list-group-item">
+                            <p><a class="text-info" href="index.html#">@颜文字君</a> 女生身高×1.09后，就是最适合你的男生身高；相反，男生是÷1.09就可以了..小伙伴们可以试着算下..【图是我的..(*/ω＼*)</p>
+                            <div class="text-center m">
+                                <span id="sparkline8"></span>
+                            </div>
+                            <small class="block text-muted"><i class="fa fa-clock-o"></i> 2小时前</small>
+                        </li>
+
+                        <li class="list-group-item">
+                            <p><a class="text-info" href="index.html#">#发型师#</a> 刚才剪发，顾客在看这个视频，妈蛋，这舞姿太销魂了，笑得手颤抖。。。</p>
+                            <small class="block text-muted"><i class="fa fa-clock-o"></i> 1分钟前</small>
+                        </li>
+                        <li class="list-group-item">
+                            <p><a class="text-info" href="index.html#">#一年级#</a> ——#陈氏父子# cut：“他是我的陈爸爸”[心]“我叫陈思成，陈老师的陈” [心]“不再见就是，你也好，爸爸也好，妈妈也好，都永远不要说再见</p>
+                            <small class="block text-muted"><i class="fa fa-clock-o"></i> 2分钟前</small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>新的评论</h5>
+                    </div>
+                    <div class="ibox-content">
+
+                        <div>
+                            <div class="feed-activity-list">
+
+                                <div class="feed-element">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/profile.jpg">
+                                    </a>
+                                    <div class="media-body ">
+                                        <small class="pull-right">5分钟前</small>
+                                        <strong>谨斯里</strong> 上传了一个文件
+                                        <br>
+                                        <small class="text-muted">2014.11.8 12:22</small>
+
+                                    </div>
+                                </div>
+
+                                <div class="feed-element">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/a2.jpg">
+                                    </a>
+                                    <div class="media-body ">
+                                        <small class="pull-right">2个月前</small>
+                                        <strong>田亮</strong> 参加了<strong>《粑粑去哪儿》</strong>
+                                        <br>
+                                        <small class="text-muted">2014.11.8 12:22</small>
+                                    </div>
+                                </div>
+                                <div class="feed-element">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/a3.jpg">
+                                    </a>
+                                    <div class="media-body ">
+                                        <small class="pull-right">2小时前</small>
+                                        <strong>林依晨Ariel</strong> 刚刚起床
+                                        <br>
+                                        <small class="text-muted">2014.11.8 12:22</small>
+                                    </div>
+                                </div>
+                                <div class="feed-element">
+                                    <a href="profile.html" class="pull-left">
+                                        <img alt="image" class="img-circle" src="img/a5.jpg">
+                                    </a>
+                                    <div class="media-body ">
+                                        <small class="pull-right">32分钟前</small>
+                                        <strong>颜文字君</strong> 评论了
+                                        <br>
+                                        <small class="text-muted">2014.11.8 12:22</small>
+                                        <div class="well">
+                                            【九部令人拍案叫绝的惊悚悬疑剧情佳作】如果你喜欢《迷雾》《致命ID》《电锯惊魂》《孤儿》《恐怖游轮》这些好片，那么接下来推荐的9部同类题材并同样出色的的电影，绝对不可错过哦~
+                                        </div>
+                                        <div class="pull-right">
+                                            <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i> 喜欢 </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary btn-block m-t"><i class="fa fa-arrow-down"></i> 加载更多</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    </body>
+    <!-- 全局js -->
+    <script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.min.js?v=2.1.4"></script>
+    <script src="${ADMIN_TEMPLATE_BASE_PATH}/js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- 自定义js -->
+    <script src="${ADMIN_TEMPLATE_BASE_PATH}/js/content.js?v=1.0.0"></script>
+
+    <!--main content end-->
+    <script type="text/javascript">
+
+
+
+    </script>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="${ADMIN_TEMPLATE_BASE_PATH}/js/bootstrap.min.js?v=${config_v}"></script>
+    <script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.form.min.js?v=${config_v}"></script>
+    <script src="${ADMIN_TEMPLATE_BASE_PATH}/js/bootbox.min.js?v=${config_v}"></script>
+    <script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.json.js?v=${config_v}"></script>
+    <script src="${ADMIN_TEMPLATE_BASE_PATH}/assets/fancybox/source/jquery.fancybox.js?v=${config_v}"></script>
+    <script src="${ADMIN_TEMPLATE_BASE_PATH}/assets/bootstrap.datetimepicker/js/bootstrap-datetimepicker.min.js?v=${config_v}"></script>
+    <script src="${ADMIN_TEMPLATE_BASE_PATH}/assets/bootstrap.datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js?v=${config_v}"></script>
+    <script type="text/javascript" charset="utf-8" src="${ADMIN_TEMPLATE_BASE_PATH}/assets/ueditor/ueditor.config.js?v=${config_v}"></script>
+    <script type="text/javascript" charset="utf-8" src="${ADMIN_TEMPLATE_BASE_PATH}/assets/ueditor/ueditor.all.min.js?v=${config_v}"> </script>
+    <script type="text/javascript" charset="utf-8" src="${ADMIN_TEMPLATE_BASE_PATH}/assets/ueditor/lang/zh-cn/zh-cn.js?v=${config_v}"></script>
+    <script type="text/javascript" charset="utf-8" src="${ADMIN_TEMPLATE_BASE_PATH}/assets/uploadify/jquery.uploadify.min.js?v=${config_v}"></script>
+    <!--common script for all pages-->
+    </html>

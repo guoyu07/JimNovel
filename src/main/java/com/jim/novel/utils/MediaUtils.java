@@ -106,7 +106,7 @@ public class MediaUtils {
 	 * @param path
 	 */
 	public static void deleteFile(String path) {
-		File file = new File(SystemConstant.SHISHUO_CMS_ROOT + path);
+		File file = new File(SystemConstant.JIM_NOVEL_ROOT + path);
 		file.delete();
 	}
 
@@ -122,10 +122,10 @@ public class MediaUtils {
 			int height) throws IOException {
 		logger.info("压缩图片尺寸："+width+" x "+height);
 		SimpleDateFormat formater = new SimpleDateFormat("yyyy/MM/dd");
-		String path = "upload/" + formater.format(new Date()) + "/"
+		String path = "/upload/" + formater.format(new Date()) + "/"
 				+ UUID.randomUUID().toString().replaceAll("-", "") + ".jpg";
-		String filePath = SystemConstant.SHISHUO_CMS_ROOT + "/" + path;
-		File file = new File(SystemConstant.SHISHUO_CMS_ROOT + "/" + path);
+		String filePath = SystemConstant.JIM_NOVEL_ROOT + "/" + path;
+		File file = new File(SystemConstant.JIM_NOVEL_ROOT + "/" + path);
 		if (!file.getParentFile().exists()) {
 			file.getParentFile().mkdirs();
 		}
@@ -175,7 +175,7 @@ public class MediaUtils {
 		String path = "upload/" + formater.format(new Date()) + "/"
 				+ UUID.randomUUID().toString().replaceAll("-", "")
 				+ getFileExt(multipartFile.getOriginalFilename());
-		File file = new File(SystemConstant.SHISHUO_CMS_ROOT + "/" + path);
+		File file = new File(SystemConstant.JIM_NOVEL_ROOT + "/" + path);
 		if (!file.getParentFile().exists()) {
 			file.getParentFile().mkdirs();
 		}

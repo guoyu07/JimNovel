@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JimNovel-分类管理</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/animate.css" rel="stylesheet">
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content  animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            添加目录
+                        </header>
+                        <div class="panel-body">
+                            <form id="addFolder_form" method="post" class="form-horizontal" enctype="multipart/form-data" autocomplete="off" action="${BASE_PATH}/fo/add">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">分类名称</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" style="font-size:15px;width: 300px;" class="form-control" name="folderName"
+                                                   placeholder="分类名称" id="folderName" >
+                                            </input>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">分类详情</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" style="font-size:15px;width: 300px;" class="form-control" name="content"
+                                                   placeholder="分类详情" id="content" >
+                                            </input>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">英文名称</label>
+                                        <div class="col-sm-10">
+                                            <input style="font-size:15px;width: 300px;" onkeyup="value=value.replace(/[\W]/g,'') " onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))"
+                                                   CLASS="form-control" NAME="folderEname" PLACEHOLDER="英文名称">
+                                            <p class="help-block">注意:英文名称只能是数字或者英文字母或者是下划线组成</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">分类展示图</label>
+                                        <div class="col-sm-10">
+                                            <input type="file" style="font-size:15px;width: 300px;" class="form-control" name="img"
+                                                   placeholder="上传图片" id="img" >
+                                            </input>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">父级标签</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control input-lg m-bot15" style="font-size:15px;width: 300px;" name="fatherId">
+                                                <#list folderAll as firstFolder>
+                                                    <option style="background-color:#DFF0D8;font-weight:bold;" value="${firstFolder.folderId}">
+                                                        ├─┬─${firstFolder.name}
+                                                    </option>
+                                                    <#list firstFolder.folderList as secondFolder>
+                                                        <option style="background-color:#5BC0DE;color:#FFFFFF;" value="${secondFolder.folderId}">
+                                                            │&nbsp;&nbsp;&nbsp;└──${secondFolder.name}
+                                                        </option>
+                                                        <#list secondFolder.folderList as thirdFolder>
+                                                            <option style="background-color:#FCF8E3;" value="${thirdFolder.folderId}">
+                                                                │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;└──${thirdFolder.name}
+                                                            </option>
+                                                        </#list>
+                                                    </#list>
+                                                </#list>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">目录状态</label>
+                                        <div class="col-sm-10">
+                                            <label class="radio-inline">
+                                                <input type="radio" name="display" value="1" checked/> 显示
+                                            </label>
+                                            <label class="radio-inline">
+                                                <input type="radio" name="display" value="0"/> 隐藏
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-2 col-lg-10">
+                                            <button class="btn btn-danger" type="submit">保存</button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- 全局js -->
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.min.js?v=2.1.4"></script>
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.form.min.js?v=2.1.4"></script>
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/plugins/layer/layer.min.js"></script>
+
+<!-- 自定义js -->
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/content.js?v=1.0.0"></script>
+
+<script>
+
+    $(function() {
+        $('#addFolder_form').ajaxForm({
+            dataType : 'json',
+            success : function(data) {
+                if (data.code==200) {
+                    comfirmMsg(data.msg)
+                }else{
+                    showMsg(data.msg);
+                }
+            }
+        });
+    });
+</script>
+
+</body>
+
+</html>

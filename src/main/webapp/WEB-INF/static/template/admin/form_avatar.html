@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JimNovel-头像编辑</title>
+		 <style>
+            #canvas{
+                cursor: move;
+                background: rgba(247,248,250,0.9);
+            }
+        </style>
+	</head>
+	<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.min.js?v=2.1.4" charset="utf-8"></script>
+	<script type="text/javascript" src="${ADMIN_TEMPLATE_BASE_PATH}/js/easyui/jquery.easyui.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="${ADMIN_TEMPLATE_BASE_PATH}/js/easyui/locale/easyui-lang-zh_CN.js" charset="utf-8"></script>
+	<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/plugins/layer/layer.min.js"></script>
+	<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/content.js?v=1.0.0"></script>
+	<body>
+		 <canvas id="canvas" width="400" height="400"  >
+		 	
+		 </canvas>
+        <!-- <img src="" alt="" id="img"> -->
+		 <form id="upload" method="post" enctype="multipart/form-data">
+       		 <input type="file" name="file" accept="image/png,image/jpeg"  id="imgInput">
+			 <button class="btn btn-info" onclick="submitForm()">上传</button>
+		 </form>
+        <script>
+
+            function submitForm(){
+                $('#upload').submit();
+            }
+
+            // 登录
+            $('#upload').form({
+                url: '/info/uploadImg.htm',
+                onSubmit : function() {
+                    var isValid = $(this).form('validate');
+                    if(!isValid){
+                        alert();
+                    }
+                    return isValid;
+                },
+                success:function(result){
+                    result = $.parseJSON(result);
+                    if (result.code==200) {
+
+                        layer.load(1);
+//此处演示关闭
+                        setTimeout(function(){
+                            layer.closeAll('loading');
+                        }, 2000);
+                        parent.location.reload();
+                    }else{
+                        showMsg(result.msg);
+                    }
+                }
+            });
+
+            var canvas = document.getElementById('canvas');
+            var ctx = canvas.getContext('2d');
+            var imgInput = document.getElementById('imgInput');
+            var image = new Image();
+            var imgW = 0;//要绘制的图片宽度
+            var imgH = 0;//要绘制的图片高度
+            var params = { //拖拽的相关属性
+                left: 0,
+                top: 0,
+                currentX: 0,
+                currentY: 0,
+                flag: false
+            }
+            var offsetX = 0;//鼠标移动偏移量
+            var offsetY = 0;
+            var imgOffsetX = 0;//图片已经偏移的量
+            var imgOffsetY = 0;
+            var imgBase64 = '';
+            imgInput.addEventListener('change', readFile);
+            function readFile() {
+                var file = this.files[0];
+                if(!/image\/\w+/.test(file.type)) {
+                    alert('请上传图片类型的文件');
+                    return false;
+                }
+                var reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = function(e) {
+                    drawToCanvas(this.result);
+                }
+            }
+
+            function drawToCanvas(imgData) {
+                image.src = imgData;
+                image.onload = function() {
+                    drawToCanvasByPoint(image,0,0);
+                }
+            }
+            //根据鼠标拖动重绘canvas offsetX:鼠标水平移动偏移量 offsetY:鼠标垂直移动偏移量
+            function drawToCanvasByPoint(image,offsetX,offsetY) {
+                imgW = image.width;
+                imgH = image.height;
+                var rate = imgW / imgH;
+                if( rate >= 1) {
+                    canvas.width = 400;
+                    canvas.height = 400;
+                    var x = imgOffsetX+offsetX;
+                    if(x>50) {
+                        x = 50;
+                    }else if(x<(350-300/imgH*imgW)){
+                        x = 350-300/imgH*imgW;
+                    }
+                    ctx.drawImage(image,x,50,300/imgH*imgW,300);
+                    imgOffsetX = offsetX;
+                } else {
+                    canvas.width = 400;
+                    canvas.height = 400;
+                    var y = imgOffsetY+offsetY;
+                    if(y>50) {
+                        y = 50;
+                    }else if(y<(350-300/imgW*imgH)){
+                        y = 350-300/imgW*imgH;
+                    }
+                    ctx.drawImage(image,50,y,300,300/imgW*imgH);
+                    imgOffsetY = offsetY;
+                }
+                ctx.beginPath();
+                ctx.lineWidth = 100;
+                ctx.moveTo(0,0);
+                ctx.lineTo(400,0);
+                ctx.lineTo(400,400);
+                ctx.lineTo(0,400);
+                ctx.lineTo(0,0);
+                ctx.strokeStyle = 'rgba(255,255,255,0.9)';
+                ctx.stroke();
+                ctx.closePath();
+                cropImage(document.getElementById('canvas'),  50,50,300,300);
+            }
+            function cropImage(targetCanvas, x, y, width, height) {
+                var targetctx = targetCanvas.getContext('2d');
+                var targetctxImageData = targetctx.getImageData(x, y, width, height); // sx, sy, sWidth, sHeight
+
+                var c = document.createElement('canvas');
+                var ctx2 = c.getContext('2d');
+
+                c.width = width;
+                c.height = height;
+                // ctx2.rect(0, 0, width, height);
+                // ctx2.fillStyle = 'white';
+                // ctx2.fill();
+                ctx2.putImageData(targetctxImageData, 0, 0); // imageData, dx, dy
+                // document.getElementById('img').src = c.toDataURL('image/jpeg', 0.92);
+                // document.getElementById('img').style.display = 'initial';
+                imgBase64 = c.toDataURL('image/jpeg', 0.92);// 最终值保存在这个参数里
+                console.log(imgBase64);
+            }
+            canvas.addEventListener('mousedown', function(e) {
+                console.log('mousedown');
+                console.log(image);
+                params.flag = true;
+                params.currentX = e.clientX;
+                params.currentY = e.clientY;
+            });
+            document.addEventListener('mouseup', function() {
+                console.log('mouseup');
+                params.flag = false;
+            });
+            document.addEventListener('mousemove', function(e) {
+                if(params.flag) {
+                    offsetX = e.clientX - params.currentX;//正的表示向右移动
+                    offsetY = e.clientY - params.currentY;//正的表示向下移动
+                    drawToCanvasByPoint(image, offsetX, offsetY);
+                    console.log('X:'+offsetX);
+                    console.log('Y:'+offsetY);
+                }
+            })
+        </script>
+	</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<#assign config_v="201704170001">
+	<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>JimNovel-作品上传</title>
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="${ADMIN_TEMPLATE_BASE_PATH}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+		<link href="${ADMIN_TEMPLATE_BASE_PATH}/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+		<link href="${ADMIN_TEMPLATE_BASE_PATH}/css/animate.css" rel="stylesheet">
+		<link href="${ADMIN_TEMPLATE_BASE_PATH}/css/style.css?v=4.1.0" rel="stylesheet">
+		<link href="${ADMIN_TEMPLATE_BASE_PATH}/assets/uploadify/uploadify.css?v=${config_v}" rel="stylesheet" />
+		<link href="${ADMIN_TEMPLATE_BASE_PATH}/assets/bootstrap.datetimepicker/css/bootstrap-datetimepicker.min.css?v=${config_v}" rel="stylesheet" />
+
+		<script type="text/javascript">
+            window.BasePath = "${BASE_PATH}";
+            window.UEDITOR_HOME_URL = "${BASE_PATH}";
+            kindId = 0;
+            kind = "article";
+		</script>
+		<script src="${ADMIN_TEMPLATE_BASE_PATH}/assets/jquery.js?v=${config_v}"></script>
+		<style type="text/css">
+			ul {
+				padding: 0;
+			}
+
+			.zpm input,.zpfl input {
+				width: 150px;
+				height: 30px;
+				background: #fff;
+				border-radius: 0 5px 5px 0;
+				font-size: 14px;
+				padding-left: 5px;
+				border: 1px solid #ddd;
+				box-shadow: 0 0 10px rgba(161, 161, 161, 0.5);
+				display: inline-block;
+				position: relative;
+			}
+
+			.zpm ul {
+				width: 150px;
+				display: none;
+				height: 145px;
+				position: absolute;
+				left: 308px;
+				top: 105px;
+				overflow: hidden;
+				background-color: #fff;
+				overflow-y: auto;
+				border: 1px solid #E0E0E0;
+				border-radius: 3px;
+			}
+			.zpfl ul{
+				width: 150px;
+				display: none;
+				height: 145px;
+				position: absolute;
+				left: 98px;
+				top: 105px;
+				overflow: hidden;
+				background-color: #fff;
+				overflow-y: auto;
+				border: 1px solid #E0E0E0;
+				border-radius: 3px;
+			}
+
+			.zpm ul li,.zpfl ul li {
+				height: 30px;
+				line-height: 30px;
+				overflow: hidden;
+				cursor: pointer;
+				list-style: none;
+				font-size: 13px;
+				font-weight: normal;
+				padding: 0 10px;
+			}
+
+			.zpm ul li.on,.zpfl ul li.on  {
+				background-color: #e0e0e0;
+			}
+			.zjm{
+				display: inline-block;
+			}
+			.zjm input{
+				height: 30px;
+				background: #fff;
+				border-radius: 0 5px 5px 0;
+				font-size: 14px;
+				padding-left: 5px;
+				border: 1px solid #ddd;
+				box-shadow: 0 0 10px rgba(161, 161, 161, 0.5)
+			}
+		</style>
+
+	</head>
+
+	<body class="gray-bg">
+	<div class="wrapper wrapper-content">
+
+		<div class="row">
+			<div class="col-sm-12">
+				<section class="wrapper">
+					<!-- page start-->
+					<form id="add_article_form" class="form-horizontal" action="${BASE_PATH}/ch/updateChapter"  autocomplete="off"  method="post"
+						  enctype="multipart/form-data">
+						<div class="row">
+							<input type="hidden" name="chapterId" value="${chapter.chapterId}">
+							<div class="col-lg-12">
+								<section class="panel">
+									<header class="panel-heading">
+										编辑章节
+									</header>
+									<div class="panel-body">
+										<div class="form-group">
+											<label class="col-sm-2 col-sm-2 control-label">所属分类</label>
+											<div class="col-sm-10">
+												<select class="form-control" id="folderList" style="font-size:15px;width: 300px;">
+
+
+
+												</select>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label class="col-sm-2 col-sm-2 control-label">所属文章</label>
+											<div class="col-sm-10">
+
+												<select class="form-control" id="articleList" name="articleId" style="font-size:15px;width: 300px;">
+
+
+
+												</select>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label class="col-sm-2 col-sm-2 control-label">章节</label>
+											<div class="col-sm-10">
+												<input type="text" style="font-size:15px;" class="form-control" name="title"
+													   placeholder="章节" id="chapter" value="${chapter.chapterTitle}">
+												</input>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-2 col-sm-2 control-label">文章内容</label>
+											<div class="col-sm-10">
+												<script id="content" name="content" type="text/plain"
+														style="width: 100%; height: 260px;"></script>
+												<script type="text/javascript">
+                                                    var contentEditor;
+                                                    $(function() {
+                                                        contentEditor = UE.getEditor('content');
+                                                    });
+												</script>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-2 col-sm-2 control-label">更新时间</label>
+											<div class="col-sm-10">
+												<input type="text" data-link-format="yyyy-MM-dd" data-date-format="yyyy-MM-dd" style="font-size:15px;width: 200px;" class="js_create_time"
+													   placeholder="更新时间" id="modifyTime" name="modifyTime" value="${.now?string("yyyy-MM-dd")}">
+												</input>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-2 col-sm-2 control-label">排序</label>
+											<div class="col-sm-10" style="margin-bottom:10px;">
+												<input name="sort" value="${chapter.sort}" type="text">
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-lg-offset-2 col-lg-10">
+												<button class="btn btn-shadow btn-primary" type="submit">更新</button>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+					</form>
+					<!-- page end-->
+				</section>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- 全局js -->
+	<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.min.js?v=2.1.4"></script>
+	<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.form.min.js?v=2.1.4"></script>
+	<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/bootstrap.min.js?v=3.3.6"></script>
+	<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/plugins/layer/layer.min.js"></script>
+
+	<!-- 自定义js -->
+	<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/content.js?v=1.0.0"></script>
+
+	<!--main content end-->
+	<script type="text/javascript">
+        $(function(){
+
+            contentEditor.ready(function(){
+                contentEditor.setContent('${chapter.content}');
+            })
+
+            $('#add_article_form').ajaxForm({
+                dataType : 'json',
+                success : function(data) {
+                    if (data.result) {
+
+                        parent.location.reload(true);
+                        // self.opener.location.reload();
+
+                    }else{
+                        showMsg(data.msg);
+                    }
+                }
+            });
+
+            $('.js_create_time').datetimepicker({
+                language:  'zh-CN',
+                format: "yyyy-mm-dd",
+                weekStart: 1,
+                todayBtn:  1,
+                autoclose: 1,
+                todayHighlight: 1,
+                startView: 2,
+                minView: 2,
+                forceParse: 0
+            });
+        });
+
+
+        $(document).ready(function() {
+
+
+                //Ajax为封装过的方法 具体见content.js，格式参照下面的写法{}可以传参数
+                //接口数据对应的Controller为
+                Ajax('/fo/list',{},function(d){//这个是Ajax请求
+                    if(d.code==200){// 200表示数据拿到了 d表示拿到的数据
+                        var data = d.data;
+                        console.log(data);//这里就是拿到数据了你把这些数据用
+                        for(var i=0; i<data.length; i++){
+                            if(data[i].folderId==${(article.folder.folderId)!"-1"}){
+                                console.log("默认分类");
+                                var s = '<option selected value='+data[i].folderId+'>'+data[i].pathName+'</option>';
+                                $('#folderList').append(s);
+                                var c = '<option selected value=${(article.articleId)!""}>${(article.title)!""}</option>';
+                                $('#articleList').append(c);
+                            }else{
+                                var s = '<option value='+data[i].folderId+'>'+data[i].pathName+'</option>';
+                                $('#folderList').append(s);
+
+                            }
+
+
+                        }
+
+                    }
+                });
+
+                $('#folderList').change(function(){
+                    var cur = $(this).val();
+                    $('#articleList').empty();
+                    Ajax('${BASE_PATH}/ar/articleList',{"folderId":cur},function(d){
+                        console.log(d)
+                        if(d.code==200){// 200表示数据拿到了 d表示拿到的数据
+                            var data = d.data;
+                            for(var i=0; i<data.length; i++){
+
+                                //这里需要动态展示小说分类 目前的下拉列表不能显示 需要你改一下@安吉
+                                var s = '<option value='+data[i].id+'>'+data[i].title+'</option>';
+
+                                $('#articleList').append(s);
+                            }
+
+                        }
+                    });
+                });
+
+            }
+
+
+        );
+
+
+	</script>
+
+	<!-- js placed at the end of the document so the pages load faster -->
+	<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/bootstrap.min.js?v=${config_v}"></script>
+	<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.form.min.js?v=${config_v}"></script>
+	<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/bootbox.min.js?v=${config_v}"></script>
+	<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.json.js?v=${config_v}"></script>
+	<script src="${ADMIN_TEMPLATE_BASE_PATH}/assets/fancybox/source/jquery.fancybox.js?v=${config_v}"></script>
+	<script src="${ADMIN_TEMPLATE_BASE_PATH}/assets/bootstrap.datetimepicker/js/bootstrap-datetimepicker.min.js?v=${config_v}"></script>
+	<script src="${ADMIN_TEMPLATE_BASE_PATH}/assets/bootstrap.datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js?v=${config_v}"></script>
+	<script type="text/javascript" charset="utf-8" src="${ADMIN_TEMPLATE_BASE_PATH}/assets/ueditor/ueditor.config.js?v=${config_v}"></script>
+	<script type="text/javascript" charset="utf-8" src="${ADMIN_TEMPLATE_BASE_PATH}/assets/ueditor/ueditor.all.min.js?v=${config_v}"> </script>
+	<script type="text/javascript" charset="utf-8" src="${ADMIN_TEMPLATE_BASE_PATH}/assets/ueditor/lang/zh-cn/zh-cn.js?v=${config_v}"></script>
+	<script type="text/javascript" charset="utf-8" src="${ADMIN_TEMPLATE_BASE_PATH}/assets/uploadify/jquery.uploadify.min.js?v=${config_v}"></script>
+	<!--common script for all pages-->
+	</body>
+
+	</html>

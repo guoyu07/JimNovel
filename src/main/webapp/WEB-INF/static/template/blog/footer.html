@@ -1,0 +1,33 @@
+<!-- Footer -->
+<footer class="footer slate_gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="copyright">Copyright &copy; 2017. angentle（软件4班王艺泳）  All rights reserved.</p>
+            </div>
+            <div class="col-sm-6">
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- END Footer -->
+<!-- All JavaScript libraries -->
+
+<script src="${TEMPLATE_BASE_PATH}/js/bootstrap.min.js"></script>
+<!-- Custom JavaScript -->
+<script src="${TEMPLATE_BASE_PATH}/js/main.js"></script>
+
+<script type="text/javascript">
+    //      	$(".items .col-md-4 >button:eq(2)").on('click',function(){$(this).find('.glyphicon').toggleClass('glyphicon-star-empty')});
+
+    //多行文本溢出显示省略号
+    $('.col-md-4 p').each(function(){
+        var maxwidth=125;
+        if($(this).text().length>maxwidth){
+            $(this).text($(this).text().substring(0,maxwidth));
+            $(this).html($(this).html()+'...');
+        }
+    });
+</script>
+</body>
+</html>

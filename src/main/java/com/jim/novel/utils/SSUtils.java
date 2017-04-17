@@ -11,6 +11,25 @@ import org.springframework.web.util.HtmlUtils;
  */
 public class SSUtils {
 
+
+	/**
+	 *
+	 *
+	 * 描述:默认昵称：ID*3+随机数（0-2）
+	 *
+	 * @author run
+	 * @since v1.0.0
+	 * @param id
+	 * @return
+	 * @return String
+	 */
+	public static String randomNickName(Integer id) {
+		int i = (int) (Math.random() * 3);
+		int num = id * 3 + i;
+		String str = "用户";
+		String name = str + num;
+		return name;
+	}
 	/**
 	 * 把骆驼命名法的变量，变为大写字母变小写且之前加下划线
 	 * 

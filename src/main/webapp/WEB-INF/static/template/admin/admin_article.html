@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>作品审核-JimNovel</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/animate.css" rel="stylesheet">
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+<div class="wrapper wrapper-content  animated fadeInRight">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <span class="text-muted small pull-right"></span>
+                    <h2>审核</h2>
+                    <p>
+                        只有审核通过才会显示
+                    </p>
+
+                    <div class="clients-list">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#tab-1"><i class="fa fa-user"></i> 待审核</a>
+                            </li>
+
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tab-1" class="tab-pane active">
+                                <div class="full-height-scroll">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-hover">
+                                            <tbody>
+                                            <@shishuo_check_article_list_tag >
+                                            <#list tag_article_list as article>
+                                                    <tr>
+                                                        <td class="client-avatar"><img alt="image" src="${article.user.avaterUrl!"/upload/userlogo-default.png"}"> </td>
+                                                        <td><a data-toggle="tab" href="#contact-1" class="client-link">${article.user.name}</a>
+                                                        </td>
+                                                        <td>《${article.title}》</td>
+                                                        <td class="contact-type"><i class="fa fa-envelope"> </i>
+                                                        </td>
+                                                        <td>${article.user.email}</td>
+                                                        <td class="client-status">
+                                                            <#if article.status==1>
+                                                                <span class="label label-primary">已通过</span>
+                                                            </#if>
+                                                            <#if article.status==0>
+                                                                <span class="label label label-warning">等待审核</span>
+                                                            </#if>
+                                                            <#if article.status==-1>
+                                                                <span class="label label label-danger">已拒绝</span>
+                                                            </#if>
+
+                                                        </td>
+
+                                                        <td class="contact-type">
+                                                            <label class="col-sm-2 control-label">修改</label>
+
+                                                            <select class="demo" id="status">
+                                                                <option value="0" data="${article.articleId}"<#if article.status==0>selected</#if>>待审</option>
+                                                                <option value="1"  data="${article.articleId}" <#if article.status==1>selected</#if>>通过</option>
+                                                                <option value="-1" data="${article.articleId}" <#if article.status==-1>selected</#if>>拒绝</option>
+                                                            </select>
+                                                        </td>
+
+
+
+                                                    </tr>
+
+                                            </#list>
+                                            </@shishuo_check_article_list_tag>
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- 全局js -->
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.min.js?v=2.1.4"></script>
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.form.min.js?v=2.1.4"></script>
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/plugins/layer/layer.min.js"></script>
+
+<!-- 自定义js -->
+<script src="${ADMIN_TEMPLATE_BASE_PATH}/js/content.js?v=1.0.0"></script>
+
+<script>
+
+    $(document).ready(function() {
+        $('.demo').change(function(){
+
+            var cur = $(this).val();
+            var s = $(this).find("option:selected").attr("data");
+            status(s,cur);
+
+        });
+    });
+
+
+
+    function status(id,status) {
+        console.log(id);
+        console.log(status);
+        Ajax('/ar/update',{"articleId":id,"status":status},function(d){
+            console.log(d)
+            if(d.code == 200){
+                comfirmMsg(d.msg);
+            }else {
+                showMsg(d.msg);
+            }
+        });
+
+    }
+</script>
+
+</body>
+
+</html>

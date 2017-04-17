@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jim.novel.dao.UserFolderMapper" >
+  <!-- ############################## -->
+  <!-- ###### 增加 ###### -->
+  <!-- ############################## -->
+
+  <insert id="addUserFolder" parameterType="com.jim.novel.model.UserFolder">
+    insert into
+    user_folder(user_id,folder_id,create_time)
+    value(#{userId},#{folderId},#{createTime})
+  </insert>
+
+  <!-- ############################## -->
+  <!-- ###### 删除 ###### -->
+  <!-- ############################## -->
+
+  <delete id="deleteUserFolder" parameterType="int">
+    delete from user_folder where
+    user_id=#{userId} and folder_id=#{folderId}
+  </delete>
+
+  <!-- ############################## -->
+  <!-- ###### 修改 ###### -->
+  <!-- ############################## -->
+  <!-- ############################## -->
+  <!-- ###### 查询 ###### -->
+  <!-- ############################## -->
+
+  <select id="getUserFolderListById" resultType="com.jim.novel.entity.UserFolderVo">
+    select * from user_folder where user_id=#{userId}
+  </select>
+
+  <select id="getUserFolderById" resultType="com.jim.novel.entity.UserFolderVo">
+    select * from user_folder where user_id=#{userId} and folder_id=#{folderId}
+  </select>
+
+</mapper>

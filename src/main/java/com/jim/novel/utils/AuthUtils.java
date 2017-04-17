@@ -46,4 +46,9 @@ public class AuthUtils {
 	public static String getFaceUrl(String email) {
 		return SystemConstant.FACE_URL + "/" + AuthUtils.MD5(email) + ".jpg";
 	}
+
+
+	public static void main(String[] args) {
+		System.out.println(getPassword("123456"));
+	}
 }
