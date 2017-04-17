@@ -39,11 +39,14 @@
                             <a href="#">
                                 <#if SESSION_USER??>
                                      <img src="<#if SESSION_USER.avaterUrl??>${SESSION_USER.avaterUrl}<#else>${BASE_PATH}/upload/userlogo-default.png</#if>" alt="" width="40" height="40"/>
+                                     <em class="active" style="color: #fff;height: 40px;">${SESSION_USER.name}<a
+                                             href="${BASE_PATH}/admin/index.htm"><span class="glyphicon glyphicon-map-marker" style="padding-left:5px;"></span></a></em>
                                  <#else>
                                      <img src="${BASE_PATH}/upload/userlogo-default.png" alt="" width="40" height="40"/>
+                                     <em class="active" style="color: #fff;height: 40px;">请先登录<a href="${BASE_PATH}/admin/index.htm"><span class="glyphicon glyphicon-map-marker" style="padding-left:5px;"></span></a></em>
                                 </#if>
                             </a>
-                            <em class="active" style="color: #fff;height: 40px;">none<span class="glyphicon glyphicon-map-marker" style="padding-left:5px;"></span></em>
+
 
 
 
