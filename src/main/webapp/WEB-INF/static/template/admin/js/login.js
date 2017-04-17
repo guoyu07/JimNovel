@@ -138,42 +138,18 @@ $(function () {
         var url = $this.data("src") + new Date().getTime();
         $this.attr("src", url);
     });
-    // 登录
-    $('#loginform').form({
-        url: '/adminLogin',
-        onSubmit : function() {
 
-            progressLoad();
-            var isValid = $(this).form('validate');
-            if(!isValid){
-                progressClose();
-            }
-            return isValid;
-        },
-        success:function(result){
-            console.log(result)
-            progressClose();
-            result = $.parseJSON(result);
-            if (result.code==200) {
-                window.location.href = 'index.htm';
+    $('#loginform').ajaxForm({
+        dataType : 'json',
+        success : function(data) {
+            if (data.code==200) {
+                 window.location.href = 'index.htm';
+
             }else{
-
-                showMsg(result.msg);
+                showMsg(data.msg);
             }
         }
     });
+
 });
-function submitForm(){
-    $('#loginform').submit();
-}
-function clearForm(){
-    $('#loginform').form('clear');
-}
-//回车登录
-function enterlogin(){
-    if (event.keyCode == 13){
-        event.returnValue=false;
-        event.cancel = true;
-        $('#loginform').submit();
-    }
-}
+

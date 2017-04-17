@@ -9,12 +9,13 @@
     <script type="text/javascript" src="${ADMIN_TEMPLATE_BASE_PATH}/js/easyui/locale/easyui-lang-zh_CN.js" charset="utf-8"></script>
     <link rel="stylesheet" type="text/css" href="${ADMIN_TEMPLATE_BASE_PATH}/css/login.css?v=201612202107" />
     <link rel="stylesheet" type="text/css" href="${ADMIN_TEMPLATE_BASE_PATH}/css/dreamlu.css?v=201612202107" />
+    <script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.form.min.js?v=201612202107"></script>
     <script type="text/javascript" src="${ADMIN_TEMPLATE_BASE_PATH}/js/login.js?v=20170115" charset="utf-8"></script>
 </head>
-<body onkeydown="enterlogin();">
+<body">
 <div class="top_div"></div>
 <div style="background: rgb(255, 255, 255); margin: -100px auto auto; border: 1px solid rgb(231, 231, 231);border-image:none;width:400px;text-align: center;">
-    <form method="post" id="loginform">
+    <form method="post" id="loginform" action="${BASE_PATH}/adminLogin">
 
         <div style="width: 165px; height: 96px; position: absolute;">
             <div class="tou"></div>
@@ -41,7 +42,7 @@
                 </span>
                 <span style="float: right;">
                     <a style="color: rgb(204, 204, 204); margin-right: 10px;" href="${BASE_PATH}/center/register.htm">注册</a>
-                    <a style="background: rgb(0, 142, 173); padding: 7px 10px; border-radius: 4px; border: 1px solid rgb(26, 117, 152); border-image: none; color: rgb(255, 255, 255); font-weight: bold;" href="javascript:;" onclick="submitForm()">登录</a>
+                    <button style="background: rgb(0, 142, 173); padding: 7px 10px; border-radius: 4px; border: 1px solid rgb(26, 117, 152); border-image: none; color: rgb(255, 255, 255); font-weight: bold;" href="javascript:;" type="submit">登录</button>
                 </span>
             </P>
         </div>
