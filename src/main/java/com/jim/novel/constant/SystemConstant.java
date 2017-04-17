@@ -25,7 +25,7 @@ public class SystemConstant {
 	/**
 	 * 上传图片文件夹
 	 */
-	public static String UPLOAD_FOLDER = "/WEB-INF/upload/";
+	public static String UPLOAD_FOLDER = "/upload/";
 
 	/**
 	 * 备份文件夹
