@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8" />
-		<title>registerform</title>
+		<title>修改密码-JimNovel</title>
 		<link href="${ADMIN_TEMPLATE_BASE_PATH}/css/demo/repassword.css" type="text/css" rel="stylesheet" />
 		<style>
 			.registerform li {
@@ -83,7 +83,8 @@
                             layer.msg('msg');
                             setTimeout(function(){
                                 layer.closeAll('msg');
-                            }, 2000);
+                                parent.location.reload();
+                            }, 1000);
                         }
                         else{
                             layer.msg(data.msg);
