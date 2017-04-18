@@ -80,7 +80,7 @@
                     callback:function(data){
                         console.log(data);
                         if(data.code==200){
-                            layer.msg('msg');
+                            layer.msg(data.msg);
                             setTimeout(function(){
                                 layer.closeAll('msg');
                                 parent.location.reload();
