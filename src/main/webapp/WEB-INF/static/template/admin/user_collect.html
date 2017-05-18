@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JimNovel-我的收藏</title>
+    <link rel="shortcut icon" href="favicon.ico"> <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/animate.css" rel="stylesheet">
+    <link href="${ADMIN_TEMPLATE_BASE_PATH}/css/style.css?v=4.1.0" rel="stylesheet">
+    <style type="text/css">
+    	#main {
+				height: 1800px;
+				padding-top: 90px;
+				text-align: center;
+			}
+			
+			#fullbg {
+				background-color: gray;
+				left: 0;
+				opacity: 0.5;
+				position: absolute;
+				top: 0;
+				z-index: 3;
+				filter: alpha(opacity=50);
+				-moz-opacity: 0.5;
+				-khtml-opacity: 0.5;
+			}
+			
+			#dialog {
+				background-color: #fff;
+				border: 5px solid rgba(0, 0, 0, 0.4);
+				height: 500px;
+				left: 50%;
+				margin: -250px 0 0 -550px;
+				padding: 1px;
+				position: fixed !important;
+				/* 浮动对话框 */
+				position: absolute;
+				top: 50%;
+				width: 1100px;
+				z-index: 5;
+				border-radius: 5px;
+				display: none;
+			}
+			
+			#dialog p {
+				margin: 0 0 12px;
+				height: 24px;
+				line-height: 24px;
+				/*background: #CCCCCC;*/
+			}
+			
+			#dialog p.close {
+				text-align: right;
+				padding-right: 10px;
+			}
+			
+			#dialog p.close a {
+				color: #000;
+				text-decoration: none;
+			}
+    </style>
+
+</head>
+
+<body class="gray-bg">
+<div class="row">
+    <div class="col-sm-12">
+        <div class="wrapper wrapper-content animated fadeInUp">
+            <ul class="notes">
+
+            </ul>
+        </div>
+    </div>
+</div>
+    
+
+    <!-- 全局js -->
+    <script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.min.js?v=2.1.4"></script>
+    <script src="${ADMIN_TEMPLATE_BASE_PATH}/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="${ADMIN_TEMPLATE_BASE_PATH}/js/jquery.form.min.js?v=2.1.4"></script>
+    <script src="${ADMIN_TEMPLATE_BASE_PATH}/js/plugins/layer/layer.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="${ADMIN_TEMPLATE_BASE_PATH}/js/content.js?v=1.0.0"></script>
+
+	<script type="text/javascript">
+
+			
+			$(document).ready(function(){
+				var s=$("#table-responsive tbody tr td:nth-child(5n)");
+				s.addClass("text-success");
+
+                Ajax('/ar/collectList',{},function(d){//这个是Ajax请求
+                    if(d.code==200){// 200表示数据拿到了 d表示拿到的数据
+                        var data = d.data;
+                        console.log(data);//这里就是拿到数据了你把这些数据用
+                        for(var i=0; i<data.length; i++){
+                            var s = '<li><div><small>'+data[i].time+'</small> <h4>《'+data[i].title+'》</h4> <p>'+data[i].keyword+'</p> <a href="javascript:void(0)" onclick="remove('+data[i].collectId+')"><i class="fa fa-trash-o "></i></a> </div> </li>';
+                            $('.notes').append(s);
+                        }
+
+                    }
+                });
+
+
+            });
+			
+			function remove(id){
+                var s=$("#table-responsive tbody tr td:nth-child(5n)");
+                s.addClass("text-success");
+
+                Ajax('/ar/remove',{'collectId':id},function(d){//这个是Ajax请求
+                    if(d.code == 200){
+                        comfirmMsg(d.msg);
+                    }else {
+                        showMsg(d.msg);
+                    }
+                });
+
+            }
+			
+		</script>
+
+</body>
+
+</html>

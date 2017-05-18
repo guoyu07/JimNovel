@@ -175,5 +175,10 @@ public class AdminController extends BaseController{
         return templateService.getAdminTemplate("change_pwd");
     }
 
+    @RequestMapping("/user_collect.htm")
+    public String user_collect(){
+        return templateService.getAdminTemplate("user_collect");
+    }
+
     //***static/template/admin/index.html这个页面中的iframe需要通过这个控制器路由，注意后缀是.htm，freemarker会自动找到static/template/admin下的xxx.html进行渲染
 }
