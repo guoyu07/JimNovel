@@ -34,7 +34,7 @@ public class UserInfoController extends BaseController{
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "uploadImg.htm",method = RequestMethod.POST,produces = "application/json")
+    @RequestMapping(value = "uploadImg.htm",method = RequestMethod.POST)
     @ResponseBody
     public String uploadImg(@RequestParam(value = "file", required = false) MultipartFile file, HttpServletRequest request){
         Response response = null;

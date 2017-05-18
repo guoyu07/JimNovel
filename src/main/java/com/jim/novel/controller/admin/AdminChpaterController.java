@@ -34,7 +34,7 @@ public class AdminChpaterController extends BaseController
     @ResponseBody
     @RequestMapping(value = "/addChapter", method = RequestMethod.POST)
     public String addChapter(
-            @RequestParam(value = "articleId", required = true) Integer articleId,
+            @RequestParam(value = "id", required = true) Integer articleId,
             @RequestParam("title") String title, @RequestParam("content")String content, @RequestParam(value = "createTime", required = false)String createTime, @RequestParam(value = "sort", required = false)Integer sort){
 
         Chapter chapter = chapterService.addChapter(SSUtils.toText(title.trim()), articleId, content, createTime, sort);

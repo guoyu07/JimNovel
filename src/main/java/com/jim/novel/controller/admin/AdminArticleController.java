@@ -77,10 +77,17 @@ public class AdminArticleController extends BaseController {
 
     }
 
+
+
     @ResponseBody
-    @RequestMapping(value = "/deleteArticle", method = RequestMethod.GET)
-    public String deteleArticle(Integer articleId){
-        articleService.deleteArticle(articleId);
-        return renderSuccess(null);
+    @RequestMapping(value = "/collectList", method = RequestMethod.GET)
+    public String collectList(Integer articleId){
+        return renderSuccess(userCollectService.getAllCollectOfUser(me().getId()));
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/remove", method = RequestMethod.GET)
+    public String removeCollect(Integer collectId){
+        return renderSuccess(userCollectService.remove(collectId));
     }
 }

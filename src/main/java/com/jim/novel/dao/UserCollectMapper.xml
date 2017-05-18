@@ -52,4 +52,13 @@
     SELECT COUNT(1) from user_collect where user_id = #{userId} and article_id = #{articleId}
   </select>
 
+  <select id="getAllCollectsByUserId" resultType="com.jim.novel.entity.UserCollectVo">
+    SELECT user_collect.id as collectId,user_collect.create_time as time,article.* from user_collect JOIN article ON article.article_id = user_collect.article_id
+    where user_collect.user_id = #{userId} and flag = 0
+  </select>
+
+  <update id="updateCollectById">
+    UPDATE user_collect set flag = 1 where id = #{id}
+  </update>
+
 </mapper>
